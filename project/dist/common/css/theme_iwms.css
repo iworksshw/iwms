@@ -230,6 +230,7 @@
 .cptSearchDetails .quickArea .btnDetails {
 	width: 35px;
 	height: 35px;
+	font-size: 0;
 	border: 0;
 	border-radius: 6px;
 	background: #0C1F2B url(../../common/images/iwms/ic_24_details.svg) center no-repeat;
@@ -417,6 +418,7 @@
 	border: 0;
 	border-radius: 10px;
 	position: relative;
+	z-index: 10;
 	cursor: pointer;
 	background: #A1A9BA url(../../common/images/iwms/ic_20_question.svg) center no-repeat;
 }
@@ -507,6 +509,14 @@
 }
 
 /* -------------------- 유지보수 상세 -------------------- */
+.modPopup:has(.cptRequestView) .popCont {
+	padding-right: 30px;
+}
+
+.lytLayout .layoutContainer .layoutCont .layoutContArea:has(.cptRequestView) {
+	padding-right: 30px;
+}
+
 .cptRequestView {
 	width: 100%;
 	height: calc(100vh - 250px);
@@ -524,13 +534,17 @@
 	overflow-y: auto;
 }
 .cptRequestView .workArea {
-	width: 610px;
+	width: 620px;
+	padding-right: 10px;
 	display: flex;
 	flex-wrap: wrap;
 	align-content: flex-start;
 	flex-grow: 0;
 	flex-shrink: 0;
 	overflow-y: auto;
+}
+.cptRequestView.assign .workArea {
+	width: 540px;
 }
 .cptRequestView .state {
 	width: 100%;
@@ -729,6 +743,15 @@
 	font-style: normal;
 	font-weight: 400;
 	line-height: 20px;
+}
+.cptRequestView .workBox .titleGroup .infoTxt {
+	width: max-content;
+	min-height: 35px;
+	color: #3569E7;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 1.5;
 }
 .cptRequestView .commentsGroup {
 	width: 100%;
@@ -1012,6 +1035,131 @@
 	border-top: 1px solid #ddd;
 	display: flex;
 	justify-content: flex-end;
+}
+.cptRequestView .typeSelect {
+	width: 100%;
+}
+.cptRequestView .managerGroup {
+	width: 100%;
+	max-height: 158px;
+	display: flex;
+	justify-content: space-between;
+	gap: 8px;
+}
+.cptRequestView .managerGroup .sltBox {
+	width: 50%;
+	max-height: 158px;
+	border: 1px solid #BBB;
+	border-radius: 4px;
+	overflow: auto;
+}
+.cptRequestView .managerGroup .sltBox .sltItem .iptRdo:checked + .rdoLbl {
+	color: #3569E7;
+	background: #F7F9FF url(../../../common/images/iwms/ic_slt_manager.svg) right 12px center no-repeat;
+}
+.cptRequestView .managerGroup .sltBox .sltItem .rdoLbl {
+	width: 100%;
+	height: 39px;
+	padding: 10px;
+	color: #333;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 18px;
+	display: block;
+}
+.cptRequestView .managerGroup .sltBox .sltItem .iptChk:checked + .chkLbl {
+	color: #3569E7;
+	background: #F7F9FF url(../../../common/images/iwms/ic_19_chk_on.svg) 10px center no-repeat;
+}
+.cptRequestView .managerGroup .sltBox .sltItem .chkLbl {
+	width: 100%;
+	height: 39px;
+	padding: 10px 10px 10px 33px;
+	color: #333;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 18px;
+	display: block;
+	background: url(../../../common/images/iwms/ic_19_chk_off.svg) 10px center no-repeat;
+}
+.cptRequestView .workGroup {
+	width: 100%;
+}
+.cptRequestView .workGroup .writeBox {
+	width: 100%;
+}
+.cptRequestView .workGroup .writeBox .writeItem {
+	width: 100%;
+	margin-top: 8px;
+	padding: 12px 16px;
+	border-radius: 10px;
+	background: #F4F6FA;
+}
+.cptRequestView .workGroup .writeBox .writeItem:first-child {
+	margin-top: 0;
+}
+.cptRequestView .workGroup .writeBox .writeItem .infoBox {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.cptRequestView .workGroup .writeBox .writeItem .infoBox .human {
+	width: max-content;
+	height: 35px;
+	display: flex;
+}
+.cptRequestView .workGroup .writeBox .writeItem .infoBox .human .name {
+	color: #000;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 1.5;
+	display: block;
+	align-content: center;
+}
+.cptRequestView .workGroup .writeBox .writeItem .infoBox .human .team {
+	margin-left: 26px;
+	color: #757575;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.5;
+	display: block;
+	position: relative;
+	align-content: center;
+}
+.cptRequestView .workGroup .writeBox .writeItem .infoBox .human .team::before {
+	content: "";
+	width: 2px;
+	height: 14px;
+	background: #ddd;
+	display: block;
+	position: absolute;
+	left: -14px;
+	top: 10px;
+}
+.cptRequestView .workGroup .writeBox .writeItem .infoBox .time {
+	width: 107px;
+}
+.cptRequestView .workGroup .writeBox .writeItem .msgBox {
+	width: 100%;
+	margin-top: 8px;
+}
+.cptRequestView .workGroup .writeBox .writeItem .msgBox .msg {
+	width: 100%;
+	height: 64px;
+	padding: 8px 10px;
+	color: #333;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.5;
+	background: #FFF;
+}
+.cptRequestView .workGroup .writeBox .writeItem .msgBox .msg::placeholder {
+	color: #CCC;
 }
 .cptRequestView .btn {
 	min-width: max-content;

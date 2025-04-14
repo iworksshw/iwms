@@ -46,7 +46,7 @@
                             &.gray {color: #757575;}
                         }
                         .tooltip {
-                            width: 20px; height: 20px; margin-left: 4px; border: 0; border-radius: 10px; position: relative; cursor: pointer;
+                            width: 20px; height: 20px; margin-left: 4px; border: 0; border-radius: 10px; position: relative; z-index: 10; cursor: pointer;
                             background:#A1A9BA url(../../common/images/iwms/ic_20_question.svg) center no-repeat;
                             &.on {.tipPopup{display: block;}}
                             .tipPopup {

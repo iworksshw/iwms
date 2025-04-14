@@ -217,87 +217,189 @@
                                 <div class="popupContainer">
                                     <div class="popupContArea">
                                         <button type="button" class="btnPopClose" onclick="closePopup('sample01');">닫기</button>
-                                        <div class="popTitle">요청사항 수정</div>
+                                        <div class="popTitle">작업 배정</div>
                                         <div class="popCont">
                                             
                                             <!-- 팝업 컨텐츠 영역 -->
-                                             <!-- 테이블 -->
-                                            <div class="cptTable">
-                                                <table class="tbView">
-                                                    <colgroup>
-                                                        <col style="width:110px;">
-                                                        <col style="width:auto;">
-                                                        <col style="width:110px;">
-                                                        <col style="width:auto;">
-                                                    </colgroup>
-                                                    <caption></caption>
-                                                    <tbody>
-                                                        <tr>
-                                                            <th class="left">요구사항 번호</th>
-                                                            <td class="left">R23-011020</td>
-                                                            <th class="left">진행상태</th>
-                                                            <td class="left"><b class="t-orange">협의요청</b></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="left">요청자</th>
-                                                            <td class="left">안경애</td>
-                                                            <th class="left">작성일자</th>
-                                                            <td class="left">2025-04-07</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="left">프로젝트</th>
-                                                            <td colspan="3" class="left">국민체육진흥공단 홈페이지</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="left">첨부파일</th>
-                                                            <td colspan="3" class="left">
-                                                                <div class="frmGroup">
-                                                                    <div class="fileBox on">
-                                                                        <div class="fileBefore">
-                                                                            <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
-                                                                            <input type="file" id="uploadBtn1" class="uploadBtn">
+
+                                            <div class="cptRequestView assign">
+                                                <div class="questArea">
+                                                    <!-- 테이블 -->
+                                                    <div class="cptTable">
+                                                        <table class="tbView">
+                                                            <colgroup>
+                                                                <col style="width:140px;">
+                                                                <col style="width:auto;">
+                                                                <col style="width:140px;">
+                                                                <col style="width:auto;">
+                                                            </colgroup>
+                                                            <caption></caption>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <th class="left">요구사항 번호</th>
+                                                                    <td class="left">R23-011020</td>
+                                                                    <th class="left">진행상태</th>
+                                                                    <td class="left"><b class="t-orange">협의요청</b></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class="left">요청자</th>
+                                                                    <td class="left">안경애</td>
+                                                                    <th class="left">등록일자</th>
+                                                                    <td class="left">2025-04-07</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class="left">프로젝트</th>
+                                                                    <td colspan="3" class="left">국민체육진흥공단 홈페이지</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class="left">첨부파일</th>
+                                                                    <td colspan="3" class="left">
+                                                                        <ul class="fileGroup">
+                                                                            <li class="fileDown">
+                                                                                <a href="#" class="download">[국민체육진흥공단]마이페이지수정사항요청건1.hwp</a>
+                                                                            </li>
+                                                                            <li class="fileDown">
+                                                                                <a href="#" class="download">[국민체육진흥공단]마이페이지수정사항요청건1.hwp</a>
+                                                                            </li>
+                                                                        </ul>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class="left">제목</th>
+                                                                    <td colspan="3" class="left">
+                                                                        국민체육진흥공단 마이페이지 수정 요청 드립니다.
+                                                                    </td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <th class="left">내용</th>
+                                                                    <td colspan="3" class="left">
+                                                                        안녕하세요
+                                                                        <br>유선상으로 수정요청사항 전달 드렸습니다.
+                                                                        <br>내용은 붙혀 주신 아이콘에 기존 윤곽선을 살려서 적용해달라는
+                                                                        <br>내용입니다.
+                                                                        <br>지난번에 보내 드린 파일 중
+                                                                        <br>개인정보 처리방침 작성지침
+                                                                        <br>(공공기관편) pdf 파일의 19페이지를 보시면
+                                                                        <br>윤곽선에 관한 
+                                                                        <br>내용이 나오니 참고 부탁드립니다.
+                                                                        <br>수정 후 회신주세요.
+                                                                        <br>
+                                                                        <br>감사합니다.
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <div class="workArea">
+                                                    <div class="typeSelect">
+                                                        <div class="frmGroup">
+                                                            <select name="" id="" class="iptSlt">
+                                                                <option value="">업무구분 선택</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="workBox">
+                                                        <div class="titleGroup">
+                                                            <div class="title">작업자 선택</div>
+                                                        </div>
+                                                        <div class="managerGroup">
+                                                            <ul class="sltBox">
+                                                                <li class="sltItem">
+                                                                    <input type="radio" class="iptRdo" id="rdo001" name="rdo001">
+                                                                    <label for="rdo001" class="rdoLbl">기획</label>
+                                                                </li>
+                                                                <li class="sltItem">
+                                                                    <input type="radio" class="iptRdo" id="rdo002" name="rdo001">
+                                                                    <label for="rdo002" class="rdoLbl">디자인</label>
+                                                                </li>
+                                                                <li class="sltItem">
+                                                                    <input type="radio" class="iptRdo" id="rdo003" name="rdo001">
+                                                                    <label for="rdo003" class="rdoLbl">퍼블리싱</label>
+                                                                </li>
+                                                                <li class="sltItem">
+                                                                    <input type="radio" class="iptRdo" id="rdo004" name="rdo001">
+                                                                    <label for="rdo004" class="rdoLbl">개발</label>
+                                                                </li>
+                                                            </ul>
+                                                            <ul class="sltBox">
+                                                                <li class="sltItem">
+                                                                    <input type="checkbox" class="iptChk" id="chk001">
+                                                                    <label for="chk001" class="chkLbl">송민아</label>
+                                                                </li>
+                                                                <li class="sltItem">
+                                                                    <input type="checkbox" class="iptChk" id="chk002">
+                                                                    <label for="chk002" class="chkLbl">권진주</label>
+                                                                </li>
+                                                                <li class="sltItem">
+                                                                    <input type="checkbox" class="iptChk" id="chk003">
+                                                                    <label for="chk003" class="chkLbl">고윤영</label>
+                                                                </li>
+                                                                <li class="sltItem">
+                                                                    <input type="checkbox" class="iptChk" id="chk004">
+                                                                    <label for="chk004" class="chkLbl">디자이너1</label>
+                                                                </li>
+                                                                <li class="sltItem">
+                                                                    <input type="checkbox" class="iptChk" id="chk005">
+                                                                    <label for="chk005" class="chkLbl">디자이너2</label>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="workBox">
+                                                        <div class="titleGroup">
+                                                            <div class="title">업무 작성</div>
+                                                            <div class="infoTxt">총 계획 공수 : 8시간</div>
+                                                        </div>
+                                                        <div class="workGroup">
+                                                            <ul class="writeBox">
+                                                                <li class="writeItem">
+                                                                    <div class="infoBox">
+                                                                        <div class="human">
+                                                                            <span class="name">고윤영 과장</span>
+                                                                            <span class="team">디자인</span>
                                                                         </div>
-                                                                        <div class="fileAfter">
-                                                                            <div class="textBox">첨부파일01.hwp</div>
-                                                                            <button type="button" class="fileDel">삭제</button>
+                                                                        <div class="time">
+                                                                            <input type="text" class="iptText" placeholder="예상 작업시간">
                                                                         </div>
                                                                     </div>
-                                                                    <button type="button" class="gridBtn minus">파일삭제</button>
-                                                                    <button type="button" class="gridBtn plus">파일추가</button>
-                                                                </div>
-                                                                <div class="frmGroup">
-                                                                    <div class="fileBox on">
-                                                                        <div class="fileBefore">
-                                                                            <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
-                                                                            <input type="file" id="uploadBtn1" class="uploadBtn">
+                                                                    <div class="msgBox">
+                                                                        <textarea class="msg" placeholder="담당자별 작업요청 내용을 입력해주세요."></textarea>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="writeItem">
+                                                                    <div class="infoBox">
+                                                                        <div class="human">
+                                                                            <span class="name">서호원 차장</span>
+                                                                            <span class="team">퍼블리싱</span>
                                                                         </div>
-                                                                        <div class="fileAfter">
-                                                                            <div class="textBox">첨부파일02.hwp</div>
-                                                                            <button type="button" class="fileDel">삭제</button>
+                                                                        <div class="time">
+                                                                            <input type="text" class="iptText" placeholder="예상 작업시간">
                                                                         </div>
                                                                     </div>
-                                                                    <button type="button" class="gridBtn minus">파일삭제</button>
-                                                                    <button type="button" class="gridBtn plus">파일추가</button>
-                                                                </div>
-                                                                <i class="pointText">파일형식(jpg,gif,jpeg,doc,docx,xls,pdf,hwp,xlst,txt)만 첨부 가능하며, 최대 1MB까지 첨부가능</i>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="left">제목</th>
-                                                            <td colspan="3" class="left">
-                                                                <div class="frmGroup"><input type="text" class="iptText" value="국민체육진흥공단 마이페이지 수정 요청 드립니다."></div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="left">내용</th>
-                                                            <td colspan="3" class="left">
-                                                                <!-- 에디터영역 -->
-                                                                <textarea class="textArea areaMd">에디터영역</textarea>
-                                                                <!-- //에디터영역 -->
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
+                                                                    <div class="msgBox">
+                                                                        <textarea class="msg" placeholder="담당자별 작업요청 내용을 입력해주세요."></textarea>
+                                                                    </div>
+                                                                </li>
+                                                                <li class="writeItem">
+                                                                    <div class="infoBox">
+                                                                        <div class="human">
+                                                                            <span class="name">정형호 차장</span>
+                                                                            <span class="team">개발</span>
+                                                                        </div>
+                                                                        <div class="time">
+                                                                            <input type="text" class="iptText" placeholder="예상 작업시간">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="msgBox">
+                                                                        <textarea class="msg" placeholder="담당자별 작업요청 내용을 입력해주세요."></textarea>
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
                                             </div>
                     
                                             <!-- //팝업 컨텐츠 영역 -->
