@@ -1,0 +1,68 @@
+/* -------------------------------------------------------------- */
+/* ------------------------ 기존 css 수정 ------------------------ */ 
+/* -------------------------------------------------------------- */
+
+.iwms {
+    /* 레이아웃 수정 */
+    .cptHeader .headerArea {
+        border-bottom: 1px solid #E1E5EF; box-shadow: none;
+    }
+    &.lytLayout .layoutContainer .layoutCont .layoutContArea {
+        background: #FFF;
+    }
+
+    //그룹(테이블, 그리드 등) 탑
+    .cptGroupTop {
+        .total {
+            &.bold {margin-right: 2px; font-weight: 500; color: #000; font-size: 18px;}
+        }
+        .comSideOpt {
+            .srhBtn {height: 35px;}
+            select {min-width: max-content; padding-left: 10px; padding-right: 40px; height: 35px; background-position-x: calc(100% - 10px);}
+        }
+    } 
+
+    /* ---------------------------- 테이블 ---------------------------- */
+    .cptTable .required {color: var(--basic-red);}
+
+    /* ---------------------------- 그리드 ---------------------------- */
+    .cptGrid {overflow: auto; position: relative;
+        &:last-child {margin-bottom: 0;}
+        &::-webkit-scrollbar {width:6px; height:6px; border-radius: 3px; background: rgba(0, 0, 0, 0.20);} /* 스크롤바 */
+        &::-webkit-scrollbar-thumb {width:6px; height:6px; border-radius: 3px; background: rgba(0, 0, 0, 0.20);}
+        .gridTb {
+            border-collapse: separate;
+            th {
+                border-radius: 0 !important; border-left: 1px solid #666;
+                &:first-child {border-left: 0; padding: 5px;}
+                &:last-child {padding: 5px;}
+            }
+            td {
+                border-radius: 0 !important;
+                &:first-child {border-left: 0; padding: 5px;}
+                &:last-child {padding: 5px;}
+            }
+            thead {
+                position: sticky; left: 0; top: 0; z-index: 2;
+                tr:nth-child(n + 2) th {border-top: 1px solid #666;}
+            }
+            tbody td {
+                border-left: 1px solid #ddd;
+                &:first-child::after {display: none;}
+                &:last-child::after {display: none;}
+            }
+            tfoot td {border-left: 1px solid #fff;}
+        }
+    }
+
+
+    /* 그리드 추가조작 */
+    .cptGrid .gridTb tr th.line {border-left: 1px solid #666;}
+    .cptGrid .gridTb tr td.line {border-left: 1px solid #ddd;}
+}
+
+
+
+@import './cptSearchDetails'; //Tab + 상세검색
+@import './cptCardRequest'; //유지보수 리스트
+@import './cptRequestView'; //유지보수 상세보기

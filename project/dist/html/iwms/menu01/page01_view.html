@@ -1,0 +1,404 @@
+
+
+
+
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="format-detection" content="telephone=no">
+	<!-- 캐싱방지 -->
+	<!-- <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+	<META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 22 Jul 2002 11:12:01 GMT"> -->
+	<!-- 모바일 상단,타이틀바,주소창 색변경(안드로이드에서 크롬,파폭,오페라,삼성브라우저만 가능) -->
+	<!-- <meta name="theme-color" content="#4285f4"> -->
+
+	<title>IWorks Sysyem</title>
+
+	<link rel="stylesheet" href="../../../common/css/swiper.css" />
+	<link rel="stylesheet" href="../../../common/css/tui-date-picker.css" /><!--20240419 toast date picker css 추가-->
+	<link rel="stylesheet" href="../../../common/css/tui-time-picker.css" /><!--20240531 toast date picker css 추가-->
+	<!-- <link rel="stylesheet" href="../../../common/css/jquery-ui.min.css" /> -->
+	<link rel="stylesheet" href="../../../common/css/style.css" />
+	<link rel="stylesheet" href="../../../common/css/theme_iwms.css" />
+	
+	
+	<script src="../../../common/js/jquery-3.4.1.min.js"></script>
+	<!-- <script src="../../../common/js/jquery-ui.min.js"></script> -->
+	<script src="../../../common/js/swiper.js"></script>
+	<!-- <script src="../../../common/js/tui-date-picker.js"></script>  -->
+	<script src="../../../common/js/tui-time-picker.js"></script>
+	<script src="https://uicdn.toast.com/tui.date-picker/latest/tui-date-picker.js"></script>
+	<script src="../../../common/js/basic.js"></script>
+	<script src="../../../common/js/layout/mng.js"></script>
+    
+</head>
+<body>
+<div class="skip"><a class="quickBtn" href="#container">본문바로가기</a></div>
+<div class="wrap">
+
+    <!-- 레이아웃 -->
+    <div class="lytLayout iwms "> <!-- 테마 클래스 들어가는 위치 thema1, thema2, .. 등 --> <!-- 레이아웃 클래스 들어가는 위치 lthema1, lthema2, .. 등 -->
+        <div class="layoutArea">
+
+            <!-- 상단영역 -->
+            <div class="layoutTop">
+
+                <!-- Top -->
+                
+                <div class="cptHeader">
+                    <div class="headerArea">
+                        <div class="headerLogo"><h1><a href="#"><img src="/common/images/iwms/ci.png" alt="" /></a></h1></div>
+                        <div class="headerGroup">
+                            <div class="headerProfile">
+                                <dl class="headerDate">
+                                    <dt>최종 로그인 날짜 : </dt>
+                                    <dd>2022-12-30 AM 09:30:00</dd>
+                                </dl>
+                                <div class="headerUser"><b>아이웍스 전체관리자</b>님</div> <!-- addClass - arr : 셀렉트 아이콘 표시, on : 셀렉트 아이콘 위/아래 표시 -->
+                                <a href="#" class="headerBtn">로그아웃</a>
+                            </div>
+                            <div class="headerNav">
+                                <ul class="menuList">
+                                    <li class="menuItem on"> <!-- class : on : 1depth 메뉴 활성화 -->
+                                        <a href="#">iWMS</a>
+                                    </li>
+                                    <li class="menuItem">
+                                        <a href="#">운영관리</a>
+                                    </li>
+                                    <li class="menuItem">
+                                        <a href="#">통계관리</a>
+                                    </li>
+                                    <li class="menuItem">
+                                        <a href="#">고객관리</a>
+                                    </li>
+                                    <li class="menuItem">
+                                        <a href="#">시스템관리</a>
+                                    </li>
+                                </ul>
+                                <div class="allMenuGroup">
+                                    <button class="allMenu">전체메뉴</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="allMenuArea">
+                        <ul class="menuList">
+                            <li class="menuItem">
+                                <a href="#">IWMS</a>
+                                <ul class="subMenu">
+                                    <li><a href="#">대시보드</a></li>
+                                    <li><a href="#">유지보수</a></li>
+                                    <li><a href="#">연락망</a></li>
+                                    <li><a href="#">통계</a></li>
+                                    <li><a href="#">공지사항</a></li>
+                                </ul>
+                            </li>
+                            <li class="menuItem">
+                                <a href="#">운영관리</a>
+                                <ul class="subMenu">
+                                    <li><a href="#">메뉴1</a></li>
+                                </ul>
+                            </li>
+                            <li class="menuItem">
+                                <a href="#">통계관리</a>
+                                <ul class="subMenu">
+                                    <li><a href="#">메뉴1</a></li>
+                                </ul>
+                            </li>
+                            <li class="menuItem">
+                                <a href="#">고객관리</a>
+                                <ul class="subMenu">
+                                    <li><a href="#">메뉴1</a></li>
+                                </ul>
+                            </li>
+                            <li class="menuItem">
+                                <a href="#">시스템관리</a>
+                                <ul class="subMenu">
+                                    <li><a href="#">메뉴1</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <!-- //상단영역 -->
+
+            <!-- 중단영역 -->
+            <div class="layoutContainer ">
+
+                <!-- 좌측 메뉴 영역 -->
+                <div class="layoutNav">
+                    
+                    <!-- Left Menu -->
+                    
+                    <div class="cptSnav">
+                        <div class="snavArea">
+                            <div class="snavMenu">
+                                <div class="snavTitle">iWMS</div>
+                                <ul class="menuList">
+                                    <li class="menuItem on"> <!-- class : on : 1depth 메뉴 활성화 -->
+                                        <a href="#">유지보수</a>
+                                    </li>
+                                    <li class="menuItem"> <!--2 depth 경우 dropdown 클래스 추가-->
+                                        <a href="#">연락망</a>
+                                    </li>
+                                    <li class="menuItem">
+                                        <a href="#">통계</a>
+                                    </li>
+                                    <li class="menuItem">
+                                        <a href="#">공지사항</a>
+                                    </li>
+                                </ul>
+                                <div class="snavBtm">
+                                    <!-- <button class="iconDownload">관리시스템 메뉴얼</button> -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sideSlide">
+                        <button class="btnSlide">메뉴 열기/닫기</button>
+                    </div>
+
+                </div>
+                <!-- //좌측 메뉴 영역 -->
+
+                <!-- 콘텐츠 영역 -->
+                <div class="layoutCont"> <!-- 테마 클래스 들어가는 위치 thema1, thema3, .. 등 -->
+				
+
+                    <!-- 컨텐츠 내용 -->
+                    <div class="layoutContArea">
+
+                        <div class="cptRequestView">
+                            <div class="questArea">
+                                <ul class="state">
+                                    <li class="piece urgency">긴급</li>
+                                    <li class="piece">국민체육진흥공단</li>
+                                    <li class="piece">신규개발</li>
+                                </ul>
+
+                                <div class="title">2025 국민체육진흥공단 마이페이지 요청드립니다.</div>
+                                
+                                <ul class="info">
+                                    <li class="item">요구사항 번호 : R23-011020</li>
+                                    <li class="item">요청자 : 김경민</li>
+                                    <li class="item">등록일자 : 2025.04.07</li>
+                                </ul>
+
+                                <div class="requestTop">
+                                    <div class="alignL">
+                                        <button type="button" class="btn oLine">반려</button>
+                                        <button type="button" class="btn gLine">협의요청</button>
+                                        <button type="button" class="btn blue">합의</button>
+                                    </div>
+                                    <div class="alignR">
+                                        <button type="button" class="btn oLine">요청취소</button>
+                                        <button type="button" class="btn blue">수정</button>
+                                        <button type="button" class="btn dkbLine">목록</button>
+                                    </div>
+                                </div>
+
+                                <ul class="fileGroup">
+                                    <li class="fileDown">
+                                        <a href="#" class="download">[국민체육진흥공단]마이페이지수정사항요청건1.hwp</a>
+                                    </li>
+                                    <li class="fileDown">
+                                        <a href="#" class="download">[국민체육진흥공단]마이페이지수정사항요청건1.hwp</a>
+                                    </li>
+                                </ul>
+
+                                <div class="requestCont">
+                                    <!-- 요청사항 컨텐츠 영역 -->
+                                    <p style="font-size: 16px;">
+                                        안녕하세요.
+                                        <br>유선상으로 수정요청사항 전달 드렸습니다.
+                                        <br>내용은
+                                        <br>붙혀 주신 아이콘에 기존 윤곽선을 살려서 적용해달라는 내용입니다.
+                                        <br>지난번에 보내 드린 파일 중
+                                        <br>개인정보 처리방침 작성지침 (공공기관편) pdf 파일의 19페이지를 보시면
+                                        <br>윤곽선에 관한 내용이 나오니 참고 부탁드립니다.
+                                        <br>수정 후 회신주세요.
+                                        <br>
+                                        <br>감사합니다.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="workArea">
+                                <div class="progressGroup">
+                                    <dl class="progress">
+                                        <dt class="progTit">진행상태</dt>
+                                        <dd class="progCont">
+                                            <span class="mark blue">접수</span>
+                                            <!-- 
+                                            <span class="mark blue">처리중</span>
+                                            <span class="mark mint">처리완료</span>
+                                            <span class="mark gray">검수완료</span> 
+                                            -->
+                                        </dd>
+                                    </dl>
+                                </div>
+                                <div class="workBox">
+                                    <div class="titleGroup">
+                                        <div class="title">댓글</div>
+                                        <button class="reload">새로고침</button>
+                                    </div>
+                                    <div class="commentsGroup">
+                                        <div class="commentBox">
+                                            <div class="cmtItem">
+                                                <div class="cmtTop">
+                                                    <img src="../../../common/images/iwms/ic_24_user.svg" alt="" class="profile">
+                                                    <span class="name">정형호</span>
+                                                    <span class="date">2025-04-07 13:00:00</span>
+                                                </div>
+                                                <div class="cmtCont">
+                                                    <span class="msg">첨부파일이 열리지 않습니다. 확인 후 댓글로 재전달 부탁드립니다.</span>
+                                                </div>
+                                            </div>
+                                            <div class="cmtItem">
+                                                <div class="cmtTop">
+                                                    <img src="../../../common/images/iwms/ic_24_user.svg" alt="" class="profile">
+                                                    <span class="name">정형호</span>
+                                                    <span class="date">2025-04-07 13:00:00</span>
+                                                </div>
+                                                <div class="cmtCont">
+                                                    <span class="msg">죄송합니다. 해당파일 다시 전달드립니다.</span>
+                                                    <div class="fileDown">
+                                                        <a href="#" class="download">[국민체육진흥공단]마이페이지수정사항마이페이지수정사항</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="cmtItem">
+                                                <div class="cmtTop">
+                                                    <img src="../../../common/images/iwms/ic_24_user.svg" alt="" class="profile">
+                                                    <span class="name">정형호</span>
+                                                    <span class="date">2025-04-07 13:00:00</span>
+                                                </div>
+                                                <div class="cmtCont">
+                                                    <span class="msg">위에 문서 확인 후 작업 진행 부탁드립니다.</span>
+                                                </div>
+                                            </div>
+                                            <div class="cmtItem me">
+                                                <div class="cmtTop">
+                                                    <span class="date">2025-04-07 13:00:00</span>
+                                                </div>
+                                                <div class="cmtCont">
+                                                    <span class="msg">네, 확인하였습니다.</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="registBox">
+                                            <textarea class="text" placeholder="메시지를 입력하세요."></textarea>
+                                            <div class="fileBox">
+                                                <label for="uploadBtn1" class="btnFile">파일선택</label>
+                                                <input type="file" id="uploadBtn1" class="uploadBtn">
+                                            </div>
+                                            <button type="button" class="btnRegist">등록</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="workBox">
+                                    <div class="titleGroup">
+                                        <div class="title">처리내역</div>
+                                    </div>
+                                    <div class="progDetailsGroup">
+                                        <ul class="progList">
+                                            <li class="progItem">
+                                                <a href="#" class="more">
+                                                    <img src="../../../common/images/iwms/ic_24_user.svg" alt="" class="profile">
+                                                    <span class="name">서호원</span>
+                                                    <span class="workStatus">접수대기</span>
+                                                    <span class="date">2025-04-07</span>
+                                                </a>
+                                            </li>
+                                            <li class="progItem">
+                                                <a href="#" class="more">
+                                                    <img src="../../../common/images/iwms/ic_24_user.svg" alt="" class="profile">
+                                                    <span class="name">고윤영</span>
+                                                    <span class="workStatus">접수대기</span>
+                                                    <span class="date">2025-04-07</span>
+                                                </a>
+                                            </li>
+                                            <li class="progItem">
+                                                <a href="#" class="more">
+                                                    <img src="../../../common/images/iwms/ic_24_user.svg" alt="" class="profile">
+                                                    <span class="name">정형호</span>
+                                                    <span class="workStatus">합의</span>
+                                                    <span class="date">2025-04-07</span>
+                                                </a>
+                                            </li>
+                                            <li class="progItem">
+                                                <a href="#" class="more">
+                                                    <img src="../../../common/images/iwms/ic_24_user.svg" alt="" class="profile">
+                                                    <span class="name">안경애</span>
+                                                    <span class="workStatus">협의요청</span>
+                                                    <span class="date">2025-04-07</span>
+                                                </a>
+                                            </li>
+                                            <li class="progItem">
+                                                <a href="#" class="more">
+                                                    <img src="../../../common/images/iwms/ic_24_user.svg" alt="" class="profile">
+                                                    <span class="name">박형식</span>
+                                                    <span class="workStatus">접수대기</span>
+                                                    <span class="date">2025-04-07</span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="workBox">
+                                    <div class="titleGroup">
+                                        <div class="title">작업내역</div>
+                                    </div>
+                                    <div class="historyGroup">
+                                        <div class="human">
+                                            <span class="manager">작업자 : </span>
+                                            <img src="../../../common/images/iwms/ic_24_user.svg" alt="" class="profile">
+                                            <span class="name">고윤영 과장</span>
+                                            <span class="team">디자인</span>
+                                        </div>
+                                        <div class="time">계획공수 : 4시간</div>
+                                        <div class="msg">
+                                            해당 문서 파악 후 이벤트 및 배너 작업 요청드립니다.<br>
+                                            (사이즈 : 800x800 , 300x400)
+                                        </div>
+                                        <div class="btnArea">
+                                            <button class="btn blue">접수</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- //컨텐츠 내용 -->
+
+
+
+
+                </div>
+                <!-- //콘텐츠 영역 -->
+
+            </div>
+            <!-- //중단영역 -->
+
+
+            <!-- 하단영역 -->
+            <div class="layoutFooter">
+            <!-- Footer -->
+            
+            </div>
+            <!-- //하단영역 -->
+
+        </div>
+    </div>
+
+    <!-- 팝업이 들어오는 영역 -->
+
+</div>
+</body>
+</html>

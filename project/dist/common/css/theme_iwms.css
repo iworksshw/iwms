@@ -1,0 +1,1029 @@
+@charset "UTF-8";
+/* ------------------------------------------------------------------------------------------ */
+/* ---------------------------------------- 테마 iwms ---------------------------------------- */
+/* ------------------------------------------------------------------------------------------ */
+/* -------------------------------------------------------------- */
+/* ------------------------ 기존 css 수정 ------------------------ */
+/* -------------------------------------------------------------- */
+.iwms {
+	/* ----------------------------------------- 테이블영역 button ----------------------------------------- */
+}
+.iwms .comPaging .start, .iwms .comPaging .prev, .iwms .comPaging .next, .iwms .comPaging .end {
+	height: 34px;
+}
+.iwms .comPaging .numList > li {
+	width: 34px;
+	height: 34px;
+	margin-left: 6px;
+}
+.iwms .comPaging .numList > li a {
+	color: #000;
+	font-weight: 500;
+	border-radius: 8px;
+	background: #EFF1F7;
+	align-content: center;
+}
+.iwms .comPaging .numList > li.on a {
+	color: #FFF;
+	background: #3569E7;
+}
+.iwms .cptTable .gridBtn {
+	height: 35px;
+}
+.iwms .cptTable .gridBtn.plus {
+	width: 35px;
+	font-size: 0;
+	background: #fff url(../../../common/images/iwms/ic_15_plus.svg) center no-repeat;
+	border: 1px solid var(--basic-dkBlue);
+}
+.iwms .cptTable .gridBtn.minus {
+	width: 35px;
+	font-size: 0;
+	background: #fff url(../../../common/images/iwms/ic_15_minus.svg) center no-repeat;
+	border: 1px solid var(--basic-dkBlue);
+}
+.iwms .cptTable select.iptSlt {
+	height: 35px;
+}
+.iwms .cptTable input.iptText {
+	height: 35px;
+}
+.iwms .cptTable .pointText {
+	width: 100%;
+	min-height: 14px;
+	margin-top: 6px;
+	padding-left: 18px;
+	color: #FF5C4A;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.3;
+	display: block;
+	background: url(../../../common/images/iwms/ic_14_redpoint.svg) left top no-repeat;
+}
+.iwms .cptTable .pointText:first-child {
+	margin-top: 0;
+}
+
+/* -------------------------------------------------------------- */
+/* ------------------------ 기존 css 수정 ------------------------ */
+/* -------------------------------------------------------------- */
+.iwms {
+	/* 레이아웃 수정 */
+	/* ---------------------------- 테이블 ---------------------------- */
+	/* ---------------------------- 그리드 ---------------------------- */
+	/* 그리드 추가조작 */
+}
+.iwms .cptHeader .headerArea {
+	border-bottom: 1px solid #E1E5EF;
+	box-shadow: none;
+}
+.iwms.lytLayout .layoutContainer .layoutCont .layoutContArea {
+	background: #FFF;
+}
+.iwms .cptGroupTop .total.bold {
+	margin-right: 2px;
+	font-weight: 500;
+	color: #000;
+	font-size: 18px;
+}
+.iwms .cptGroupTop .comSideOpt .srhBtn {
+	height: 35px;
+}
+.iwms .cptGroupTop .comSideOpt select {
+	min-width: max-content;
+	padding-left: 10px;
+	padding-right: 40px;
+	height: 35px;
+	background-position-x: calc(100% - 10px);
+}
+.iwms .cptTable .required {
+	color: var(--basic-red);
+}
+.iwms .cptGrid {
+	overflow: auto;
+	position: relative;
+	/* 스크롤바 */
+}
+.iwms .cptGrid:last-child {
+	margin-bottom: 0;
+}
+.iwms .cptGrid::-webkit-scrollbar {
+	width: 6px;
+	height: 6px;
+	border-radius: 3px;
+	background: rgba(0, 0, 0, 0.2);
+}
+.iwms .cptGrid::-webkit-scrollbar-thumb {
+	width: 6px;
+	height: 6px;
+	border-radius: 3px;
+	background: rgba(0, 0, 0, 0.2);
+}
+.iwms .cptGrid .gridTb {
+	border-collapse: separate;
+}
+.iwms .cptGrid .gridTb th {
+	border-radius: 0 !important;
+	border-left: 1px solid #666;
+}
+.iwms .cptGrid .gridTb th:first-child {
+	border-left: 0;
+	padding: 5px;
+}
+.iwms .cptGrid .gridTb th:last-child {
+	padding: 5px;
+}
+.iwms .cptGrid .gridTb td {
+	border-radius: 0 !important;
+}
+.iwms .cptGrid .gridTb td:first-child {
+	border-left: 0;
+	padding: 5px;
+}
+.iwms .cptGrid .gridTb td:last-child {
+	padding: 5px;
+}
+.iwms .cptGrid .gridTb thead {
+	position: sticky;
+	left: 0;
+	top: 0;
+	z-index: 2;
+}
+.iwms .cptGrid .gridTb thead tr:nth-child(n+2) th {
+	border-top: 1px solid #666;
+}
+.iwms .cptGrid .gridTb tbody td {
+	border-left: 1px solid #ddd;
+}
+.iwms .cptGrid .gridTb tbody td:first-child::after {
+	display: none;
+}
+.iwms .cptGrid .gridTb tbody td:last-child::after {
+	display: none;
+}
+.iwms .cptGrid .gridTb tfoot td {
+	border-left: 1px solid #fff;
+}
+.iwms .cptGrid .gridTb tr th.line {
+	border-left: 1px solid #666;
+}
+.iwms .cptGrid .gridTb tr td.line {
+	border-left: 1px solid #ddd;
+}
+
+/* ------------------------ Tab + 상세검색 ----------------------- */
+.cptSearchDetails {
+	width: 100%;
+	padding: 13px 20px;
+	border-radius: 10px;
+	background: #EFF1F7;
+}
+.cptSearchDetails .quickArea {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.cptSearchDetails .quickArea .stateTab {
+	width: 100%;
+	display: flex;
+	gap: 16px;
+}
+.cptSearchDetails .quickArea .stateTab .tabMenu {
+	position: relative;
+}
+.cptSearchDetails .quickArea .stateTab .tabMenu .tabName {
+	width: max-content;
+	min-width: 110px;
+	height: 35px;
+	padding: 0 20px;
+	line-height: 1;
+	color: #757575;
+	align-content: center;
+	font-size: 16px;
+	font-weight: 500;
+	text-align: center;
+	display: block;
+}
+.cptSearchDetails .quickArea .stateTab .tabMenu .iptTab {
+	width: 1px;
+	height: 1px;
+	font-size: 0;
+	position: absolute;
+	overflow: hidden;
+	opacity: 0.01;
+}
+.cptSearchDetails .quickArea .stateTab .tabMenu .iptTab:checked + .tabName {
+	border-radius: 17.5px;
+	background: #0C1F2B;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.2);
+	color: #FFF;
+}
+.cptSearchDetails .quickArea .stateTab .tabMenu .iptTab:disabled + .tabName {
+	color: #ccc;
+}
+.cptSearchDetails .quickArea .stateTab .tabMenu .iptTab:checked:disabled + .tabName {
+	background: none;
+	box-shadow: none;
+	color: #ccc;
+}
+.cptSearchDetails .quickArea .btnDetails {
+	width: 35px;
+	height: 35px;
+	border: 0;
+	border-radius: 6px;
+	background: #0C1F2B url(../../../common/images/iwms/ic_24_details.svg) center no-repeat;
+}
+.cptSearchDetails.on .detailsArea {
+	display: block;
+}
+.cptSearchDetails .detailsArea {
+	width: 100%;
+	margin-top: 13px;
+	border-top: 1px solid #ddd;
+	display: none;
+}
+.cptSearchDetails .detailsArea .cptSearchArea {
+	margin-top: 0;
+	padding: 20px 0 7px;
+	border: 0;
+	background: transparent;
+}
+.cptSearchDetails .detailsArea .cptSearchArea table th {
+	padding-left: 40px;
+	position: relative;
+}
+.cptSearchDetails .detailsArea .cptSearchArea table th:first-child {
+	padding-left: 20px;
+}
+.cptSearchDetails .detailsArea .cptSearchArea table th:not(:first-child):before {
+	content: "";
+	width: 1px;
+	height: 35px;
+	background: #ddd;
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 10px;
+}
+.cptSearchDetails .detailsArea .cptSearchArea table td {
+	padding-right: 40px;
+	position: relative;
+}
+.cptSearchDetails .detailsArea .cptSearchArea table td:last-child {
+	padding-right: 20px;
+}
+
+/* ------------------------ 유지보수 리스트 ----------------------- */
+.cptCardRequest {
+	width: 100%;
+}
+.cptCardRequest .cardList {
+	width: 100%;
+	display: flex;
+	gap: 30px;
+	flex-wrap: wrap;
+}
+.cptCardRequest .cardList .cardItem {
+	width: calc(33.333% - 20px);
+	padding: 30px 20px 20px;
+	border-radius: 20px;
+	border: 1px solid #E1E5EF;
+	background: #FFF;
+}
+.cptCardRequest .cardList .cardItem:hover {
+	box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.1);
+}
+.cptCardRequest .cardList .cardItem .state {
+	width: 100%;
+	margin-bottom: 12px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px;
+}
+.cptCardRequest .cardList .cardItem .state .piece {
+	width: max-content;
+	height: 25px;
+	padding: 0 6px;
+	border-radius: 4px;
+	color: #000;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1;
+	align-content: center;
+	background: #EFF1F7;
+}
+.cptCardRequest .cardList .cardItem .state .piece.urgency {
+	background: #FF5C4A;
+	color: #FFF;
+}
+.cptCardRequest .cardList .cardItem .title {
+	width: 100%;
+	height: 66px;
+	color: #000;
+	font-family: "Montserrat", "Pretendard";
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 33px;
+	white-space: normal;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	text-overflow: ellipsis;
+}
+.cptCardRequest .cardList .cardItem .info {
+	width: 100%;
+	margin-top: 12px;
+	display: flex;
+}
+.cptCardRequest .cardList .cardItem .info .item {
+	width: max-content;
+	height: 17px;
+	margin-left: 17px;
+	color: #757575;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1;
+	position: relative;
+}
+.cptCardRequest .cardList .cardItem .info .item::before {
+	content: "";
+	width: 1px;
+	height: 12px;
+	background: #ddd;
+	display: block;
+	position: absolute;
+	left: -9px;
+	top: 1px;
+}
+.cptCardRequest .cardList .cardItem .info .item:first-child {
+	margin-left: 0;
+}
+.cptCardRequest .cardList .cardItem .info .item:first-child::before {
+	display: none;
+}
+.cptCardRequest .cardList .cardItem .statusBar {
+	width: 100%;
+	margin-top: 36px;
+}
+.cptCardRequest .cardList .cardItem .statusBar .startEnd {
+	width: 100%;
+	height: 21px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.cptCardRequest .cardList .cardItem .statusBar .startEnd .start {
+	width: max-content;
+	height: 17px;
+	color: #757575;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1;
+	display: block;
+}
+.cptCardRequest .cardList .cardItem .statusBar .startEnd .end {
+	width: max-content;
+	height: 21px;
+	display: flex;
+}
+.cptCardRequest .cardList .cardItem .statusBar .startEnd .end .text {
+	color: #757575;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 1;
+	display: block;
+	align-content: end;
+}
+.cptCardRequest .cardList .cardItem .statusBar .startEnd .end .text.blue {
+	color: #3569E7;
+}
+.cptCardRequest .cardList .cardItem .statusBar .startEnd .end .text.orange {
+	color: #FF5C4A;
+}
+.cptCardRequest .cardList .cardItem .statusBar .startEnd .end .text.black {
+	color: #000000;
+}
+.cptCardRequest .cardList .cardItem .statusBar .startEnd .end .text.gray {
+	color: #757575;
+}
+.cptCardRequest .cardList .cardItem .statusBar .startEnd .end .tooltip {
+	width: 20px;
+	height: 20px;
+	margin-left: 4px;
+	border: 0;
+	border-radius: 10px;
+	position: relative;
+	cursor: pointer;
+	background: #A1A9BA url(../../../common/images/iwms/ic_20_question.svg) center no-repeat;
+}
+.cptCardRequest .cardList .cardItem .statusBar .startEnd .end .tooltip.on .tipPopup {
+	display: block;
+}
+.cptCardRequest .cardList .cardItem .statusBar .startEnd .end .tooltip .tipPopup {
+	width: max-content;
+	max-width: 360px;
+	padding: 12px 16px;
+	display: none;
+	position: absolute;
+	top: 30px;
+	right: 0;
+	border-radius: 6px;
+	background: #0C1F2B;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.cptCardRequest .cardList .cardItem .statusBar .startEnd .end .tooltip .tipPopup dl {
+	width: 100%;
+}
+.cptCardRequest .cardList .cardItem .statusBar .startEnd .end .tooltip .tipPopup dl dt {
+	width: 100%;
+	text-align: left;
+	color: #FFF;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 26px;
+}
+.cptCardRequest .cardList .cardItem .statusBar .startEnd .end .tooltip .tipPopup dl dd {
+	width: 100%;
+	text-align: left;
+	margin-top: 4px;
+	color: #C0C7CD;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 26px;
+}
+.cptCardRequest .cardList .cardItem .statusBar .bar {
+	width: 100%;
+	height: 6px;
+	margin-top: 12px;
+	background: #EFF1F7;
+	border-radius: 3px;
+	position: relative;
+	overflow: hidden;
+}
+.cptCardRequest .cardList .cardItem .statusBar .bar .barInner {
+	width: auto;
+	height: 6px;
+	background: #3569E7;
+	border-radius: 3px;
+}
+.cptCardRequest .cardList .cardItem .statusBar .workGroup {
+	width: 100%;
+	margin-top: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	gap: 8px;
+}
+.cptCardRequest .cardList .cardItem .statusBar .workGroup .status {
+	width: 84px;
+	height: 84px;
+	padding-top: 17px;
+	border-radius: 50%;
+	background: #EFF1F7;
+}
+.cptCardRequest .cardList .cardItem .statusBar .workGroup .status dt {
+	width: 100%;
+	color: #333;
+	text-align: center;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 20px;
+}
+.cptCardRequest .cardList .cardItem .statusBar .workGroup .status dd {
+	width: 100%;
+	margin-top: 4px;
+	color: #000;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 23px;
+}
+.cptCardRequest + .comPaging {
+	margin-top: 60px;
+}
+
+/* -------------------- 유지보수 상세 -------------------- */
+.cptRequestView {
+	width: 100%;
+	height: calc(100vh - 250px);
+	display: flex;
+	gap: 30px;
+}
+.cptRequestView .questArea {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	flex-grow: 1;
+	flex-shrink: 1;
+	background: #fff;
+	overflow-y: auto;
+}
+.cptRequestView .workArea {
+	width: 610px;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: flex-start;
+	flex-grow: 0;
+	flex-shrink: 0;
+	overflow-y: auto;
+}
+.cptRequestView .state {
+	width: 100%;
+	margin-bottom: 12px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px;
+}
+.cptRequestView .state .piece {
+	width: max-content;
+	height: 25px;
+	padding: 0 6px;
+	border-radius: 4px;
+	color: #000;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 1;
+	align-content: center;
+	background: #EFF1F7;
+}
+.cptRequestView .state .piece.urgency {
+	background: #FF5C4A;
+	color: #FFF;
+}
+.cptRequestView .title {
+	width: 100%;
+	color: #000;
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 1.5;
+}
+.cptRequestView .info {
+	width: 100%;
+	margin-top: 4px;
+	display: flex;
+}
+.cptRequestView .info .item {
+	width: max-content;
+	height: 20px;
+	margin-left: 25px;
+	color: #757575;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1;
+	position: relative;
+}
+.cptRequestView .info .item::before {
+	content: "";
+	width: 1px;
+	height: 14px;
+	background: #ddd;
+	display: block;
+	position: absolute;
+	left: -12px;
+	top: 1px;
+}
+.cptRequestView .info .item:first-child {
+	margin-left: 0;
+}
+.cptRequestView .info .item:first-child::before {
+	display: none;
+}
+.cptRequestView .requestTop {
+	width: 100%;
+	padding-bottom: 12px;
+	margin-bottom: 30px;
+	display: flex;
+	justify-content: space-between;
+	margin-top: 40px;
+	border-bottom: 1px solid #000;
+}
+.cptRequestView .requestTop .alignL {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	gap: 8px;
+}
+.cptRequestView .requestTop .alignR {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	gap: 8px;
+}
+.cptRequestView .fileGroup {
+	width: 100%;
+	margin-bottom: 40px;
+}
+.cptRequestView .fileDown {
+	width: 100%;
+	min-height: 50px;
+	margin-top: 8px;
+	padding-left: 36px;
+	border-radius: 6px;
+	border: 1px solid #BBB;
+	display: flex;
+	background: #FFF url(../../../common/images/iwms/ic_16_attach.svg) left 15px center no-repeat;
+}
+.cptRequestView .fileDown:first-child {
+	margin-top: 0;
+}
+.cptRequestView .fileDown .download {
+	width: 100%;
+	min-height: 48px;
+	padding: 10px 37px 10px 0;
+	color: #000;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1;
+	display: block;
+	background: url(../../../common/images/iwms/ic_24_download.svg) right 13px center no-repeat;
+	align-content: center;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: block;
+}
+.cptRequestView .requestCont {
+	width: 100%;
+	padding: 0 0 60px;
+	border-bottom: 1px solid #E1E5EF;
+}
+.cptRequestView .progressGroup {
+	width: 100%;
+}
+.cptRequestView .progressGroup .progress {
+	width: 100%;
+	padding: 12px 16px;
+	display: flex;
+	justify-content: space-between;
+	border-radius: 10px;
+	background: #EFF5FF;
+	align-items: center;
+}
+.cptRequestView .progressGroup .progress .progTit {
+	width: max-content;
+	height: 100%;
+	color: #000;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1;
+}
+.cptRequestView .progressGroup .progress .progCont {
+	width: max-content;
+}
+.cptRequestView .progressGroup .progress .progCont .mark {
+	width: max-content;
+	min-height: 33px;
+	padding: 0 20px;
+	border-radius: 17px;
+	display: block;
+	align-content: center;
+	color: #FFF;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 1;
+	background: #3569E7;
+}
+.cptRequestView .progressGroup .progress .progCont .mark.blue {
+	background: #3569E7;
+}
+.cptRequestView .progressGroup .progress .progCont .mark.mint {
+	background: #01C290;
+}
+.cptRequestView .progressGroup .progress .progCont .mark.gray {
+	background: #96A0B5;
+}
+.cptRequestView .workBox {
+	width: 100%;
+	margin-top: 30px;
+}
+.cptRequestView .workBox .titleGroup {
+	width: 100%;
+	margin-bottom: 4px;
+	display: flex;
+	justify-content: space-between;
+}
+.cptRequestView .workBox .titleGroup .title {
+	width: max-content;
+	min-height: 35px;
+	color: #000;
+	font-size: 22px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 35px;
+}
+.cptRequestView .workBox .titleGroup .reload {
+	width: max-content;
+	min-height: 35px;
+	padding-left: 18px;
+	border: 0;
+	background: url(../../../common/images/iwms/ic_16_reload.svg) left center no-repeat;
+	color: #6F7176;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 20px;
+}
+.cptRequestView .commentsGroup {
+	width: 100%;
+	padding: 20px 16px 16px;
+	border-radius: 10px;
+	border: 1px solid #A1A9BA;
+	background: #FFF;
+}
+.cptRequestView .commentsGroup .commentBox {
+	width: 100%;
+	max-height: 360px;
+	overflow-y: auto;
+}
+.cptRequestView .commentsGroup .commentBox::-webkit-scrollbar {
+	width: 10px;
+	height: 12px;
+}
+.cptRequestView .commentsGroup .commentBox::-webkit-scrollbar-thumb {
+	background: #aaa;
+	border: 3px solid #fff;
+	border-radius: 5px;
+}
+.cptRequestView .commentsGroup .commentBox .cmtItem {
+	width: 100%;
+	margin-top: 12px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.cptRequestView .commentsGroup .commentBox .cmtItem:first-child {
+	margin-top: 0;
+}
+.cptRequestView .commentsGroup .commentBox .cmtItem.me {
+	justify-content: flex-end;
+}
+.cptRequestView .commentsGroup .commentBox .cmtItem.me .cmtTop {
+	justify-content: flex-end;
+}
+.cptRequestView .commentsGroup .commentBox .cmtItem.me .cmtCont {
+	max-width: 464px;
+}
+.cptRequestView .commentsGroup .commentBox .cmtItem .cmtTop {
+	width: 100%;
+	max-width: 464px;
+	display: flex;
+	gap: 8px;
+}
+.cptRequestView .commentsGroup .commentBox .cmtItem .cmtTop .profile {
+	width: 26px;
+	height: 26px;
+	border-radius: 50%;
+	background: #EFF1F7;
+}
+.cptRequestView .commentsGroup .commentBox .cmtItem .cmtTop .name {
+	color: #000;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 26px;
+}
+.cptRequestView .commentsGroup .commentBox .cmtItem .cmtTop .date {
+	color: #999;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 26px;
+}
+.cptRequestView .commentsGroup .commentBox .cmtItem .cmtCont {
+	width: max-content;
+	max-width: 430px;
+	margin-left: 34px;
+	margin-top: 5px;
+	padding: 8px 10px;
+	border-radius: 10px;
+	background: #F4F6FA;
+}
+.cptRequestView .commentsGroup .commentBox .cmtItem .cmtCont .msg {
+	color: #333;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.6;
+}
+.cptRequestView .commentsGroup .commentBox .cmtItem .cmtCont .fileDown {
+	min-height: 40px;
+}
+.cptRequestView .commentsGroup .commentBox .cmtItem .cmtCont .fileDown .download {
+	min-height: 38px;
+	padding: 4px 37px 4px 0;
+}
+.cptRequestView .commentsGroup .registBox {
+	width: 100%;
+	margin-top: 12px;
+	padding-top: 12px;
+	border-top: 1px solid #DDD;
+	display: flex;
+	gap: 8px;
+}
+.cptRequestView .commentsGroup .registBox .text {
+	width: 100%;
+	height: 35px;
+	padding: 7px 10px;
+	flex-grow: 1;
+	flex-shrink: 1;
+	border: 0;
+	overflow: hidden;
+}
+.cptRequestView .commentsGroup .registBox .fileBox {
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+	background: #EFF1F7;
+}
+.cptRequestView .commentsGroup .registBox .fileBox .btnFile {
+	width: 100%;
+	height: 100%;
+	font-size: 0;
+	display: block;
+	background: url(../../../common/images/iwms/ic_16_attach.svg) center/20px no-repeat;
+}
+.cptRequestView .commentsGroup .registBox .btnRegist {
+	width: max-content;
+	height: 35px;
+	padding: 0 30px;
+	border: 0;
+	border-radius: 6px;
+	background: #0C1F2B;
+	color: #FFF;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	white-space: nowrap;
+}
+.cptRequestView .progDetailsGroup {
+	width: 100%;
+	padding: 16px 3px 16px 16px;
+	border-radius: 6px;
+	background: #F4F6FA;
+}
+.cptRequestView .progDetailsGroup .progList {
+	width: 100%;
+	max-height: 140px;
+	padding-right: 7px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	overflow-y: auto;
+}
+.cptRequestView .progDetailsGroup .progList::-webkit-scrollbar {
+	width: 10px;
+	height: 12px;
+}
+.cptRequestView .progDetailsGroup .progList::-webkit-scrollbar-thumb {
+	background: #aaa;
+	border: 3px solid #F4F6FA;
+	border-radius: 5px;
+}
+.cptRequestView .progDetailsGroup .progList .progItem {
+	width: 100%;
+	padding: 3px 10px;
+	border-radius: 6px;
+	border: 1px solid #FFF;
+	background: #FFF;
+}
+.cptRequestView .progDetailsGroup .progList .progItem:hover {
+	border: 1px solid #3569E7;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+.cptRequestView .progDetailsGroup .progList .progItem .more {
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+.cptRequestView .progDetailsGroup .progList .progItem .profile {
+	width: 26px;
+	height: 26px;
+	border-radius: 13px;
+	background: #EFF1F7;
+}
+.cptRequestView .progDetailsGroup .progList .progItem .name {
+	margin-left: 8px;
+	color: #000;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1;
+}
+.cptRequestView .progDetailsGroup .progList .progItem .workStatus {
+	margin-left: 40px;
+	color: #000;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 1;
+}
+.cptRequestView .progDetailsGroup .progList .progItem .date {
+	margin-left: 8px;
+	color: #999;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1;
+}
+.cptRequestView .historyGroup {
+	width: 100%;
+	padding: 16px;
+	border-radius: 6px;
+	background: #F4F6FA;
+}
+.cptRequestView .historyGroup .human {
+	width: 100%;
+	padding: 3px 10px;
+	border-radius: 6px;
+	border: 1px solid #FFF;
+	background: #FFF;
+	display: flex;
+	align-items: center;
+}
+.cptRequestView .historyGroup .human .manager {
+	color: #000;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1;
+}
+.cptRequestView .historyGroup .human .profile {
+	margin-left: 8px;
+	width: 26px;
+	height: 26px;
+	border-radius: 13px;
+	background: #EFF1F7;
+}
+.cptRequestView .historyGroup .human .name {
+	margin-left: 8px;
+	color: #000;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1;
+}
+.cptRequestView .historyGroup .human .team {
+	margin-left: 26px;
+	color: #999;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1;
+	display: block;
+	position: relative;
+}
+.cptRequestView .historyGroup .human .team::before {
+	content: "";
+	width: 2px;
+	height: 14px;
+	background: #ddd;
+	display: block;
+	position: absolute;
+	left: -12px;
+	top: 0px;
+}
+.cptRequestView .historyGroup .time {
+	margin-top: 12px;
+	color: #3569E7;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 26px;
+}
+.cptRequestView .historyGroup .msg {
+	margin-top: 4px;
+	padding-bottom: 12px;
+	color: #333;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.5;
+}
+.cptRequestView .historyGroup .btnArea {
+	width: 100%;
+	margin-top: 12px;
+	padding-top: 12px;
+	border-top: 1px solid #ddd;
+	display: flex;
+	justify-content: flex-end;
+}
+.cptRequestView .btn {
+	min-width: max-content;
+	padding: 0 30px;
+	height: 35px;
+	margin-left: 0;
+	font-size: 16px;
+	font-weight: 500;
+	white-space: nowrap;
+	line-height: 1;
+	border-radius: 6px;
+	display: flex;
+	align-items: center;
+}
+/*# sourceMappingURL=../maps/theme_iwms.css.map */

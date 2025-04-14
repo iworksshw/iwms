@@ -1,0 +1,48 @@
+/* ------------------------ Tab + 상세검색 ----------------------- */
+.cptSearchDetails {
+    width: 100%; padding: 13px 20px; border-radius: 10px; background: #EFF1F7;
+    .quickArea {
+        width: 100%; display: flex; justify-content: space-between;
+        .stateTab {
+            width: 100%; display: flex; gap: 16px;
+            .tabMenu {
+                position: relative; 
+                .tabName {
+                    width: max-content; min-width: 110px; height: 35px; padding: 0 20px; line-height: 1; color: #757575; align-content: center;
+                    font-size: 16px; font-weight: 500; text-align: center; display: block;
+                }
+                .iptTab {
+                    width: 1px; height: 1px; font-size: 0; position: absolute; overflow: hidden; opacity: 0.01;
+                    &:checked + .tabName {border-radius: 17.5px; background: #0C1F2B; box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.20); color: #FFF;}
+                    &:disabled + .tabName {color: #ccc;}
+                    &:checked:disabled + .tabName {background: none; box-shadow: none; color: #ccc;}
+                }
+            }
+        }
+        .btnDetails {
+            width: 35px; height: 35px; border: 0; border-radius: 6px; background: #0C1F2B url(../../../common/images/iwms/ic_24_details.svg) center no-repeat;
+        }
+    }
+    &.on {
+        .detailsArea {display: block;}
+    }
+    .detailsArea {
+        width: 100%; margin-top: 13px; border-top: 1px solid #ddd; display: none;
+        .cptSearchArea {
+            margin-top: 0; padding: 20px 0 7px; border: 0; background: transparent;
+            table {
+                th {
+                    padding-left: 40px; position: relative;
+                    &:first-child {padding-left: 20px;}
+                    &:not(:first-child) {
+                        &:before {content: ''; width: 1px; height: 35px; background: #ddd; display: block; position: absolute; left: 0; top: 10px; }
+                    }
+                }
+                td {
+                    padding-right: 40px; position: relative;
+                    &:last-child {padding-right: 20px;}
+                }
+            }
+        }
+    }
+}
