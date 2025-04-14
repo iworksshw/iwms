@@ -1055,7 +1055,7 @@
 }
 .cptRequestView .managerGroup .sltBox .sltItem .iptRdo:checked + .rdoLbl {
 	color: #3569E7;
-	background: #F7F9FF url(../../../common/images/iwms/ic_slt_manager.svg) right 12px center no-repeat;
+	background: #F7F9FF url(../../common/images/iwms/ic_slt_manager.svg) right 12px center no-repeat;
 }
 .cptRequestView .managerGroup .sltBox .sltItem .rdoLbl {
 	width: 100%;
@@ -1070,7 +1070,7 @@
 }
 .cptRequestView .managerGroup .sltBox .sltItem .iptChk:checked + .chkLbl {
 	color: #3569E7;
-	background: #F7F9FF url(../../../common/images/iwms/ic_19_chk_on.svg) 10px center no-repeat;
+	background: #F7F9FF url(../../common/images/iwms/ic_19_chk_on.svg) 10px center no-repeat;
 }
 .cptRequestView .managerGroup .sltBox .sltItem .chkLbl {
 	width: 100%;
@@ -1082,7 +1082,7 @@
 	font-weight: 400;
 	line-height: 18px;
 	display: block;
-	background: url(../../../common/images/iwms/ic_19_chk_off.svg) 10px center no-repeat;
+	background: url(../../common/images/iwms/ic_19_chk_off.svg) 10px center no-repeat;
 }
 .cptRequestView .workGroup {
 	width: 100%;

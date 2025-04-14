@@ -202,17 +202,17 @@
             .sltItem {
                 .iptRdo {
 
-                    &:checked + .rdoLbl {color: #3569E7; background:#F7F9FF url(../../../common/images/iwms/ic_slt_manager.svg) right 12px center no-repeat;}
+                    &:checked + .rdoLbl {color: #3569E7; background:#F7F9FF url(../../common/images/iwms/ic_slt_manager.svg) right 12px center no-repeat;}
                 }
                 .rdoLbl {
                     width: 100%; height: 39px; padding: 10px; color: #333; font-size: 16px; font-style: normal; font-weight: 400; line-height: 18px; display: block;
                 }
                 .iptChk {
-                    &:checked + .chkLbl {color: #3569E7; background:#F7F9FF url(../../../common/images/iwms/ic_19_chk_on.svg) 10px center no-repeat;}
+                    &:checked + .chkLbl {color: #3569E7; background:#F7F9FF url(../../common/images/iwms/ic_19_chk_on.svg) 10px center no-repeat;}
                 }
                 .chkLbl {
                     width: 100%; height: 39px; padding: 10px 10px 10px 33px; color: #333; font-size: 16px; font-style: normal; font-weight: 400; 
-                    line-height: 18px; display: block; background: url(../../../common/images/iwms/ic_19_chk_off.svg) 10px center no-repeat;
+                    line-height: 18px; display: block; background: url(../../common/images/iwms/ic_19_chk_off.svg) 10px center no-repeat;
                 }
             }
         }
