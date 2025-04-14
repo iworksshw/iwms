@@ -47,7 +47,7 @@
                         }
                         .tooltip {
                             width: 20px; height: 20px; margin-left: 4px; border: 0; border-radius: 10px; position: relative; cursor: pointer;
-                            background:#A1A9BA url(../../../common/images/iwms/ic_20_question.svg) center no-repeat;
+                            background:#A1A9BA url(../../common/images/iwms/ic_20_question.svg) center no-repeat;
                             &.on {.tipPopup{display: block;}}
                             .tipPopup {
                                 width: max-content; max-width: 360px; padding: 12px 16px; display: none; position: absolute; top: 30px; right: 0; 

@@ -46,11 +46,11 @@
     }
     .fileDown {
         width: 100%; min-height: 50px; margin-top: 8px; padding-left: 36px; border-radius: 6px; border: 1px solid #BBB; display: flex; 
-        background:#FFF url(../../../common/images/iwms/ic_16_attach.svg) left 15px center no-repeat;
+        background:#FFF url(../../common/images/iwms/ic_16_attach.svg) left 15px center no-repeat;
         &:first-child {margin-top: 0;}
         .download {
             width: 100%; min-height: 48px; padding: 10px 37px 10px 0; color: #000; font-size: 16px; font-weight: 400; line-height: 1; display: block;
-            background: url(../../../common/images/iwms/ic_24_download.svg) right 13px center no-repeat; align-content: center; @include line1();
+            background: url(../../common/images/iwms/ic_24_download.svg) right 13px center no-repeat; align-content: center; @include line1();
         }
     }
     .requestCont {
@@ -85,7 +85,7 @@
                 width: max-content; min-height: 35px; color: #000; font-size: 22px; font-style: normal; font-weight: 700; line-height: 35px;
             }
             .reload {
-                width: max-content; min-height: 35px; padding-left: 18px; border: 0; background: url(../../../common/images/iwms/ic_16_reload.svg) left center no-repeat;
+                width: max-content; min-height: 35px; padding-left: 18px; border: 0; background: url(../../common/images/iwms/ic_16_reload.svg) left center no-repeat;
                 color: #6F7176; font-size: 14px; font-style: normal; font-weight: 400; line-height: 20px;
             }
         }
@@ -134,7 +134,7 @@
                 background: #EFF1F7;
                 .btnFile {
                     width: 100%; height: 100%; font-size: 0; display: block;
-                    background: url(../../../common/images/iwms/ic_16_attach.svg) center / 20px no-repeat;
+                    background: url(../../common/images/iwms/ic_16_attach.svg) center / 20px no-repeat;
                 }
             }
             .btnRegist {
