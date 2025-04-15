@@ -173,7 +173,7 @@
 
                     <!-- 컨텐츠 내용 -->
                     <div class="layoutContArea">
-                        
+
                         <!-- h2 타이틀 -->
                         <div class="comH2Group">
                             <div class="alignL">
@@ -182,224 +182,417 @@
                             <div class="alignR">
                                 <ul class="locaGroup">
                                     <li class="item">HOME</li>
-                                    <li class="item">업무요청</li>
+                                    <li class="item">iWMS</li>
                                     <li class="item">유지보수</li>
                                 </ul>
                             </div>
                         </div>
 
-                        <div class="cptSearchArea">
-                            <table>
-                                <caption></caption>
-                                <colgroup>
-                                    <col style="width:150px;">
-                                    <col style="width:auto;">
-                                    <col style="width:150px;">
-                                    <col style="width:auto;">
-                                </colgroup>
-                                <tbody>
-                                    <tr>
-                                        <th>진행상태</th>
-                                        <td colspan="3">
-                                            <div class="frmGroup">
-                                                <div class="frmChoBox"><input id="chk101" type="checkbox" class="iptChk" name="chk101"><label for="chk101" class="iptLbl">전체선택</label></div>
-                                                <div class="frmChoBox"><input id="chk102" type="checkbox" class="iptChk" name="chk101"><label for="chk102" class="iptLbl">요청</label></div>
-                                                <div class="frmChoBox"><input id="chk103" type="checkbox" class="iptChk" name="chk101"><label for="chk103" class="iptLbl">접수</label></div>
-                                                <div class="frmChoBox"><input id="chk104" type="checkbox" class="iptChk" name="chk101"><label for="chk104" class="iptLbl">처리중</label></div>
-                                                <div class="frmChoBox"><input id="chk105" type="checkbox" class="iptChk" name="chk101"><label for="chk105" class="iptLbl">처리완료</label></div>
-                                                <div class="frmChoBox"><input id="chk106" type="checkbox" class="iptChk" name="chk101"><label for="chk106" class="iptLbl">검수완료</label></div>
-                                                <div class="frmChoBox"><input id="chk107" type="checkbox" class="iptChk" name="chk101"><label for="chk107" class="iptLbl">검토</label></div>
-                                                <div class="frmChoBox"><input id="chk108" type="checkbox" class="iptChk" name="chk101"><label for="chk108" class="iptLbl">반려</label></div>
-                                                <div class="frmChoBox"><input id="chk109" type="checkbox" class="iptChk" name="chk101"><label for="chk109" class="iptLbl">협의요청</label></div>
-                                                <div class="frmChoBox"><input id="chk110" type="checkbox" class="iptChk" name="chk101"><label for="chk110" class="iptLbl">취소</label></div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>사이트구분</th>
-                                        <td>
-                                            <div class="frmGroup">
-                                                <select name="" id="" class="iptSlt">
-                                                    <option value="">전체</option>
-                                                    <option value="">한국생활안내</option>
-                                                    <option value="">정보더하기</option>
-                                                    <option value="">장애인체력100</option>
-                                                </select>
-                                            </div>
-                                        </td>
-                                        <th>키워드검색</th>
-                                        <td>
-                                            <div class="frmGroup">
-                                                <select name="" id="" class="iptSlt frmSm">
-                                                    <option value="">요청제목</option>
-                                                    <option value="">요청내용</option>
-                                                    <option value="">등록자</option>
-                                                    <option value="">검수자</option>
-                                                    <option value="">처리자</option>
-                                                </select>
-                                                <input type="text" class="iptText" />
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>날짜검색</th>
-                                        <td>
-                                            <div class="frmGroup">
-                                                <select name="" id="" class="iptSlt frmSm">
-                                                    <option value="">등록일</option>
-                                                    <option value="">처리일</option>
-                                                </select>
-                                                <div class="tui-datepicker-input tui-datetime-input tui-has-focus">
-                                                    <input id="startpicker-input" type="text" aria-label="Date">
-                                                    <div id="startpicker-container" style="margin-left: -1px;"></div>
-                                                </div>
-                                                <div class="textBox deco">~</div>
-                                                <div class="tui-datepicker-input tui-datetime-input tui-has-focus">
-                                                    <input id="endpicker-input" type="text" aria-label="Date">
-                                                    <div id="endpicker-container" style="margin-left: -1px;"></div>
-                                                </div>
+                        <div class="cptSearchDetails">
+                            <div class="quickArea">
+                                <div class="stateTab">
+                                    <div class="tabMenu"><input type="radio" id="tab01" class="iptTab" name="tab01" checked><label class="tabName" for="tab01">전체</label></div>
+                                    <div class="tabMenu"><input type="radio" id="tab02" class="iptTab" name="tab01"><label class="tabName" for="tab02">처리중</label></div>
+                                    <div class="tabMenu"><input type="radio" id="tab03" class="iptTab" name="tab01"><label class="tabName" for="tab03">처리완료</label></div>
+                                </div>
+                                <button type="button" class="btnDetails" onclick="searchDetails ();">상세검색</button>
+                            </div>
+                            <div class="detailsArea">
+                                <div class="cptSearchArea">
+                                    <table>
+                                        <caption></caption>
+                                        <colgroup>
+                                            <col style="width:150px;">
+                                            <col style="width:auto;">
+                                            <col style="width:150px;">
+                                            <col style="width:auto;">
+                                        </colgroup>
+                                        <tbody>
+                                            <tr>
+                                                <th>프로젝트</th>
+                                                <td>
+                                                    <div class="frmGroup">
+                                                        <select name="" id="" class="iptSlt">
+                                                            <option value="">회사 선택</option>
+                                                            <option value="">바로크레디트</option>
+                                                            <option value="">현대</option>
+                                                            <option value="">국민체력진흥공단</option>
+                                                        </select>
+                                                        <select name="" id="" class="iptSlt">
+                                                            <option value="">프로젝트 선택</option>
+                                                            <option value="">한국생활안내</option>
+                                                            <option value="">정보더하기</option>
+                                                            <option value="">장애인체력100</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                                <th>진행상태</th>
+                                                <td>
+                                                    <div class="frmGroup">
+                                                        <select name="" id="" class="iptSlt">
+                                                            <option value="">전체</option>
+                                                            <option value="">처리중</option>
+                                                            <option value="">처리완료</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>날짜검색</th>
+                                                <td>
+                                                    <div class="frmGroup">
+                                                        <div class="tui-datepicker-input tui-datetime-input tui-has-focus">
+                                                            <input id="startpicker-input" type="text" aria-label="Date">
+                                                            <div id="startpicker-container" style="margin-left: -1px;"></div>
+                                                        </div>
+                                                        <div class="textBox deco">~</div>
+                                                        <div class="tui-datepicker-input tui-datetime-input tui-has-focus">
+                                                            <input id="endpicker-input" type="text" aria-label="Date">
+                                                            <div id="endpicker-container" style="margin-left: -1px;"></div>
+                                                        </div>
+        
+                                                        <script>
+                                                            datePickerTo("startpicker-input", "startpicker-container", "endpicker-input", "endpicker-container");
+                                                        </script>
+                                                        
+                                                    </div>
+                                                </td>
+                                                <th>키워드검색</th>
+                                                <td>
+                                                    <div class="frmGroup">
+                                                        <select name="" id="" class="iptSlt frmSm">
+                                                            <option value="">요청제목</option>
+                                                            <option value="">요청내용</option>
+                                                            <option value="">등록자</option>
+                                                            <option value="">검수자</option>
+                                                            <option value="">처리자</option>
+                                                        </select>
+                                                        <input type="text" class="iptText" />
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="4" class="right">
+                                                    <button class="btnReset">초기화</button>
+                                                    <button class="btnSearch">검색</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
 
-                                                <script>
-                                                    datePickerTo("startpicker-input", "startpicker-container", "endpicker-input", "endpicker-container");
-                                                </script>
-                                                
-                                            </div>
-                                        </td>
-                                        <td colspan="2" class="right">
-                                            <button class="btnSearch">검색</button>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            <script>
+                                //상세 검색 영역 토글
+                                function searchDetails () {
+                                    const searchDetails = document.querySelector(".cptSearchDetails");
+                                    if (searchDetails.classList.contains("on")) {
+                                        searchDetails.classList.remove("on");
+                                        searchDisabledToggle(false);
+                                    } else {
+                                        searchDetails.classList.add("on");
+                                        searchDisabledToggle(true);
+                                    }
+                                }
+                                function searchDisabledToggle ($boolean) {
+                                    const searchDetails = document.querySelector(".cptSearchDetails");
+                                    searchDetails.querySelectorAll(".iptTab").forEach((item) => {
+                                        item.disabled = $boolean;
+                                    });
+                                }
+                            </script>
                         </div>
 
                         <div class="grpComponent">
                             <div class="cptGroupTop">
                                 <div class="alignL">
-                                    <div class="unit"><span class="text">전체 <span class="total">17</span>개</span> | <span class="text">현재페이지 1/2</span></div>
+                                    <div class="unit"><span class="text">전체 <span class="total bold">17</span>건</div>
                                 </div>
                                 <div class="alignR">
                                     <div class="comSideOpt">
                                         <ul class="opList">
                                             <li class="item">
-                                                <button class="srhBtn gLine">처리단계 도움말</button>
-                                                <button class="srhBtn bLine">엑셀다운로드</button>
+                                                <div class="frmGroup">
+                                                    <select name="" id="" class="iptSlt">
+                                                        <option value="">9개씩 보기</option>
+                                                        <option value="">45개씩 보기</option>
+                                                    </select>
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <button class="srhBtn blue" style="width: 88px;">등록</button>
                                             </li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
-                            <div class="cptGrid">
-                                <table class="gridTb">
-                                    <colgroup>
-                                        <col width="80px">
-                                        <col width="auto">
-                                        <col width="100px">
-                                        <col width="105px">
-                                        <col width="105px">
-                                        <col width="100px">
-                                        <col width="100px">
-                                        <col width="105px">
-                                        <col width="80px">
-                                        <col width="80px">
-                                        <col width="100px">
-                                        <col width="105px">
-                                    </colgroup>
-                                    <thead>
-                                        <tr>
-                                            <th>NO</th>
-                                            <th>요청제목</th>
-                                            <th>등록자</th>
-                                            <th>등록일</th>
-                                            <th>분류 제목</th>
-                                            <th>작업</th>
-                                            <th>처리자</th>	
-                                            <th>처리일</th>					
-                                            <th>개발상태</th>
-                                            <th>최종상태</th>
-                                            <th>검수자</th>
-                                            <th>검수일</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>17</td>
-                                            <td>
-                                                <div class="titleBox">
-                                                    <i>장애인체력100</i>
-                                                    <a href="#">Test</a>
-                                                </div>
-                                            </td>
-                                            <td>홍길동</td>
-                                            <td>0000-00-00</td>
-                                            <td>기능 개선 요청</td>
-                                            <td>개발</td>
-                                            <td>김정기</td>
-                                            <td>0000-00-00</td>
-                                            <td>
-                                                <button type="button" class="gridBtn blue">접수</button>
-                                            </td>
-                                            <td>
-                                                <button type="button" class="gridBtn blue">접수</button>
-                                            </td>
-                                            <td>홍길동</td>
-                                            <td>00-00-00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>16</td>
-                                            <td rowspan="3">
-                                                <div class="titleBox">
-                                                    <i>장애인체력100</i>
-                                                    <a href="#">Test</a>
-                                                </div>
-                                            </td>
-                                            <td rowspan="3">홍길동</td>
-                                            <td rowspan="3">0000-00-00</td>
-                                            <td>기능 개선 요청</td>
-                                            <td>개발</td>
-                                            <td>김정기</td>
-                                            <td>0000-00-00</td>
-                                            <td>
-                                                <button type="button" class="gridBtn blue">접수</button>
-                                            </td>
-                                            <td>
-                                                <button type="button" class="gridBtn blue">접수</button>
-                                            </td>
-                                            <td>홍길동</td>
-                                            <td>00-00-00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>15</td>
-                                            <td rowspan="2">기능 개선 요청</td>
-                                            <td>기획</td>
-                                            <td>강두현</td>
-                                            <td>0000-00-00</td>
-                                            <td>
-                                                <button type="button" class="gridBtn red">취소</button>
-                                            </td>
-                                            <td rowspan="2">
-                                                <button type="button" class="gridBtn blue">접수</button>
-                                            </td>
-                                            <td rowspan="2">홍길동</td>
-                                            <td rowspan="2">00-00-00</td>
-                                        </tr>
-                                        <tr>
-                                            <td>14</td>
-                                            <td>개발</td>
-                                            <td>전사은</td>
-                                            <td>0000-00-00</td>
-                                            <td class="noLast">
-                                                <button type="button" class="gridBtn red">취소</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td colspan="12">
-                                                검색 결과가 없습니다.
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+
+                            <!-- 요청사항 리스트 -->
+                            <div class="cptCardRequest">
+                                <ul class="cardList">
+                                    <li class="cardItem">
+                                        <ul class="state">
+                                            <li class="piece urgency">긴급</li>
+                                            <li class="piece">국민체육진흥공단</li>
+                                            <li class="piece">신규개발</li>
+                                        </ul>
+                                        <div class="title">2025 국민체육진흥공단 마이페이지 요청드립니다. 2025 국민체육진흥공단 마이페이지 요청드립니다. 2025 국민체육진흥공단 마이페이지 요청드립니다.</div>
+                                        <ul class="info">
+                                            <li class="item">요청자 : 김경민</li>
+                                            <li class="item">등록일자 : 2025.04.07</li>
+                                        </ul>
+                                        <div class="statusBar">
+                                            <div class="startEnd">
+                                                <span class="start">최종상태</span>
+                                                <span class="end">
+                                                    <span class="text orange">협의요청</span> <!-- addClass - [blue:처리완료, 처리중, 요청중, 접수], [orange:반려, 협의요청], [black:검수완료], [gray:취소] -->
+                                                    <button class="tooltip" onclick="tooltipPopup(this);">
+                                                        <span class="tipPopup">
+                                                            <dl>
+                                                                <dt>협의 사유</dt>
+                                                                <dd>스케쥴 변경으로 추후 작업 진행 예정
+                                                                    요청자와 협의하에 작업 취소 처리</dd>
+                                                            </dl>
+                                                        </span>
+                                                    </button>
+                                                </span>
+                                            </div>
+                                            <div class="bar"><div class="barInner" style="width: 0%;"></div></div>
+                                            <div class="workGroup">
+                                                <dl class="status"><dt>기획</dt><dd>처리완료</dd></dl>
+                                                <dl class="status"><dt>디자인</dt><dd>처리중</dd></dl>
+                                                <dl class="status"><dt>퍼블</dt><dd>요청</dd></dl>
+                                                <dl class="status"><dt>개발</dt><dd>취소</dd></dl>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="cardItem">
+                                        <ul class="state">
+                                            <li class="piece urgency">긴급</li>
+                                            <li class="piece">국민체육진흥공단</li>
+                                            <li class="piece">신규개발</li>
+                                        </ul>
+                                        <div class="title">2025 국민체육진흥공단 마이페이지 요청드립니다. 2025 국민체육진흥공단 마이페이지 요청드립니다. 2025 국민체육진흥공단 마이페이지 요청드립니다.</div>
+                                        <ul class="info">
+                                            <li class="item">요청자 : 김경민</li>
+                                            <li class="item">등록일자 : 2025.04.07</li>
+                                        </ul>
+                                        <div class="statusBar">
+                                            <div class="startEnd">
+                                                <span class="start">최종상태</span>
+                                                <span class="end">
+                                                    <span class="text orange">반려</span> <!-- addClass - [blue:처리완료, 처리중, 요청중, 접수], [orange:반려, 협의요청], [black:검수완료], [gray:취소] -->
+                                                    <button class="tooltip" onclick="tooltipPopup(this);">
+                                                        <span class="tipPopup">
+                                                            <dl>
+                                                                <dt>반려 사유</dt>
+                                                                <dd>스케쥴 변경으로 추후 작업 진행 예정
+                                                                    요청자와 협의하에 작업 취소 처리</dd>
+                                                            </dl>
+                                                        </span>
+                                                    </button>
+                                                </span>
+                                            </div>
+                                            <div class="bar"><div class="barInner" style="width: 0%;"></div></div>
+                                            <div class="workGroup">
+                                                <dl class="status"><dt>기획</dt><dd>처리완료</dd></dl>
+                                                <dl class="status"><dt>디자인</dt><dd>처리중</dd></dl>
+                                                <dl class="status"><dt>퍼블</dt><dd>요청</dd></dl>
+                                                <dl class="status"><dt>개발</dt><dd>취소</dd></dl>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="cardItem">
+                                        <ul class="state">
+                                            <li class="piece urgency">긴급</li>
+                                            <li class="piece">국민체육진흥공단</li>
+                                            <li class="piece">신규개발</li>
+                                        </ul>
+                                        <div class="title">2025 국민체육진흥공단 마이페이지 요청드립니다. 2025 국민체육진흥공단 마이페이지 요청드립니다. 2025 국민체육진흥공단 마이페이지 요청드립니다.</div>
+                                        <ul class="info">
+                                            <li class="item">요청자 : 김경민</li>
+                                            <li class="item">등록일자 : 2025.04.07</li>
+                                        </ul>
+                                        <div class="statusBar">
+                                            <div class="startEnd">
+                                                <span class="start">최종상태</span>
+                                                <span class="end">
+                                                    <span class="text blue">요청중</span> <!-- addClass - [blue:처리완료, 처리중, 요청중, 접수], [orange:반려, 협의요청], [black:검수완료], [gray:취소] -->
+                                                </span>
+                                            </div>
+                                            <div class="bar"><div class="barInner" style="width: 0%;"></div></div>
+                                            <div class="workGroup">
+                                                <dl class="status"><dt>기획</dt><dd>처리완료</dd></dl>
+                                                <dl class="status"><dt>디자인</dt><dd>처리중</dd></dl>
+                                                <dl class="status"><dt>퍼블</dt><dd>요청</dd></dl>
+                                                <dl class="status"><dt>개발</dt><dd>취소</dd></dl>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="cardItem">
+                                        <ul class="state">
+                                            <li class="piece">국민체육진흥공단</li>
+                                            <li class="piece">단순수정</li>
+                                        </ul>
+                                        <div class="title">2025 국민체육진흥공단 마이페이지 요청드립니다. 2025 국민체육진흥공단 마이페이지 요청드립니다. 2025 국민체육진흥공단 마이페이지 요청드립니다.</div>
+                                        <ul class="info">
+                                            <li class="item">요청자 : 김경민</li>
+                                            <li class="item">등록일자 : 2025.04.07</li>
+                                        </ul>
+                                        <div class="statusBar">
+                                            <div class="startEnd">
+                                                <span class="start">최종상태</span>
+                                                <span class="end">
+                                                    <span class="text blue">접수</span> <!-- addClass - [blue:처리완료, 처리중, 요청중, 접수], [orange:반려, 협의요청], [black:검수완료], [gray:취소] -->
+                                                </span>
+                                            </div>
+                                            <div class="bar"><div class="barInner" style="width: 25%;"></div></div>
+                                            <div class="workGroup">
+                                                <dl class="status"><dt>기획</dt><dd>요청</dd></dl>
+                                                <dl class="status"><dt>디자인</dt><dd>요청</dd></dl>
+                                                <dl class="status"><dt>퍼블</dt><dd>요청</dd></dl>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="cardItem">
+                                        <ul class="state">
+                                            <li class="piece">국민체육진흥공단</li>
+                                            <li class="piece">기능개선</li>
+                                        </ul>
+                                        <div class="title">2025 국민체육진흥공단 마이페이지 요청드립니다. 2025 국민체육진흥공단 마이페이지 요청드립니다. 2025 국민체육진흥공단 마이페이지 요청드립니다.</div>
+                                        <ul class="info">
+                                            <li class="item">요청자 : 김경민</li>
+                                            <li class="item">등록일자 : 2025.04.07</li>
+                                        </ul>
+                                        <div class="statusBar">
+                                            <div class="startEnd">
+                                                <span class="start">최종상태</span>
+                                                <span class="end">
+                                                    <span class="text blue">처리중</span> <!-- addClass - [blue:처리완료, 처리중, 요청중, 접수], [orange:반려, 협의요청], [black:검수완료], [gray:취소] -->
+                                                </span>
+                                            </div>
+                                            <div class="bar"><div class="barInner" style="width: 50%;"></div></div>
+                                            <div class="workGroup">
+                                                <dl class="status"><dt>디자인</dt><dd>처리중</dd></dl>
+                                                <dl class="status"><dt>퍼블</dt><dd>요청</dd></dl>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="cardItem">
+                                        <ul class="state">
+                                            <li class="piece">국민체육진흥공단</li>
+                                            <li class="piece">기능추가</li>
+                                        </ul>
+                                        <div class="title">2025 국민체육진흥공단 마이페이지 요청드립니다. 2025 국민체육진흥공단 마이페이지 요청드립니다. 2025 국민체육진흥공단 마이페이지 요청드립니다.</div>
+                                        <ul class="info">
+                                            <li class="item">요청자 : 김경민</li>
+                                            <li class="item">등록일자 : 2025.04.07</li>
+                                        </ul>
+                                        <div class="statusBar">
+                                            <div class="startEnd">
+                                                <span class="start">최종상태</span>
+                                                <span class="end">
+                                                    <span class="text blue">처리완료</span> <!-- addClass - [blue:처리완료, 처리중, 요청중, 접수], [orange:반려, 협의요청], [black:검수완료], [gray:취소] -->
+                                                </span>
+                                            </div>
+                                            <div class="bar"><div class="barInner" style="width: 75%;"></div></div>
+                                            <div class="workGroup">
+                                                <dl class="status"><dt>기획</dt><dd>처리완료</dd></dl>
+                                                <dl class="status"><dt>개발</dt><dd>처리완료</dd></dl>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="cardItem">
+                                        <ul class="state">
+                                            <li class="piece urgency">긴급</li>
+                                            <li class="piece">국민체육진흥공단</li>
+                                            <li class="piece">자료요청</li>
+                                        </ul>
+                                        <div class="title">2025 국민체육진흥공단 마이페이지 요청드립니다. 2025 국민체육진흥공단 마이페이지 요청드립니다. 2025 국민체육진흥공단 마이페이지 요청드립니다.</div>
+                                        <ul class="info">
+                                            <li class="item">요청자 : 김경민</li>
+                                            <li class="item">등록일자 : 2025.04.07</li>
+                                        </ul>
+                                        <div class="statusBar">
+                                            <div class="startEnd">
+                                                <span class="start">최종상태</span>
+                                                <span class="end">
+                                                    <span class="text black">검수완료</span> <!-- addClass - [blue:처리완료, 처리중, 요청중, 접수], [orange:반려, 협의요청], [black:검수완료], [gray:취소] -->
+                                                </span>
+                                            </div>
+                                            <div class="bar"><div class="barInner" style="width: 100%;"></div></div>
+                                            <div class="workGroup">
+                                                <dl class="status"><dt>기획</dt><dd>처리완료</dd></dl>
+                                                <dl class="status"><dt>개발</dt><dd>처리완료</dd></dl>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="cardItem">
+                                        <ul class="state">
+                                            <li class="piece urgency">긴급</li>
+                                            <li class="piece">국민체육진흥공단</li>
+                                            <li class="piece">데이터</li>
+                                        </ul>
+                                        <div class="title">2025 국민체육진흥공단 마이페이지 요청드립니다. 2025 국민체육진흥공단 마이페이지 요청드립니다. 2025 국민체육진흥공단 마이페이지 요청드립니다.</div>
+                                        <ul class="info">
+                                            <li class="item">요청자 : 김경민</li>
+                                            <li class="item">등록일자 : 2025.04.07</li>
+                                        </ul>
+                                        <div class="statusBar">
+                                            <div class="startEnd">
+                                                <span class="start">최종상태</span>
+                                                <span class="end">
+                                                    <span class="text gray">취소</span> <!-- addClass - [blue:처리완료, 처리중, 요청중, 접수], [orange:반려, 협의요청], [black:검수완료], [gray:취소] -->
+                                                    <button class="tooltip" onclick="tooltipPopup(this);">
+                                                        <span class="tipPopup">
+                                                            <dl>
+                                                                <dt>취소 사유</dt>
+                                                                <dd>스케쥴 변경으로 추후 작업 진행 예정
+                                                                    요청자와 협의하에 작업 취소 처리</dd>
+                                                            </dl>
+                                                        </span>
+                                                    </button>
+                                                </span>
+                                            </div>
+                                            <div class="bar"><div class="barInner" style="width: 0%;"></div></div>
+                                            <div class="workGroup">
+                                                <dl class="status"><dt>개발</dt><dd>취소</dd></dl>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="cardItem">
+                                        <ul class="state">
+                                            <li class="piece">국민체육진흥공단</li>
+                                            <li class="piece">단순수정</li>
+                                        </ul>
+                                        <div class="title">2025 국민체육진흥공단 마이페이지 요청드립니다. 2025 국민체육진흥공단 마이페이지 요청드립니다. 2025 국민체육진흥공단 마이페이지 요청드립니다.</div>
+                                        <ul class="info">
+                                            <li class="item">요청자 : 김경민</li>
+                                            <li class="item">등록일자 : 2025.04.07</li>
+                                        </ul>
+                                        <div class="statusBar">
+                                            <div class="startEnd">
+                                                <span class="start">최종상태</span>
+                                                <span class="end">
+                                                    <span class="text blue">처리중</span> <!-- addClass - [blue:처리완료, 처리중, 요청중, 접수], [orange:반려, 협의요청], [black:검수완료], [gray:취소] -->
+                                                </span>
+                                            </div>
+                                            <div class="bar"><div class="barInner" style="width: 50%;"></div></div>
+                                            <div class="workGroup">
+                                                <dl class="status"><dt>디자인</dt><dd>처리완료</dd></dl>
+                                                <dl class="status"><dt>퍼블</dt><dd>처리중</dd></dl>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <script>
+                                // tooltip 클릭 시 자식 tipPopup에 on 클래스 토글
+                                function tooltipPopup(tooltip) {
+                                    tooltip.classList.toggle('on');
+                                }
+                                </script>
                             </div>
+                            <!-- //요청사항 리스트 -->
     
                             <!-- 페이징 -->
                             <div class="comPaging">
@@ -419,13 +612,6 @@
                                 </ul>
                                 <a class="next" href="#"></a>
                                 <a class="end" href="#"></a>
-                            </div>
-
-                        </div>
-
-                        <div class="cptGroupBtm alignR">
-                            <div class="comSideOpt">
-                                <button type="button" class="crudBtn dkBlue">등록</button>
                             </div>
                         </div>
 
