@@ -2,11 +2,11 @@
 .cptDashboard {
     width: 100%; height: 100%; display: flex; justify-content: space-between; gap: 30px;
     .infoArea {
-        width: calc(100% - 1020px); height: calc(100% - 40px); padding: 30px; border-radius: 20px; background: #FFF; 
+        width: calc(100% - 1020px); height: calc(100% - 80px); margin-top: 40px; padding: 30px 30px 20px; border-radius: 20px; background: #FFF; 
         box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.10); overflow-y: auto;
     }
     .graphArea {
-        width: 1030px; min-width: 1030px; height: 100%; padding: 0 40px 40px 0; display: flex; flex-wrap: wrap; gap: 30px; overflow-y: auto;
+        width: 1030px; min-width: 1030px; height: 100%; padding: 40px 40px 40px 0; display: flex; flex-wrap: wrap; gap: 30px; overflow-y: auto;
     }
     .dashTitle {
         width: 100%; min-height: 35px; display: flex; justify-content: space-between; 

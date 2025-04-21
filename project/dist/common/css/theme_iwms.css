@@ -80,7 +80,7 @@
 }
 .iwms.lytLayout .layoutContainer:has(.cptDashboard) .layoutCont .layoutContArea {
 	height: 100%;
-	padding: 40px 0 0 40px;
+	padding: 0 0 0 40px;
 	background: #F4F6FA;
 	overflow-y: hidden;
 }
@@ -1241,8 +1241,9 @@ html, body, .wrap, .lytLayout, .layoutArea {
 }
 .cptDashboard .infoArea {
 	width: calc(100% - 1020px);
-	height: calc(100% - 40px);
-	padding: 30px;
+	height: calc(100% - 80px);
+	margin-top: 40px;
+	padding: 30px 30px 20px;
 	border-radius: 20px;
 	background: #FFF;
 	box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.1);
@@ -1252,7 +1253,7 @@ html, body, .wrap, .lytLayout, .layoutArea {
 	width: 1030px;
 	min-width: 1030px;
 	height: 100%;
-	padding: 0 40px 40px 0;
+	padding: 40px 40px 40px 0;
 	display: flex;
 	flex-wrap: wrap;
 	gap: 30px;
