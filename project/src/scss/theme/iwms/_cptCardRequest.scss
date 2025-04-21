@@ -4,7 +4,7 @@
     .cardList {
         width: 100%; display: flex; gap: 30px; flex-wrap: wrap;
         .cardItem {
-            width: calc(33.333% - 20px); padding: 30px 20px 20px; border-radius: 20px; border: 1px solid #E1E5EF; background: #FFF;
+            width: calc(33.333% - 20px); padding: 30px 20px 20px; border-radius: 20px; border: 1px solid #E1E5EF; background: #FFF; cursor: pointer;
             &:hover {box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.10);}
             .state {
                 width: 100%; margin-bottom: 12px; display: flex; flex-wrap: wrap; gap: 4px;

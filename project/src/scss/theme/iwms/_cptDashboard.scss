@@ -1,0 +1,150 @@
+/* ---------------------- 대시보드 ---------------------- */
+.cptDashboard {
+    width: 100%; height: 100%; display: flex; justify-content: space-between; gap: 30px;
+    .infoArea {
+        width: calc(100% - 1020px); height: calc(100% - 40px); padding: 30px; border-radius: 20px; background: #FFF; 
+        box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.10); overflow-y: auto;
+    }
+    .graphArea {
+        width: 1030px; min-width: 1030px; height: 100%; padding: 0 40px 40px 0; display: flex; flex-wrap: wrap; gap: 30px; overflow-y: auto;
+    }
+    .dashTitle {
+        width: 100%; min-height: 35px; display: flex; justify-content: space-between; 
+        h3 {
+            color: #000; font-size: 22px; font-style: normal; font-weight: 700; line-height: 1.6; display: block;
+            .cmt {color: #757575; font-size: 16px; font-style: normal; font-weight: 400; line-height: 1.6; display: inline;}
+        }
+        .other {
+            width: max-content; 
+            .more {
+                width: 35px; height: 35px; font-size: 0; background: url(../../common/images/iwms/ic_24_more.svg) center no-repeat; display: block;
+            }
+        }
+    }
+    .profileGroup {
+        width: 100%; padding-bottom: 30px; margin-bottom: 30px; border-bottom: 1px solid #EEE; position: relative;
+        .profile {
+            width: 100%; display: flex; align-items: center;
+            .photo {
+                width: 40px; height: 40px; border-radius: 50%; background: #EFF1F7;
+                img {width: 100%; height: 100%;}
+            }
+            .name {
+                margin-left: 8px; color: #000; font-size: 36px; font-style: normal; font-weight: 300; line-height: 58px;
+                b {
+                    font-weight: 700;
+                }
+            }
+        }
+        .infoBox {
+            margin-top: 12px;
+            .infoItem {
+                margin-top: 4px;
+                .tit {
+                    color: #757575; font-size: 16px; font-style: normal; font-weight: 400; line-height: 26px;
+                }
+                .desc {
+                    color: #000; font-size: 16px; font-style: normal; font-weight: 500; line-height: 26px;
+                }
+            }
+        }
+        .setting {
+            width: 40px; height: 40px; font-size: 0; border: 0; border-radius: 10px; position: absolute; right: 48px; top: 9px;
+            background: #EFF5FF url(../../common/images/iwms/ic_26_setting.svg) center no-repeat;
+        }
+        .logout {
+            width: 40px; height: 40px; font-size: 0; border: 0; border-radius: 10px;  position: absolute; right: 0; top: 9px;
+            background: #EFF5FF url(../../common/images/iwms/ic_26_logout.svg) center no-repeat;
+        }
+    }
+    .dashBox {
+        width: 100%; margin-top: 12px; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px;
+        .dashItem {
+            width: calc(50% - 8px); height: 86px; border-radius: 16px; background: #F4F6FA; display: flex; justify-content: space-between; align-items: center;
+            .link {width: 100%; height: 100%; padding: 0 30px; display: flex; justify-content: space-between; align-items: center;}
+            .name {color: #333; font-size: 18px; font-style: normal; font-weight: 600; line-height:1.6;}
+            .num {color: #000; font-size: 30px; font-style: normal; font-weight: 600; line-height:1.6;}
+            &.blue {
+                background: #3569E7;
+                .name, .num {color: #FFF;}
+            }
+            &.mint {
+                background: #01C290;
+                .name, .num {color: #FFF;}
+            }
+            &.gray {
+                background: #96A0B5;
+                .name, .num {color: #FFF;}
+            }
+        }
+    }
+    .diviGroup {
+        width: 100%; display: flex; justify-content: space-between; gap: 30px;
+        .graphGroup {
+            width: 600px; 
+            .graphBox {
+                margin-top: 12px;
+            }
+        }
+        .notiGroup {   
+            width: 360px; padding: 30px; border-radius: 20px; background: #FFF; box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.07);
+            .notiBox {
+                width: 100%; margin-top: 12px; 
+                .notiList {
+                    width: 100%;
+                    .notiItem {
+                        width: 100%; height: 48px; display: flex; justify-content: space-between;
+                        .link {width: 100%; height: 100%; display: flex; justify-content: space-between;}
+                        .notiTitle {
+                            width: max-content; max-width: 220px; height: 100%; padding-right: 20px; color: #000; font-size: 16px; font-style: normal; font-weight: 400; 
+                            line-height: 1.6; @include line1(); position: relative; align-content: center;
+                            .new {
+                                width: 16px; height: 16px; font-size: 0; position: absolute; right: 0; top:16px;
+                                background: url(../../../common/images/iwms/ic_16_new.svg) center no-repeat;
+                            }
+                        }
+                        .notiDate {width: 80px; height: 100%; align-content: center; text-align: right;}
+                    }
+                }
+            }
+        }
+    }
+    .graphGroup {
+        width: 100%; padding: 30px; border-radius: 20px; background: #FFF; box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.07);
+        .graphBox {
+            width: 100%; margin-top: 30px;
+            & > img {width: 100%;}
+        } 
+    }
+    .workTime {
+        width: 100%;
+        .timeItem {
+            width: 100%; height: 52px; padding-bottom: 20px; display: flex; justify-content: space-between;
+            &.dkBlue {
+                .line {
+                    .bar {
+                        background: #0C1F2B;
+                    }
+                }
+            }
+            &.blue {
+                .line {
+                    .bar {
+                        background: #3569E7;
+                    }
+                }
+            }
+            .tit {
+                width: 93px; min-width: 93px; color: #000; font-size: 18px; font-style: normal; font-weight: 600; line-height: 1.6;
+            }
+            .line {
+                width: 100%; height: 16px; align-self: center;
+                .bar {height: 100%; font-size: 0; border-radius: 0 8px 8px 0; background: #ccc;}
+            }
+            .time {
+                width: 80px; min-width: 80px; color: #757575; font-size: 20px; font-style: normal; font-weight: 400; line-height: 1.6;
+                b {color: #000; font-weight: 600;}
+            }
+        }
+    }
+}

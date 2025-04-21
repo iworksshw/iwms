@@ -25,8 +25,9 @@ var navContain = locals.navContain ? locals.navContain : '';    //좌네비 여�
             <!-- //상단영역 -->
 
             <!-- 중단영역 -->
-            <div class="layoutContainer <%= navContain %>">
+            <div class="layoutContainer">
 
+                <% if (navContain!="false") { %>
                 <!-- 좌측 메뉴 영역 -->
                 <div class="layoutNav">
                     
@@ -40,6 +41,7 @@ var navContain = locals.navContain ? locals.navContain : '';    //좌네비 여�
                     </div>
 
                 </div>
+                <% } %>
                 <!-- //좌측 메뉴 영역 -->
 
                 <!-- 콘텐츠 영역 -->

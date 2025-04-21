@@ -43,5 +43,29 @@
     textArea {
         &::placeholder {color: #ccc;}
     }
+
+    /* ----------------------------------------- 대시보드를 가지고 잇을 때 ----------------------------------------- */
+    &.lytLayout .layoutContainer:has(.cptDashboard) {
+        height: calc(100% - 110px);
+        .layoutCont {
+            height: 100%;
+            .layoutContArea {
+                height: 100%; padding: 40px 0 0 40px; background: #F4F6FA; overflow-y: hidden;
+            }
+        }
+    }
+
+    /* --------------------------------------------------------------------------- */
+    /* ------------------------ 추후 원본 css 수정 필요부분 ------------------------ */ 
+    /* --------------------------------------------------------------------------- */
+    
+    &.lytLayout .layoutContainer:has(.layoutNav) .layoutCont {
+        width: calc(100% - 250px);
+    }
+    &.lytLayout .layoutContainer .layoutCont {
+        width: 100%;
+    }
     
 }
+
+html, body, .wrap, .lytLayout, .layoutArea {height: 100%;}

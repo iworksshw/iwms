@@ -8,6 +8,10 @@
 .iwms {
 	/* ----------------------------------------- 테이블영역 button ----------------------------------------- */
 	/* ----------------------------------------- 텍스트에어리어 기본 ----------------------------------------- */
+	/* ----------------------------------------- 대시보드를 가지고 잇을 때 ----------------------------------------- */
+	/* --------------------------------------------------------------------------- */
+	/* ------------------------ 추후 원본 css 수정 필요부분 ------------------------ */
+	/* --------------------------------------------------------------------------- */
 }
 .iwms .comPaging .start, .iwms .comPaging .prev, .iwms .comPaging .next, .iwms .comPaging .end {
 	height: 34px;
@@ -67,6 +71,28 @@
 }
 .iwms textArea::placeholder {
 	color: #ccc;
+}
+.iwms.lytLayout .layoutContainer:has(.cptDashboard) {
+	height: calc(100% - 110px);
+}
+.iwms.lytLayout .layoutContainer:has(.cptDashboard) .layoutCont {
+	height: 100%;
+}
+.iwms.lytLayout .layoutContainer:has(.cptDashboard) .layoutCont .layoutContArea {
+	height: 100%;
+	padding: 40px 0 0 40px;
+	background: #F4F6FA;
+	overflow-y: hidden;
+}
+.iwms.lytLayout .layoutContainer:has(.layoutNav) .layoutCont {
+	width: calc(100% - 250px);
+}
+.iwms.lytLayout .layoutContainer .layoutCont {
+	width: 100%;
+}
+
+html, body, .wrap, .lytLayout, .layoutArea {
+	height: 100%;
 }
 
 /* -------------------------------------------------------------- */
@@ -317,6 +343,7 @@
 	border-radius: 20px;
 	border: 1px solid #E1E5EF;
 	background: #FFF;
+	cursor: pointer;
 }
 .cptCardRequest .cardList .cardItem:hover {
 	box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.1);
@@ -1202,5 +1229,330 @@
 	border-radius: 6px;
 	display: flex;
 	align-items: center;
+}
+
+/* ---------------------- 대시보드 ---------------------- */
+.cptDashboard {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	gap: 30px;
+}
+.cptDashboard .infoArea {
+	width: calc(100% - 1020px);
+	height: calc(100% - 40px);
+	padding: 30px;
+	border-radius: 20px;
+	background: #FFF;
+	box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.1);
+	overflow-y: auto;
+}
+.cptDashboard .graphArea {
+	width: 1030px;
+	min-width: 1030px;
+	height: 100%;
+	padding: 0 40px 40px 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 30px;
+	overflow-y: auto;
+}
+.cptDashboard .dashTitle {
+	width: 100%;
+	min-height: 35px;
+	display: flex;
+	justify-content: space-between;
+}
+.cptDashboard .dashTitle h3 {
+	color: #000;
+	font-size: 22px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 1.6;
+	display: block;
+}
+.cptDashboard .dashTitle h3 .cmt {
+	color: #757575;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.6;
+	display: inline;
+}
+.cptDashboard .dashTitle .other {
+	width: max-content;
+}
+.cptDashboard .dashTitle .other .more {
+	width: 35px;
+	height: 35px;
+	font-size: 0;
+	background: url(../../common/images/iwms/ic_24_more.svg) center no-repeat;
+	display: block;
+}
+.cptDashboard .profileGroup {
+	width: 100%;
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+	border-bottom: 1px solid #EEE;
+	position: relative;
+}
+.cptDashboard .profileGroup .profile {
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+.cptDashboard .profileGroup .profile .photo {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: #EFF1F7;
+}
+.cptDashboard .profileGroup .profile .photo img {
+	width: 100%;
+	height: 100%;
+}
+.cptDashboard .profileGroup .profile .name {
+	margin-left: 8px;
+	color: #000;
+	font-size: 36px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 58px;
+}
+.cptDashboard .profileGroup .profile .name b {
+	font-weight: 700;
+}
+.cptDashboard .profileGroup .infoBox {
+	margin-top: 12px;
+}
+.cptDashboard .profileGroup .infoBox .infoItem {
+	margin-top: 4px;
+}
+.cptDashboard .profileGroup .infoBox .infoItem .tit {
+	color: #757575;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 26px;
+}
+.cptDashboard .profileGroup .infoBox .infoItem .desc {
+	color: #000;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 26px;
+}
+.cptDashboard .profileGroup .setting {
+	width: 40px;
+	height: 40px;
+	font-size: 0;
+	border: 0;
+	border-radius: 10px;
+	position: absolute;
+	right: 48px;
+	top: 9px;
+	background: #EFF5FF url(../../common/images/iwms/ic_26_setting.svg) center no-repeat;
+}
+.cptDashboard .profileGroup .logout {
+	width: 40px;
+	height: 40px;
+	font-size: 0;
+	border: 0;
+	border-radius: 10px;
+	position: absolute;
+	right: 0;
+	top: 9px;
+	background: #EFF5FF url(../../common/images/iwms/ic_26_logout.svg) center no-repeat;
+}
+.cptDashboard .dashBox {
+	width: 100%;
+	margin-top: 12px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 16px;
+}
+.cptDashboard .dashBox .dashItem {
+	width: calc(50% - 8px);
+	height: 86px;
+	border-radius: 16px;
+	background: #F4F6FA;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.cptDashboard .dashBox .dashItem .link {
+	width: 100%;
+	height: 100%;
+	padding: 0 30px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.cptDashboard .dashBox .dashItem .name {
+	color: #333;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 1.6;
+}
+.cptDashboard .dashBox .dashItem .num {
+	color: #000;
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 1.6;
+}
+.cptDashboard .dashBox .dashItem.blue {
+	background: #3569E7;
+}
+.cptDashboard .dashBox .dashItem.blue .name, .cptDashboard .dashBox .dashItem.blue .num {
+	color: #FFF;
+}
+.cptDashboard .dashBox .dashItem.mint {
+	background: #01C290;
+}
+.cptDashboard .dashBox .dashItem.mint .name, .cptDashboard .dashBox .dashItem.mint .num {
+	color: #FFF;
+}
+.cptDashboard .dashBox .dashItem.gray {
+	background: #96A0B5;
+}
+.cptDashboard .dashBox .dashItem.gray .name, .cptDashboard .dashBox .dashItem.gray .num {
+	color: #FFF;
+}
+.cptDashboard .diviGroup {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	gap: 30px;
+}
+.cptDashboard .diviGroup .graphGroup {
+	width: 600px;
+}
+.cptDashboard .diviGroup .graphGroup .graphBox {
+	margin-top: 12px;
+}
+.cptDashboard .diviGroup .notiGroup {
+	width: 360px;
+	padding: 30px;
+	border-radius: 20px;
+	background: #FFF;
+	box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.07);
+}
+.cptDashboard .diviGroup .notiGroup .notiBox {
+	width: 100%;
+	margin-top: 12px;
+}
+.cptDashboard .diviGroup .notiGroup .notiBox .notiList {
+	width: 100%;
+}
+.cptDashboard .diviGroup .notiGroup .notiBox .notiList .notiItem {
+	width: 100%;
+	height: 48px;
+	display: flex;
+	justify-content: space-between;
+}
+.cptDashboard .diviGroup .notiGroup .notiBox .notiList .notiItem .link {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.cptDashboard .diviGroup .notiGroup .notiBox .notiList .notiItem .notiTitle {
+	width: max-content;
+	max-width: 220px;
+	height: 100%;
+	padding-right: 20px;
+	color: #000;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.6;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: block;
+	position: relative;
+	align-content: center;
+}
+.cptDashboard .diviGroup .notiGroup .notiBox .notiList .notiItem .notiTitle .new {
+	width: 16px;
+	height: 16px;
+	font-size: 0;
+	position: absolute;
+	right: 0;
+	top: 16px;
+	background: url(../../../common/images/iwms/ic_16_new.svg) center no-repeat;
+}
+.cptDashboard .diviGroup .notiGroup .notiBox .notiList .notiItem .notiDate {
+	width: 80px;
+	height: 100%;
+	align-content: center;
+	text-align: right;
+}
+.cptDashboard .graphGroup {
+	width: 100%;
+	padding: 30px;
+	border-radius: 20px;
+	background: #FFF;
+	box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.07);
+}
+.cptDashboard .graphGroup .graphBox {
+	width: 100%;
+	margin-top: 30px;
+}
+.cptDashboard .graphGroup .graphBox > img {
+	width: 100%;
+}
+.cptDashboard .workTime {
+	width: 100%;
+}
+.cptDashboard .workTime .timeItem {
+	width: 100%;
+	height: 52px;
+	padding-bottom: 20px;
+	display: flex;
+	justify-content: space-between;
+}
+.cptDashboard .workTime .timeItem.dkBlue .line .bar {
+	background: #0C1F2B;
+}
+.cptDashboard .workTime .timeItem.blue .line .bar {
+	background: #3569E7;
+}
+.cptDashboard .workTime .timeItem .tit {
+	width: 93px;
+	min-width: 93px;
+	color: #000;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 1.6;
+}
+.cptDashboard .workTime .timeItem .line {
+	width: 100%;
+	height: 16px;
+	align-self: center;
+}
+.cptDashboard .workTime .timeItem .line .bar {
+	height: 100%;
+	font-size: 0;
+	border-radius: 0 8px 8px 0;
+	background: #ccc;
+}
+.cptDashboard .workTime .timeItem .time {
+	width: 80px;
+	min-width: 80px;
+	color: #757575;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.6;
+}
+.cptDashboard .workTime .timeItem .time b {
+	color: #000;
+	font-weight: 600;
 }
 /*# sourceMappingURL=../maps/theme_iwms.css.map */
