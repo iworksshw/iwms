@@ -308,7 +308,7 @@
 .cptGroupTop .unit {margin-left:5px; display:inline-block;}
 .cptGroupTop .unit:first-child {margin-left:0;}
 .cptGroupTop .text {font-size:14px; line-height:1; vertical-align:bottom; color:#333;}
-.cptGroupTop .total {font-size:14px; font-size:400; color:var(--basic-color);}
+.cptGroupTop .total {font-size:14px; font-weight:400; color:var(--basic-color);}
 .cptGroupTop.soloBtn .inner {display:flex; justify-content: end;}
 .cptGroupTop.soloBtn .inner .blue {padding: 5px 10px; height:auto;}
 
@@ -1095,7 +1095,7 @@ textArea.areaMd {height:150px;}
 .cptAttCalCov .attCal .dateBox ul li a.disabled {color:rgba(132, 132, 132, 0.2); cursor:default;}
 .cptAttCalCov .attCal .dateBox ul li a:hover {background:#ececf1;}
 .cptAttCalCov .attCal .dateBox ul li a.disabled:hover {background:#fff;}
-.cptAttCalCov .attCal .dateBox ul li.notThisMon a {cursor:default; color:#757575; opacity:0.3; transition:0;}
+.cptAttCalCov .attCal .dateBox ul li.notThisMon a {cursor:default; color:#757575; opacity:0.3; transition:none;}
 .cptAttCalCov .attCal .dateBox ul li.notThisMon a:hover {background:#fff;}
 
 /* ----------------------------------------- 시스템 관리 ----------------------------------------- */
@@ -1162,10 +1162,11 @@ textArea.areaMd {height:150px;}
 .lytLogin .cptLogin .lgInner > div.fnBox > .iptBox input::-webkit-input-placeholder {color:#ccc; font-weight:400;}
 .lytLogin .cptLogin .lgInner > div.fnBox > .lgBtn {width:100%; margin-top:10px;}
 .lytLogin .cptLogin .lgInner > div.fnBox > .lgBtn a {display:block; width:100%; height:66px; background:var(--basic-color); font-size:18px; color:#fff; font-weight:500; text-align:center; line-height:66px; border-radius:5px;}
+.lytLogin .cptLogin .lgInner > div.fnBox > .lgBtn a.ms-login { display: block; width: 100%; height: 33px; background: #2a2d3e; font-size: 18px; color: #fff; font-weight: 500; text-align: center; line-height: 33px; border-radius: 5px;}
 .lytLogin .cptLogin .lgInner > div.fnBox > .lgFunc {width:100%; display:flex; flex-flow:row nowrap; justify-content: space-between; align-items: center; margin:12px 0 33px 0;}
 .lytLogin .cptLogin .lgInner > div.fnBox > .lgFunc > div a {font-size:14px; color:#000; font-weight:500; letter-spacing:-0.28px;}
 /*20230216 문구수정으로인한 css 수정*/
-.lytLogin .cptLogin .lgInner > div.fnBox > .lgWarn {border-top:1px solid rgba(132, 132, 132, 0.2); padding: 10px 0; box-sizing:border-box; display:flex; flex-flow:row nowrap; justify-content:start; align-items: top;}
+.lytLogin .cptLogin .lgInner > div.fnBox > .lgWarn {border-top:1px solid rgba(132, 132, 132, 0.2); padding: 10px 0; box-sizing:border-box; display:flex; flex-flow:row nowrap; justify-content:start; align-items: flex-start;}
 .lytLogin .cptLogin .lgInner > div.fnBox > .lgWarn img {height:19px; margin-right:5px;}
 .lytLogin .cptLogin .lgInner > div.fnBox > .lgWarn span {font-size:13px; color:#757575;}
 /*20240429 신규 로그인 타입 (공동인증서 타입)*/
@@ -1198,7 +1199,7 @@ textArea.areaMd {height:150px;}
 .lytError .errorTop {margin-bottom: 60px; padding-bottom: 20px; border-bottom: 2px solid #000;}
 .lytError .errorTop h1 {}
 .lytError .errorTop h1 img {width: 177px; vertical-align: top;}
-.lytError .errorCont {padding-top: 162px; background: url(../images/icon/error_icon01.svg) center 0 no-repeat; text-align: center;}
+.lytError .errorCont {padding-top: 162px; /*background: url(../images/icon/error_icon01.svg) center 0 no-repeat;*/ text-align: center;}
 .lytError .errorCont .mainTxt {display: block; color: #000; font-size: 32px;}
 .lytError .errorCont .subTxt {margin-top: 16px; color: #757575; font-size: 20px; line-height: 1.6;}
 .lytError .errorBottom {margin-top: 90px; padding-top: 26px; border-top: 1px solid #c2c2c2;}
@@ -1445,7 +1446,7 @@ select {width:100%; height:30px; padding-left:25px; font-size:14px; color:#333; 
 .staticArea.cntUserCov > div > ul { display:flex; flex-flow:row nowrap; justify-content: flex-start; align-items: center;}
 .staticArea.cntUserCov > div > ul li {width:100%; border-right:1px solid rgba(132, 132, 132, 0.2);}
 .staticArea.cntUserCov > div > ul li:last-of-type {border-right:0;}
-.staticArea.cntUserCov > div > ul li p.minTit {font-size:12ㅇpx; color:#333; text-align:center; line-height:21px; letter-spacing:-0.24px; font-weight:500;}
+.staticArea.cntUserCov > div > ul li p.minTit {font-size:12px; color:#333; text-align:center; line-height:21px; letter-spacing:-0.24px; font-weight:500;}
 .staticArea.cntUserCov > div > ul li p.bigTit {font-size:16px; color:#5a7eff; text-align:center; line-height:21px; letter-spacing:-0.32px; font-weight:500;}
 .staticArea.cntUserCov > div > ul li a {font-size:30px; color:#000; font-weight:500; text-align:center; display:block;}
 
@@ -1561,10 +1562,10 @@ select {width:100%; height:30px; padding-left:25px; font-size:14px; color:#333; 
 .weeklyCal .calTit a {font-size:14px; color:#000; font-weight:500; letter-spacing: -0.28px; background:url(../images/common/moreBtn.png)right center no-repeat; padding-right:15px; box-sizing:border-box;}
 
 .wkCalList {width:100%; margin-top:15px;}
-.wkCalList ul {display:flex; flex-flow:row nowrap; justify-content: start; align-items:top; gap:5px;}
+.wkCalList ul {display:flex; flex-flow:row nowrap; justify-content: start; align-items:flex-start; gap:5px;}
 .wkCalList ul li {width:13.90%; text-align:center; position:relative; padding:20px; box-sizing:border-box; border:1px solid #e1e5ef; border-radius:20px;}
 .wkCalList ul li > p.wkDt {font-size:13px; letter-spacing: -0.26px; line-height:1; margin-bottom:10px;}
-.wkCalList ul li > p.wkNdt {font-size:20px; letter-spacing: -.0.4px; line-height:1; margin-bottom:7px;}
+.wkCalList ul li > p.wkNdt {font-size:20px; /*letter-spacing: -.0.4px;*/ line-height:1; margin-bottom:7px;}
 .wkCalList ul li > div.wkPlc {border-top:1px solid rgba(132, 132, 132, 0.2); padding-top:7px; box-sizing:border-box;}
 .wkCalList ul li > div.wkPlc .glbTooltip {margin:0;}
 .wkCalList ul li > div.wkPlc .glbTooltip .place {font-size:16px; font-weight:500; position:relative;}
@@ -1676,7 +1677,7 @@ select {width:100%; height:30px; padding-left:25px; font-size:14px; color:#333; 
 .cptBoxCont .ctaArea button.tempsave {border:1px solid #005ce6; background:#fff; color:#005ce6;}
 .cptBoxCont .ctaArea button.save {background:#292b3f; color:#fff;}
 .cptBoxCont .ctaArea button.delete {background:#ff4848;}
-.cptBoxCont .ctaArea button:last-of-type():not(:first-of-type) {margin-right:0;}
+.cptBoxCont .ctaArea button:last-of-type:not(:first-of-type) {margin-right:0;}
 .cptBoxCont .ctaArea.instPt button:nth-of-type(2):not(:last-of-type) {margin:10px 5px 0 5px;}
 
 /*신용대출 신규 유형*/

@@ -2,11 +2,11 @@
 .cptDashboard {
     width: 100%; height: 100%; display: flex; justify-content: space-between; gap: 30px;
     .infoArea {
-        width: calc(100% - 1020px); height: calc(100% - 80px); margin-top: 40px; padding: 30px 30px 20px; border-radius: 20px; background: #FFF; 
+        width: 500px; height: calc(100% - 80px); margin-top: 40px; padding: 30px 30px 20px; border-radius: 20px; background: #FFF; 
         box-shadow: 10px 10px 50px 0px rgba(0, 0, 0, 0.10); overflow-y: auto;
     }
     .graphArea {
-        width: 1030px; min-width: 1030px; height: 100%; padding: 40px 40px 40px 0; display: flex; flex-wrap: wrap; gap: 30px; overflow-y: auto;
+        width: calc(100% - 530px); min-width: 1030px; height: 100%; padding: 40px 40px 40px 0; display: flex; flex-wrap: wrap; gap: 30px; overflow-y: auto;
     }
     .dashTitle {
         width: 100%; min-height: 35px; display: flex; justify-content: space-between; 
@@ -79,15 +79,16 @@
         }
     }
     .diviGroup {
-        width: 100%; display: flex; justify-content: space-between; gap: 30px;
+        width: 100%; max-height: 350px; display: flex; justify-content: space-between; gap: 30px;
         .graphGroup {
-            width: 600px; 
+            width: 600px; flex-grow: 1; flex-shrink: 1;
             .graphBox {
-                margin-top: 12px;
+                height: 240px; margin-top: 12px;
+                & > img {}
             }
         }
         .notiGroup {   
-            width: 360px; padding: 30px; border-radius: 20px; background: #FFF; box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.07);
+            width: 360px; padding: 30px; border-radius: 20px; background: #FFF; box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.07); flex-grow: 1; flex-shrink: 1;
             .notiBox {
                 width: 100%; margin-top: 12px; 
                 .notiList {
@@ -112,8 +113,8 @@
     .graphGroup {
         width: 100%; padding: 30px; border-radius: 20px; background: #FFF; box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.07);
         .graphBox {
-            width: 100%; margin-top: 30px;
-            & > img {width: 100%;}
+            width: 100%; margin-top: 30px; height: 203px;
+            & > img {width: 100%; height: 100%; object-fit: contain;}
         } 
     }
     .workTime {
