@@ -34,15 +34,20 @@
 }
 .iwms .cptTable .gridBtn {
 	height: 35px;
+	padding: 0 30px;
 }
 .iwms .cptTable .gridBtn.plus {
 	width: 35px;
+	min-width: 35px;
+	padding: 0;
 	font-size: 0;
 	background: #fff url(../../common/images/iwms/ic_15_plus.svg) center no-repeat;
 	border: 1px solid var(--basic-dkBlue);
 }
 .iwms .cptTable .gridBtn.minus {
 	width: 35px;
+	min-width: 35px;
+	padding: 0;
 	font-size: 0;
 	background: #fff url(../../common/images/iwms/ic_15_minus.svg) center no-repeat;
 	border: 1px solid var(--basic-dkBlue);
@@ -69,6 +74,94 @@
 .iwms .cptTable .pointText:first-child {
 	margin-top: 0;
 }
+.iwms .cptTable .inApproval {
+	width: 100%;
+	padding-top: 4px;
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+}
+.iwms .cptTable .inApproval dt {
+	width: 100%;
+	padding-top: 15px;
+	display: flex;
+	position: relative;
+	justify-content: center;
+}
+.iwms .cptTable .inApproval dd {
+	width: 100%;
+	padding-bottom: 15px;
+	margin-top: 12px;
+	display: flex;
+	justify-content: center;
+}
+.iwms .cptTable .inApproval .mark {
+	width: 80px;
+	height: 80px;
+	border: 4px solid #A1A9BA;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #A1A9BA;
+	font-size: 24px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+.iwms .cptTable .inApproval .mark.mint {
+	color: #01C290;
+	border: 4px solid #01C290;
+}
+.iwms .cptTable .inApproval .mark.blue {
+	color: #3569E7;
+	border: 4px solid #3569E7;
+}
+.iwms .cptTable .inApproval .mark.orange {
+	color: #FF5C4A;
+	border: 4px solid #FF5C4A;
+}
+.iwms .cptTable .inApproval .mark.gray {
+	color: #A1A9BA;
+	border: 4px solid #A1A9BA;
+}
+.iwms .cptTable .inApproval .date {
+	color: #757575;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+.iwms .cptTable .inApproval .btnDel {
+	width: 24px;
+	height: 24px;
+	font-size: 0;
+	border: 0;
+	background: url(../../common/images/iwms/ic_24_mark_del.svg) center no-repeat;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.iwms .cptTable .btnNameDel {
+	width: 19px;
+	height: 19px;
+	margin-left: 5px;
+	font-size: 0;
+	border: 0;
+	background: url(../../common/images/iwms/ic_16_name_del.svg) center no-repeat;
+	display: inline-block;
+}
+.iwms .cptTable .btnNameSearch {
+	width: 19px;
+	height: 19px;
+	font-size: 0;
+	border: 0;
+	position: absolute;
+	top: 8px;
+	right: 10px;
+	background: url(../../common/images/iwms/ic_19_name_search.svg) center no-repeat;
+	display: inline-block;
+}
 .iwms textArea::placeholder {
 	color: #ccc;
 }
@@ -84,6 +177,9 @@
 	background: #F4F6FA;
 	overflow-y: hidden;
 }
+.iwms .frmGroup {
+	position: relative;
+}
 .iwms.lytLayout .layoutContainer:has(.layoutNav) .layoutCont {
 	width: calc(100% - 250px);
 }
@@ -95,6 +191,32 @@ html, body, .wrap, .lytLayout, .layoutArea {
 	height: 100%;
 }
 
+.comComment {
+	width: 100%;
+	margin-top: 120px;
+}
+.comComment .basicText {
+	width: 100%;
+}
+.comComment .basicText.center {
+	text-align: center;
+}
+.comComment .basicText dt {
+	color: #000;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+}
+.comComment .basicText dd {
+	margin-top: 8px;
+	color: #757575;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+}
+
 /* -------------------------------------------------------------- */
 /* ------------------------ 기존 css 수정 ------------------------ */
 /* -------------------------------------------------------------- */
@@ -104,6 +226,7 @@ html, body, .wrap, .lytLayout, .layoutArea {
 	/* ---------------------------- 테이블 ---------------------------- */
 	/* ---------------------------- 그리드 ---------------------------- */
 	/* 그리드 추가조작 */
+	/**/
 }
 .iwms .cptHeader .headerArea {
 	border-bottom: 1px solid #E1E5EF;
@@ -222,6 +345,15 @@ html, body, .wrap, .lytLayout, .layoutArea {
 }
 .iwms .cptGrid .gridTb tr td.line {
 	border-left: 1px solid #ddd;
+}
+.iwms .cptGroupBtm {
+	margin-top: 60px;
+}
+.iwms .cptGroupBtm:first-child {
+	margin-top: 0;
+}
+.iwms .cptGroupBtm.alignC .comSideOpt button {
+	width: auto;
 }
 
 /* ------------------------ Tab + 상세검색 ----------------------- */
@@ -783,7 +915,7 @@ html, body, .wrap, .lytLayout, .layoutArea {
 	width: max-content;
 	min-height: 35px;
 	color: #000;
-	font-size: 22px;
+	font-size: 20px;
 	font-style: normal;
 	font-weight: 700;
 	line-height: 35px;
@@ -1510,11 +1642,85 @@ html, body, .wrap, .lytLayout, .layoutArea {
 	width: 100%;
 	margin-top: 30px;
 	height: 203px;
+	display: flex;
+	justify-content: space-between;
 }
 .cptDashboard .graphGroup .graphBox > img {
 	width: 100%;
 	height: 100%;
 	object-fit: contain;
+}
+.cptDashboard .graphGroup .graphL {
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+.cptDashboard .graphGroup .graphR {
+	width: 252px;
+	padding-right: 12px;
+}
+.cptDashboard .graphGroup .markGroup {
+	width: 200px;
+	margin-top: 5px;
+}
+.cptDashboard .graphGroup .markGroup .markItem {
+	width: 100%;
+	height: 35px;
+	display: flex;
+	justify-content: space-between;
+}
+.cptDashboard .graphGroup .markGroup .markItem .mark {
+	width: 100%;
+	padding-left: 22px;
+	display: block;
+	position: relative;
+	align-content: center;
+	color: #333;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.6;
+}
+.cptDashboard .graphGroup .markGroup .markItem .mark::before {
+	content: "";
+	width: 16px;
+	height: 16px;
+	border-radius: 6px;
+	background: #96A0B5;
+	position: absolute;
+	left: 0;
+	top: 10px;
+}
+.cptDashboard .graphGroup .markGroup .markItem .mark.blue::before {
+	background: #3569E7;
+}
+.cptDashboard .graphGroup .markGroup .markItem .mark.black::before {
+	background: #0C1F2B;
+}
+.cptDashboard .graphGroup .markGroup .markItem .mark.mint::before {
+	background: #01C290;
+}
+.cptDashboard .graphGroup .markGroup .markItem .mark.gray::before {
+	background: #96A0B5;
+}
+.cptDashboard .graphGroup .markGroup .markItem .mark.orange::before {
+	background: #FF9B01;
+}
+.cptDashboard .graphGroup .markGroup .markItem .mark.red::before {
+	background: #FF5C4A;
+}
+.cptDashboard .graphGroup .markGroup .markItem .num {
+	width: 50px;
+	min-width: 50px;
+	display: block;
+	position: relative;
+	align-content: center;
+	text-align: right;
+	color: #000;
+	font-size: 22px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 1.6;
 }
 .cptDashboard .workTime {
 	width: 100%;

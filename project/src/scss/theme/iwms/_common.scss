@@ -21,12 +21,12 @@
     /* ----------------------------------------- 테이블영역 button ----------------------------------------- */
     .cptTable {
         .gridBtn { 
-            height: 35px;
+            height: 35px; padding: 0 30px;
             &.plus {
-                width: 35px; font-size:0; background:#fff url(../../common/images/iwms/ic_15_plus.svg) center no-repeat; border:1px solid var(--basic-dkBlue);
+                width: 35px; min-width: 35px; padding: 0; font-size:0; background:#fff url(../../common/images/iwms/ic_15_plus.svg) center no-repeat; border:1px solid var(--basic-dkBlue);
             }
             &.minus {
-                width: 35px; font-size:0; background:#fff url(../../common/images/iwms/ic_15_minus.svg) center no-repeat; border:1px solid var(--basic-dkBlue);
+                width: 35px; min-width: 35px; padding: 0; font-size:0; background:#fff url(../../common/images/iwms/ic_15_minus.svg) center no-repeat; border:1px solid var(--basic-dkBlue);
             }
         }
         select.iptSlt {height: 35px;}
@@ -36,6 +36,40 @@
             width: 100%; min-height: 14px; margin-top: 6px; padding-left: 18px; color: #FF5C4A; font-size: 12px; font-style: normal; font-weight: 400; line-height: 1.3;
             display: block; background: url(../../common/images/iwms/ic_14_redpoint.svg) left top no-repeat;
             &:first-child {margin-top: 0;}
+        }
+
+        //추가
+        .inApproval {
+            width: 100%; padding-top: 4px; text-align: center; display: flex; flex-wrap: wrap;
+            dt {
+                width: 100%; padding-top: 15px; display: flex; position: relative; justify-content: center;
+            }
+            dd {
+                width: 100%; padding-bottom: 15px; margin-top: 12px; display: flex; justify-content: center;
+            }
+            .mark {
+                width: 80px; height: 80px; border: 4px solid #A1A9BA; border-radius: 50%; display: flex; justify-content: center; align-items: center;
+                color: #A1A9BA; font-size: 24px; font-style: normal; font-weight: 700; line-height: normal;
+                &.mint {color: #01C290; border: 4px solid #01C290;}
+                &.blue {color: #3569E7; border: 4px solid #3569E7;}
+                &.orange {color: #FF5C4A; border: 4px solid #FF5C4A;}
+                &.gray {color: #A1A9BA; border: 4px solid #A1A9BA;}
+            }
+            .date {
+                color: #757575; font-size: 14px; font-style: normal; font-weight: 400; line-height: normal;
+            }
+            .btnDel {
+                width: 24px; height: 24px; font-size: 0; border: 0; background: url(../../common/images/iwms/ic_24_mark_del.svg) center no-repeat;
+                position: absolute; top: 0; right: 0;
+            }
+        }
+        .btnNameDel {
+            width: 19px; height: 19px; margin-left: 5px; font-size: 0; border: 0; 
+            background: url(../../common/images/iwms/ic_16_name_del.svg) center no-repeat; display: inline-block;
+        }
+        .btnNameSearch {
+            width: 19px; height: 19px; font-size: 0; border: 0; position: absolute; top: 8px; right: 10px;
+            background: url(../../common/images/iwms/ic_19_name_search.svg) center no-repeat; display: inline-block;
         }
     } 
 
@@ -58,6 +92,9 @@
     /* --------------------------------------------------------------------------- */
     /* ------------------------ 추후 원본 css 수정 필요부분 ------------------------ */ 
     /* --------------------------------------------------------------------------- */
+    .frmGroup {
+        position: relative;
+    }
     
     &.lytLayout .layoutContainer:has(.layoutNav) .layoutCont {
         width: calc(100% - 250px);
@@ -69,3 +106,6 @@
 }
 
 html, body, .wrap, .lytLayout, .layoutArea {height: 100%;}
+
+
+@import './comComment'; //중간 코멘트

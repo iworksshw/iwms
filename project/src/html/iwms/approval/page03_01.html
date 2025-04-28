@@ -1,0 +1,76 @@
+<%- include('../../layout/iwms/header.ejs', {
+    theme: "iwms",
+    url: "../../../"
+}) %>
+
+                    <!-- 컨텐츠 내용 -->
+                    <div class="layoutContArea">
+
+                        <!-- h2 타이틀 -->
+                        <div class="comH2Group">
+                            <div class="alignL">
+                                <h2>작성하기</h2>
+                            </div>
+                            <div class="alignR">
+                                <ul class="locaGroup">
+                                    <li class="item">HOME</li>
+                                    <li class="item">전자결재</li>
+                                    <li class="item">작성하기</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">기본설정</div>
+                            </div>
+                        </div>
+
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:140px;">
+                                    <col style="width:auto;">
+                                    <col style="width:140px;">
+                                    <col style="width:auto;">
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th>문서종류</th>
+                                        <td>
+                                            <div class="frmGroup frmXl">
+                                                <select name="" id="" class="iptSlt ">
+                                                    <option value="">선택</option>
+                                                    <option value=""></option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                        <th>문서설명</th>
+                                        <td>문서종류를 선택하세요.</td>
+                                    </tr>
+                                    <tr>
+                                        <th>합의사항</th>
+                                        <td>문서종류를 선택하세요.</td>
+                                        <th>결재선</th>
+                                        <td>문서종류를 선택하세요.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="comComment">
+                            <dl class="basicText center">
+                                <dt>문서종류를 선택하세요.</dt>
+                                <dd>문서 종류를 선택하면, 해당 문서에 맞는 결재선과 결재 항목이 노출됩니다.</dd>
+                            </dl>
+                        </div>
+
+                        
+
+                    </div>
+                    <!-- //컨텐츠 내용 -->
+
+<%- include('../../layout/iwms/bottom.ejs', {
+    url: "../../../"
+}) %>

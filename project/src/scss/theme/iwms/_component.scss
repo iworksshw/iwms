@@ -80,6 +80,15 @@
     /* 그리드 추가조작 */
     .cptGrid .gridTb tr th.line {border-left: 1px solid #666;}
     .cptGrid .gridTb tr td.line {border-left: 1px solid #ddd;}
+
+    /**/
+    .cptGroupBtm {
+        margin-top: 60px;
+        &:first-child {margin-top: 0;}
+        &.alignC {
+            .comSideOpt button {width: auto;}
+        }
+    }
 }
 
 

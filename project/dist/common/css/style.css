@@ -3939,6 +3939,11 @@ html .frmLg {
 	min-width: 200px;
 }
 
+html .frmXl {
+	width: 300px;
+	min-width: 300px;
+}
+
 html .frmHalf {
 	width: calc(50% - 3px);
 	min-width: calc(50% - 3px);

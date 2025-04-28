@@ -1,0 +1,13 @@
+.comComment {
+    width: 100%; margin-top:120px;
+    .basicText {
+        width: 100%; 
+        &.center {text-align: center;}
+        dt {
+            color: #000; font-size: 18px; font-style: normal; font-weight: 500; line-height: normal;
+        }
+        dd {
+            margin-top: 8px; color: #757575; font-size: 16px; font-style: normal; font-weight: 400; line-height: normal;
+        }
+    }
+}

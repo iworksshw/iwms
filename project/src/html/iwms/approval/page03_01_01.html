@@ -1,0 +1,245 @@
+<%- include('../../layout/iwms/header.ejs', {
+    theme: "iwms",
+    url: "../../../"
+}) %>
+
+                    <!-- 컨텐츠 내용 -->
+                    <div class="layoutContArea">
+
+                        <!-- h2 타이틀 -->
+                        <div class="comH2Group">
+                            <div class="alignL">
+                                <h2>작성하기</h2>
+                            </div>
+                            <div class="alignR">
+                                <ul class="locaGroup">
+                                    <li class="item">HOME</li>
+                                    <li class="item">전자결재</li>
+                                    <li class="item">작성하기</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">기본설정</div>
+                            </div>
+                        </div>
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:140px;">
+                                    <col style="width:auto;">
+                                    <col style="width:140px;">
+                                    <col style="width:auto;">
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th>문서종류</th>
+                                        <td>
+                                            <div class="frmGroup frmXl">
+                                                <select name="" id="" class="iptSlt ">
+                                                    <option value="">선택</option>
+                                                    <option value=""></option>
+                                                </select>
+                                            </div>
+                                        </td>
+                                        <th>문서설명</th>
+                                        <td>사내 업무관계로 출장업무에 대한 신청</td>
+                                    </tr>
+                                    <tr>
+                                        <th>합의사항</th>
+                                        <td>PM 합의 필요</td>
+                                        <th>결재선</th>
+                                        <td>이사, 대표</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">결재선</div>
+                            </div>
+                        </div>
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:auto;">
+                                    <col style="width:auto;">
+                                    <col style="width:auto;">
+                                    <col style="width:auto;">
+                                    <col style="width:auto;">
+                                    <col style="width:auto;">
+                                    <col style="width:auto;">
+                                    <col style="width:auto;">
+                                </colgroup>
+                                <caption></caption>
+                                <thead>
+                                    <tr>
+                                        <th>기안</th>
+                                        <th>합의</th>
+                                        <th colspan="3">결재</th>
+                                        <th colspan="3">참조</th>
+                                    </tr>
+                                    <tr>
+                                        <th>과장</th>
+                                        <th>차장</th>
+                                        <th></th>
+                                        <th>이사</th>
+                                        <th>대표</th>
+                                        <th>차장</th>
+                                        <th>이사</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="center">
+                                            <dl class="inApproval">
+                                                <dt>
+                                                    <span class="mark mint">기안</span>
+                                                </dt>
+                                                <dd>
+                                                    <span class="date">2025-04-25 13:30</span>
+                                                </dd>
+                                            </dl>
+                                        </td>
+                                        <td class="center">
+                                            <dl class="inApproval">
+                                                <dt>
+                                                    <span class="mark blue">승인</span>
+                                                </dt>
+                                                <dd>
+                                                    <span class="date">2025-04-25 13:30</span>
+                                                </dd>
+                                            </dl>
+                                        </td>
+                                        <td class="center">
+                                            <dl class="inApproval">
+                                                <dt>
+                                                    <span class="mark blue">승인</span>
+                                                </dt>
+                                                <dd>
+                                                    <span class="date">2025-04-25 13:30</span>
+                                                </dd>
+                                            </dl>
+                                        </td>
+                                        <td class="center">
+                                            <dl class="inApproval">
+                                                <dt>
+                                                    <span class="mark orange">반려</span>
+                                                    <button type="button" class="btnDel">취소</button>
+                                                </dt>
+                                                <dd>
+                                                    <span class="date">2025-04-25 13:30</span>
+                                                </dd>
+                                            </dl>
+                                        </td>
+                                        <td class="center">
+                                            <button class="gridBtn dkBlue">결재</button>
+                                        </td>
+                                        <td class="center">
+                                            <dl class="inApproval">
+                                                <dt>
+                                                    <span class="mark gray">확인</span>
+                                                </dt>
+                                                <dd>
+                                                    <span class="date">2025-04-25 13:30</span>
+                                                </dd>
+                                            </dl>
+                                        </td>
+                                        <td class="center">
+                                            <button class="gridBtn dkbLine">확인</button>
+                                        </td>
+                                        <td class="center"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="center">고윤영</td>
+                                        <td class="center">정형호<button type="button" class="btnNameDel">삭제</button></td>
+                                        <td class="center">
+                                            <div class="frmGroup">
+                                                <input type="text" class="iptText">
+                                                <button type="button" class="btnNameSearch">찾기</button>
+                                            </div>
+                                        </td>
+                                        <td class="center">김형주</td>
+                                        <td class="center">이창수</td>
+                                        <td class="center">이도경</td>
+                                        <td class="center">김재인</td>
+                                        <td class="center">
+                                            <div class="frmGroup">
+                                                <input type="text" class="iptText">
+                                                <button type="button" class="btnNameSearch">찾기</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <i class="pointText">합의결재로 지정된 결재문서는 합의 [승인]처리가 되어야 이후 결재자에게 전달이 됩니다.</i>
+                        </div>
+
+                        <div class="comSmTit">
+                            <div class="alignL">
+                                <div class="title">결재내용</div>
+                            </div>
+                        </div>
+                        <div class="cptTable">
+                            <table class="tbView">
+                                <colgroup>
+                                    <col style="width:140px;">
+                                    <col style="width:auto;">
+                                </colgroup>
+                                <caption></caption>
+                                <tbody>
+                                    <tr>
+                                        <th class="left">제목<span class="required">*</span></th>
+                                        <td colspan="3" class="left">
+                                            <div class="frmGroup"><input type="text" class="iptText"></div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">내용</th>
+                                        <td colspan="3" class="left" style="height: 500px;">
+                                            <!-- 에디터영역 -->
+                                            <textarea class="textArea" style="height: 500px;">에디터영역</textarea>
+                                            <!-- //에디터영역 -->
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th class="left">별첨</th>
+                                        <td colspan="3" class="left">
+                                            <div class="frmGroup">
+                                                <div class="fileBox">
+                                                    <div class="fileBefore">
+                                                        <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
+                                                        <input type="file" id="uploadBtn1" class="uploadBtn">
+                                                    </div>
+                                                    <div class="fileAfter">
+                                                        <div class="textBox"></div>
+                                                        <button type="button" class="fileDel">삭제</button>
+                                                    </div>
+                                                </div>
+                                                <button type="button" class="gridBtn minus">파일삭제</button>
+                                                <button type="button" class="gridBtn plus">파일추가</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="cptGroupBtm alignC">
+                            <div class="comSideOpt">
+                                <button type="button" class="crudBtn gLine">취소</button>
+                                <button type="button" class="crudBtn dkBlue">기안하기</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- //컨텐츠 내용 -->
+
+<%- include('../../layout/iwms/bottom.ejs', {
+    url: "../../../"
+}) %>
