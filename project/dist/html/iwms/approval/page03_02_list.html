@@ -2,6 +2,7 @@
 
 
 
+
 <!doctype html>
 <html lang="ko">
 <head>
@@ -124,11 +125,35 @@
                                 <div class="snavTitle">iWMS</div>
                                 <ul class="menuList">
                                     
-                                    <li class="menuItem on"> <!-- class : on : 1depth 메뉴 활성화 -->
-                                        <a href="#">유지보수</a>
-                                    </li>
                                     <li class="menuItem">
-                                        <a href="#">연락망</a>
+                                        <a href="#">작성하기</a>
+                                    </li>
+                                    <li class="menuItem dropDown on"> <!--2 depth 경우 dropdown 클래스 추가-->
+                                        <a href="#">진행문서</a>
+                                        <ul class="subMenu" style="display: block;">
+                                            <li><a href="#">기안 <span class="num">(16)</span></a></li>
+                                            <li><a href="#">합의 <span class="num">(16)</span></a></li>
+                                            <li><a href="#" class="on">결재 <span class="num">(03)</span></a></li>
+                                            <li><a href="#">참조 <span class="num">(00)</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menuItem dropDown"> <!--2 depth 경우 dropdown 클래스 추가-->
+                                        <a href="#">완료문서</a>
+                                        <ul class="subMenu">
+                                            <li><a href="#">전체</a></li>
+                                            <li><a href="#">기안</a></li>
+                                            <li><a href="#">결재</a></li>
+                                            <li><a href="#">합의</a></li>
+                                            <li><a href="#">참조</a></li>
+                                            <li><a href="#">반려</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menuItem dropDown"> <!--2 depth 경우 dropdown 클래스 추가-->
+                                        <a href="#">전자결재설정</a>
+                                        <ul class="subMenu">
+                                            <li><a href="#">기본설정</a></li>
+                                            <li><a href="#">결재양식관리</a></li>
+                                        </ul>
                                     </li>
                                     
                                 </ul>
@@ -157,13 +182,14 @@
                         <!-- h2 타이틀 -->
                         <div class="comH2Group">
                             <div class="alignL">
-                                <h2>유지보수</h2>
+                                <h2>결재</h2>
                             </div>
                             <div class="alignR">
                                 <ul class="locaGroup">
                                     <li class="item">HOME</li>
-                                    <li class="item">업무요청</li>
-                                    <li class="item">유지보수</li>
+                                    <li class="item">전자결재</li>
+                                    <li class="item">진행문서</li>
+                                    <li class="item">결재</li>
                                 </ul>
                             </div>
                         </div>
@@ -179,70 +205,10 @@
                                 </colgroup>
                                 <tbody>
                                     <tr>
-                                        <th>진행상태</th>
-                                        <td colspan="3">
-                                            <div class="frmGroup">
-                                                <div class="frmChoBox"><input id="chk101" type="checkbox" class="iptChk" name="chk101"><label for="chk101" class="iptLbl">전체선택</label></div>
-                                                <div class="frmChoBox"><input id="chk102" type="checkbox" class="iptChk" name="chk101"><label for="chk102" class="iptLbl">요청</label></div>
-                                                <div class="frmChoBox"><input id="chk103" type="checkbox" class="iptChk" name="chk101"><label for="chk103" class="iptLbl">접수</label></div>
-                                                <div class="frmChoBox"><input id="chk104" type="checkbox" class="iptChk" name="chk101"><label for="chk104" class="iptLbl">처리중</label></div>
-                                                <div class="frmChoBox"><input id="chk105" type="checkbox" class="iptChk" name="chk101"><label for="chk105" class="iptLbl">처리완료</label></div>
-                                                <div class="frmChoBox"><input id="chk106" type="checkbox" class="iptChk" name="chk101"><label for="chk106" class="iptLbl">검수완료</label></div>
-                                                <div class="frmChoBox"><input id="chk107" type="checkbox" class="iptChk" name="chk101"><label for="chk107" class="iptLbl">검토</label></div>
-                                                <div class="frmChoBox"><input id="chk108" type="checkbox" class="iptChk" name="chk101"><label for="chk108" class="iptLbl">반려</label></div>
-                                                <div class="frmChoBox"><input id="chk109" type="checkbox" class="iptChk" name="chk101"><label for="chk109" class="iptLbl">협의요청</label></div>
-                                                <div class="frmChoBox"><input id="chk110" type="checkbox" class="iptChk" name="chk101"><label for="chk110" class="iptLbl">취소</label></div>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>사이트구분</th>
+                                        <th>검색어 입력</th>
                                         <td>
                                             <div class="frmGroup">
-                                                <select name="" id="" class="iptSlt">
-                                                    <option value="">전체</option>
-                                                    <option value="">한국생활안내</option>
-                                                    <option value="">정보더하기</option>
-                                                    <option value="">장애인체력100</option>
-                                                </select>
-                                            </div>
-                                        </td>
-                                        <th>키워드검색</th>
-                                        <td>
-                                            <div class="frmGroup">
-                                                <select name="" id="" class="iptSlt frmSm">
-                                                    <option value="">요청제목</option>
-                                                    <option value="">요청내용</option>
-                                                    <option value="">등록자</option>
-                                                    <option value="">검수자</option>
-                                                    <option value="">처리자</option>
-                                                </select>
-                                                <input type="text" class="iptText" />
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <th>날짜검색</th>
-                                        <td>
-                                            <div class="frmGroup">
-                                                <select name="" id="" class="iptSlt frmSm">
-                                                    <option value="">등록일</option>
-                                                    <option value="">처리일</option>
-                                                </select>
-                                                <div class="tui-datepicker-input tui-datetime-input tui-has-focus">
-                                                    <input id="startpicker-input" type="text" aria-label="Date">
-                                                    <div id="startpicker-container" style="margin-left: -1px;"></div>
-                                                </div>
-                                                <div class="textBox deco">~</div>
-                                                <div class="tui-datepicker-input tui-datetime-input tui-has-focus">
-                                                    <input id="endpicker-input" type="text" aria-label="Date">
-                                                    <div id="endpicker-container" style="margin-left: -1px;"></div>
-                                                </div>
-
-                                                <script>
-                                                    datePickerTo("startpicker-input", "startpicker-container", "endpicker-input", "endpicker-container");
-                                                </script>
-                                                
+                                                <input type="text" class="iptText" placeholder="문서명 또는 기안자를 입력해주세요.">
                                             </div>
                                         </td>
                                         <td colspan="2" class="right">
@@ -256,14 +222,18 @@
                         <div class="grpComponent">
                             <div class="cptGroupTop">
                                 <div class="alignL">
-                                    <div class="unit"><span class="text">전체 <span class="total">17</span>개</span> | <span class="text">현재페이지 1/2</span></div>
+                                    <div class="unit"><span class="draft">결재</span><span class="text"><span class="total bold txtBlue">17</span>건</span></div>
+                                    <div class="unit"><span class="text">전체 <span class="total bold">17</span>건</span></div>
                                 </div>
                                 <div class="alignR">
                                     <div class="comSideOpt">
                                         <ul class="opList">
                                             <li class="item">
-                                                <button class="srhBtn gLine">처리단계 도움말</button>
-                                                <button class="srhBtn bLine">엑셀다운로드</button>
+                                                <div class="frmGroup">
+                                                    <select name="" id="" class="iptSlt">
+                                                        <option value="">10개씩 보기</option>
+                                                    </select>
+                                                </div>
                                             </li>
                                         </ul>
                                     </div>
@@ -272,116 +242,137 @@
                             <div class="cptGrid">
                                 <table class="gridTb">
                                     <colgroup>
-                                        <col width="80px">
-                                        <col width="auto">
-                                        <col width="100px">
-                                        <col width="105px">
-                                        <col width="105px">
-                                        <col width="100px">
-                                        <col width="100px">
-                                        <col width="105px">
-                                        <col width="80px">
-                                        <col width="80px">
-                                        <col width="100px">
-                                        <col width="105px">
+                                        <col style="width:140px;">
+                                        <col style="width:320px;">
+                                        <col style="width:auto;">
+                                        <col style="width:100px;">
+                                        <col style="width:100px;">
+                                        <col style="width:140px;">
                                     </colgroup>
                                     <thead>
                                         <tr>
-                                            <th>NO</th>
-                                            <th>요청제목</th>
-                                            <th>등록자</th>
-                                            <th>등록일</th>
-                                            <th>분류 제목</th>
-                                            <th>작업</th>
-                                            <th>처리자</th>	
-                                            <th>처리일</th>					
-                                            <th>개발상태</th>
-                                            <th>최종상태</th>
-                                            <th>검수자</th>
-                                            <th>검수일</th>
+                                            <th>기안일자</th>
+                                            <th>문서번호</th>
+                                            <th>제목</th>
+                                            <th>기안자</th>
+                                            <th>상태</th>
+                                            <th>처리일자</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td>17</td>
-                                            <td>
-                                                <div class="titleBox">
-                                                    <i>장애인체력100</i>
-                                                    <a href="#">Test</a>
+                                            <td>2025-04-23</td>
+                                            <td>IWI-팀명-품의서-YYYY-MM-DD-0001</td>
+                                            <td class="left">
+                                                <div class="title">
+                                                    <a href="#" class="link">전자결재 문서제목입니다 전자결재 문서제목입니다 전자결재 문서제목입니다 전자결재 문서제목입니다 전자결재 문서제목입니다 전자결재 문서제목입니다 전자결재 문서제목입니다 전자결재 문서제목입니다.</a>
+                                                    <span class="icons">
+                                                        <span class="read">(16)</span>
+                                                        <span class="icon file">파일첨부</span>
+                                                    </span>
                                                 </div>
                                             </td>
-                                            <td>홍길동</td>
-                                            <td>0000-00-00</td>
-                                            <td>기능 개선 요청</td>
-                                            <td>개발</td>
-                                            <td>김정기</td>
-                                            <td>0000-00-00</td>
+                                            <td>고윤영</td>
                                             <td>
-                                                <button type="button" class="gridBtn blue">접수</button>
+                                                <span class="text blue">대기</span>
                                             </td>
-                                            <td>
-                                                <button type="button" class="gridBtn blue">접수</button>
-                                            </td>
-                                            <td>홍길동</td>
-                                            <td>00-00-00</td>
+                                            <td>-</td>
                                         </tr>
                                         <tr>
-                                            <td>16</td>
-                                            <td rowspan="3">
-                                                <div class="titleBox">
-                                                    <i>장애인체력100</i>
-                                                    <a href="#">Test</a>
-                                                </div>
-                                            </td>
-                                            <td rowspan="3">홍길동</td>
-                                            <td rowspan="3">0000-00-00</td>
-                                            <td>기능 개선 요청</td>
-                                            <td>개발</td>
-                                            <td>김정기</td>
-                                            <td>0000-00-00</td>
+                                            <td>2025-04-23</td>
+                                            <td>IWI-팀명-품의서-YYYY-MM-DD-0001</td>
+                                            <td class="left">전자결재 문서제목입니다.</td>
+                                            <td>고윤영</td>
                                             <td>
-                                                <button type="button" class="gridBtn blue">접수</button>
+                                                <span class="text blue">대기</span>
                                             </td>
-                                            <td>
-                                                <button type="button" class="gridBtn blue">접수</button>
-                                            </td>
-                                            <td>홍길동</td>
-                                            <td>00-00-00</td>
+                                            <td>-</td>
                                         </tr>
                                         <tr>
-                                            <td>15</td>
-                                            <td rowspan="2">기능 개선 요청</td>
-                                            <td>기획</td>
-                                            <td>강두현</td>
-                                            <td>0000-00-00</td>
+                                            <td>2025-04-23</td>
+                                            <td>IWI-팀명-품의서-YYYY-MM-DD-0001</td>
+                                            <td class="left">전자결재 문서제목입니다.</td>
+                                            <td>고윤영</td>
                                             <td>
-                                                <button type="button" class="gridBtn red">취소</button>
+                                                <span class="text blue">대기</span>
                                             </td>
-                                            <td rowspan="2">
-                                                <button type="button" class="gridBtn blue">접수</button>
-                                            </td>
-                                            <td rowspan="2">홍길동</td>
-                                            <td rowspan="2">00-00-00</td>
+                                            <td>-</td>
                                         </tr>
                                         <tr>
-                                            <td>14</td>
-                                            <td>개발</td>
-                                            <td>전사은</td>
-                                            <td>0000-00-00</td>
-                                            <td class="noLast">
-                                                <button type="button" class="gridBtn red">취소</button>
+                                            <td>2025-04-23</td>
+                                            <td>IWI-팀명-품의서-YYYY-MM-DD-0001</td>
+                                            <td class="left">전자결재 문서제목입니다.</td>
+                                            <td>고윤영</td>
+                                            <td>
+                                                <span class="text gray">승인</span>
                                             </td>
+                                            <td>2025-04-23</td>
                                         </tr>
                                         <tr>
-                                            <td colspan="12">
-                                                검색 결과가 없습니다.
+                                            <td>2025-04-23</td>
+                                            <td>IWI-팀명-품의서-YYYY-MM-DD-0001</td>
+                                            <td class="left">전자결재 문서제목입니다.</td>
+                                            <td>고윤영</td>
+                                            <td>
+                                                <span class="text gray">승인</span>
                                             </td>
+                                            <td>2025-04-23</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2025-04-23</td>
+                                            <td>IWI-팀명-품의서-YYYY-MM-DD-0001</td>
+                                            <td class="left">전자결재 문서제목입니다.</td>
+                                            <td>고윤영</td>
+                                            <td>
+                                                <span class="text black">진행</span>
+                                            </td>
+                                            <td>2025-04-23</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2025-04-23</td>
+                                            <td>IWI-팀명-품의서-YYYY-MM-DD-0001</td>
+                                            <td class="left">전자결재 문서제목입니다.</td>
+                                            <td>고윤영</td>
+                                            <td>
+                                                <span class="text black">진행</span>
+                                            </td>
+                                            <td>2025-04-23</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2025-04-23</td>
+                                            <td>IWI-팀명-품의서-YYYY-MM-DD-0001</td>
+                                            <td class="left">전자결재 문서제목입니다.</td>
+                                            <td>고윤영</td>
+                                            <td>
+                                                <span class="text gray">확인</span>
+                                            </td>
+                                            <td>2025-04-23</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2025-04-23</td>
+                                            <td>IWI-팀명-품의서-YYYY-MM-DD-0001</td>
+                                            <td class="left">전자결재 문서제목입니다.</td>
+                                            <td>고윤영</td>
+                                            <td>
+                                                <span class="text gray">확인</span>
+                                            </td>
+                                            <td>2025-04-23</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2025-04-23</td>
+                                            <td>IWI-팀명-품의서-YYYY-MM-DD-0001</td>
+                                            <td class="left">전자결재 문서제목입니다.</td>
+                                            <td>고윤영</td>
+                                            <td>
+                                                <span class="text orange">반려</span>
+                                            </td>
+                                            <td>2025-04-23</td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
-    
-                            <!-- 페이징 -->
+
+                            <!-- paging -->
                             <div class="comPaging">
                                 <a class="start" href="#"></a>
                                 <a class="prev" href="#"></a>
@@ -402,13 +393,6 @@
                             </div>
 
                         </div>
-
-                        <div class="cptGroupBtm alignR">
-                            <div class="comSideOpt">
-                                <button type="button" class="crudBtn dkBlue">등록</button>
-                            </div>
-                        </div>
-
 
                     </div>
                     <!-- //컨텐츠 내용 -->

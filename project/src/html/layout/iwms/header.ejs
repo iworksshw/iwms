@@ -3,6 +3,7 @@ var url = locals.url ? locals.url : '../../';
 var color = locals.color ? locals.color : '';
 var theme = locals.theme ? locals.theme : '';
 var navContain = locals.navContain ? locals.navContain : '';    //좌네비 여부 : noNav : 좌메뉴 없음 
+var depth = locals.depth ? locals.depth : ''; //좌네비 메뉴 뎁스
 %>
 
 <%- include('./head.ejs', {
@@ -33,7 +34,8 @@ var navContain = locals.navContain ? locals.navContain : '';    //좌네비 여�
                     
                     <!-- Left Menu -->
                     <%- include('./nav.ejs', {
-                        url: url
+                        url: url,
+                        depth : depth,
                     }) %>
 
                     <div class="sideSlide">

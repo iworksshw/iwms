@@ -1,17 +1,51 @@
 <%
 var url = locals.url ? locals.url : '../../';
+var depth = locals.depth ? locals.depth : 'depth01';
 %>
                     <div class="cptSnav">
                         <div class="snavArea">
                             <div class="snavMenu">
                                 <div class="snavTitle">iWMS</div>
                                 <ul class="menuList">
+                                    <% if (depth=='depth01') { %>
                                     <li class="menuItem on"> <!-- class : on : 1depth 메뉴 활성화 -->
                                         <a href="#">유지보수</a>
                                     </li>
-                                    <li class="menuItem"> <!--2 depth 경우 dropdown 클래스 추가-->
+                                    <li class="menuItem">
                                         <a href="#">연락망</a>
                                     </li>
+                                    <% } else if (depth=='depth02') { %>
+                                    <li class="menuItem">
+                                        <a href="#">작성하기</a>
+                                    </li>
+                                    <li class="menuItem dropDown on"> <!--2 depth 경우 dropdown 클래스 추가-->
+                                        <a href="#">진행문서</a>
+                                        <ul class="subMenu" style="display: block;">
+                                            <li><a href="#">기안 <span class="num">(16)</span></a></li>
+                                            <li><a href="#">합의 <span class="num">(16)</span></a></li>
+                                            <li><a href="#" class="on">결재 <span class="num">(03)</span></a></li>
+                                            <li><a href="#">참조 <span class="num">(00)</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menuItem dropDown"> <!--2 depth 경우 dropdown 클래스 추가-->
+                                        <a href="#">완료문서</a>
+                                        <ul class="subMenu">
+                                            <li><a href="#">전체</a></li>
+                                            <li><a href="#">기안</a></li>
+                                            <li><a href="#">결재</a></li>
+                                            <li><a href="#">합의</a></li>
+                                            <li><a href="#">참조</a></li>
+                                            <li><a href="#">반려</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menuItem dropDown"> <!--2 depth 경우 dropdown 클래스 추가-->
+                                        <a href="#">전자결재설정</a>
+                                        <ul class="subMenu">
+                                            <li><a href="#">기본설정</a></li>
+                                            <li><a href="#">결재양식관리</a></li>
+                                        </ul>
+                                    </li>
+                                    <% } %>
                                 </ul>
                                 <div class="snavBtm">
                                     <!-- <button class="iconDownload">관리시스템 메뉴얼</button> -->

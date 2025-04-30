@@ -3,33 +3,7 @@
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    //파일찾기
-    const uploadFiles = document.querySelectorAll(".fileBox .uploadBtn");
-    uploadFiles.forEach(function(uploadFile,idx){
-        uploadFile.addEventListener("change",function(event){
-            const fileBox = parentsElementFind(this, "fileBox");
-            let fileName;
-            if(window.FileReader){
-                fileName = this.files[0].name;
-            } else {
-                console.log("noFileReader");
-                //var filename = $(this).val().split('/').pop().split('\\').pop();
-                //var filename = this.val().split('/').pop().split('\\').pop();
-            }
-            fileBox.querySelector(".textBox").innerText = fileName;
-            fileBox.classList.add("on");
-        });
-    });
-    //파일찾기 취소
-    const delFiles = document.querySelectorAll(".fileBox .fileDel");
-    delFiles.forEach(function(delFile,idx){
-        delFile.addEventListener("click",function(event){
-            const fileBox = parentsElementFind(this, "fileBox");
-            fileBox.querySelector(".uploadBtn").value = "";
-            fileBox.querySelector(".textBox").innerText = "";
-            fileBox.classList.remove("on");
-        });
-    });
+    initializeFileUpload(); //파일찾기
 
     //팝업 내부 스크롤 시 타이틀 쉐도우 추가
     const scrollPops = document.querySelectorAll(".modPopup .popCont");
@@ -77,6 +51,66 @@ function tableRowFirst (){
     }
 }
 
+
+
+// ------------------------------- 파일찾기 함수 ------------------------------- //
+function initializeFileUpload(){
+    //파일찾기
+    const uploadFiles = document.querySelectorAll(".fileBox .uploadBtn");
+    uploadFiles.forEach(function(uploadFile,idx){
+        uploadFile.addEventListener("change",function(event){
+            const fileBox = parentsElementFind(this, "fileBox");
+            let fileName;
+            if(window.FileReader){
+                fileName = this.files[0].name;
+            } else {
+                console.log("noFileReader");
+                //var filename = $(this).val().split('/').pop().split('\\').pop();
+                //var filename = this.val().split('/').pop().split('\\').pop();
+            }
+            fileBox.querySelector(".textBox").innerText = fileName;
+            fileBox.classList.add("on");
+        });
+    });
+    //파일찾기 취소
+    const delFiles = document.querySelectorAll(".fileBox .fileDel");
+    delFiles.forEach(function(delFile,idx){
+        delFile.addEventListener("click",function(event){
+            const fileBox = parentsElementFind(this, "fileBox");
+            fileBox.querySelector(".uploadBtn").value = "";
+            fileBox.querySelector(".textBox").innerText = "";
+            fileBox.classList.remove("on");
+        });
+    });
+}
+
+// 동적으로 추가된 .frmGroup에 대해 호출
+function addNewFileGroup(newGroupElement) {
+    initializeFileUpload(newGroupElement);
+}
+
+// 추가된 파일추가기능 테스트
+// function addTest(){
+//     const newGroup = document.createElement("div");
+//     newGroup.classList.add("frmGroup");
+//     newGroup.innerHTML = `
+//         <div class="fileBox">
+//             <div class="fileBefore">
+//                 <label for="uploadBtn2" class="gridBtn dkbLine">파일선택</label>
+//                 <input type="file" id="uploadBtn2" class="uploadBtn">
+//             </div>
+//             <div class="fileAfter">
+//                 <div class="textBox"></div>
+//                 <button type="button" class="fileDel">삭제</button>
+//             </div>
+//         </div>
+//         <button type="button" class="gridBtn minus">파일삭제</button>
+//         <button type="button" class="gridBtn plus">파일추가</button>
+//     `;
+//     document.querySelector(".modPopup .cptTable").appendChild(newGroup);
+
+//     addNewFileGroup(newGroup);
+// }
 
 // ------------------------------- 탭메뉴 함수 ------------------------------- //
 //모드 탭 함수

@@ -1,0 +1,27 @@
+/* ------------------------ 결재 상세 내용 ------------------------ */
+.cptApprovalView {
+    width: 100%; margin-top: 80px;
+    .apprTitle {
+        width: 100%;
+        h3 {
+            color: #000; font-size: 30px; font-style: normal; font-weight: 500; line-height: 1.5;
+        }
+    }
+    .apprCont {
+        width: 100%; margin-top: 12px; padding: 30px 0 60px; border-top: 1px solid #333; border-bottom: 1px solid #E1E5EF;
+    }
+
+    //.cptRequestView .fileGroup과 동일한 디자인 (약간 수정됨)
+    .fileGroup {
+        width: 100%; margin-top: 30px; display: flex; flex-wrap: wrap; gap: 8px;
+        &:first-child {margin-top: 0;}
+    }
+    .fileDown {
+        width: calc(50% - 4px); min-height: 50px; padding-left: 36px; border-radius: 6px; border: 1px solid #BBB; display: flex; flex-shrink: 0; flex-grow: 0;
+        background:#FFF url(../../common/images/iwms/ic_16_attach.svg) left 15px center no-repeat;
+        .download {
+            width: 100%; min-height: 48px; padding: 10px 37px 10px 0; color: #000; font-size: 16px; font-weight: 400; line-height: 1; display: block;
+            background: url(../../common/images/iwms/ic_24_download.svg) right 13px center no-repeat; align-content: center; @include line1();
+        }
+    }
+}

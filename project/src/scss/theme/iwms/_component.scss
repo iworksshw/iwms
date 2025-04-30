@@ -13,8 +13,25 @@
 
     //그룹(테이블, 그리드 등) 탑
     .cptGroupTop {
+        .unit {
+            margin-left: 26px; position: relative;
+            &::after {
+                content: ""; width: 2px; height: 14px; background: #ddd; position: absolute; left: -14px; top: 2px;
+            }
+            &:first-child {
+                margin-left: 0;
+                &::after {display: none;}
+            }
+        }
         .total {
-            &.bold {margin-right: 2px; font-weight: 500; color: #000; font-size: 18px;}
+            &.bold {
+                margin-right: 2px; font-weight: 500; color: #000; font-size: 18px;
+                &.txtBlue {font-weight: 600;}
+            }
+        }
+        .draft {
+            width: max-content; height: 23px; padding: 0 10px; margin-bottom: -2px; margin-right: 3px; border-radius: 12px; background: #3569E7; 
+            color: #FFF; font-size: 16px; font-style: normal; font-weight: 700; line-height: 23px; display: inline-block;
         }
         .comSideOpt {
             .srhBtn {height: 35px;}
@@ -73,6 +90,35 @@
             tfoot {
                 td {border: 1px solid #E1E5EF; background: #EFF5FF;}
             } 
+            .title {
+                width: 100%; display: flex; align-items: center;
+                .link {
+                    width: max-content; font-weight: 400; display:block; @include line1();
+                }
+                .icons {
+                    padding: 0 2px; display:flex;
+                    .read {
+                        color: #3569E7; line-height: 1.6; white-space: nowrap;
+                        &:last-child {margin-right: 0;}
+                    }
+                    .icon {
+                        width: 18px; margin-right: 5px; font-size:0; border-radius:8px; display:flex; position:relative;
+                        &:last-child {margin-right: 0;}
+                        &.new {
+                            min-width: 14px; width: 14px; background: url(../../images/common/ic_20_new.svg) center no-repeat;
+                        }
+                        &.file {
+                            background: url(../../common/images/iwms/ic_16_list_file.svg) center no-repeat;
+                        }
+                    }
+                }
+            }
+            .text {
+                &.blue {color: #3569E7; font-weight: 500;}
+                &.gray {color: #96A0B5; font-weight: 500;}
+                &.black {color: #000000; font-weight: 500;}
+                &.orange {color: #FF5C4A; font-weight: 500;}
+            }
         }
     }
 
@@ -86,8 +132,18 @@
         margin-top: 60px;
         &:first-child {margin-top: 0;}
         &.alignC {
-            .comSideOpt button {width: auto;}
+            .comSideOpt .crudBtn {
+                width: auto; height: 48px; min-width: auto; padding: 0 30px; font-size: 20px; line-height: 1; display: inline-flex; align-items: center;
+            }
         }
+        .comSideOpt {
+            .srhBtn {
+                height: 34px; padding: 0 30px;
+            }
+        }
+    }
+    .comH2Group + .cptGroupBtm {
+        margin: 20px 0 12px;
     }
 }
 
@@ -97,3 +153,6 @@
 @import './cptCardRequest'; //유지보수 리스트
 @import './cptRequestView'; //유지보수 상세보기
 @import './cptDashboard';   //대시보드
+@import './cptApprovalSetting'; //결재선 설정
+@import './cptApprovalView'; //결재 상세 내용
+@import './cptComment' //댓글

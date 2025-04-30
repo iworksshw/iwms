@@ -118,7 +118,7 @@
                     .cmtCont {max-width: 464px;}
                 }
                 .cmtTop {
-                    width: 100%; max-width: 464px; display: flex; gap: 8px;
+                    width: 100%; display: flex; gap: 8px; //max-width: 464px; 
                     .profile {
                         width: 26px; height: 26px; border-radius: 50%; background: #EFF1F7;
                     }

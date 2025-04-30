@@ -1,5 +1,6 @@
 <%- include('../../layout/iwms/header.ejs', {
     theme: "iwms",
+    depth: "depth02",
     url: "../../../"
 }) %>
 
@@ -256,46 +257,35 @@
                                                 <div class="approvalTeamList">
                                                     <ul class="approvalGroup">
                                                         <li class="apprItem">
-                                                            <button class="nameTeam plus">아이웍스인터렉티브(37)</button>
-
+                                                            <button class="nameTeam plus">아이웍스인터렉티브 <b>(37)</b></button>
                                                             <ul class="approvalGroup">
                                                                 <li class="apprItem">
-                                                                    <button class="nameTeam plus">경영지원본부(3)</button>
+                                                                    <button class="nameTeam plus">경영지원본부 <b>(3)</b></button>
 
                                                                     <ul class="approvalGroup">
-                                                                        <li class="apprItem"><button class="nameTeam">본부1(2)</button></li>
-                                                                        <li class="apprItem"><button class="nameTeam">본부2(1)</button></li>
+                                                                        <li class="apprItem"><button class="nameTeam">본부1 <b>(2)</b></button></li>
+                                                                        <li class="apprItem"><button class="nameTeam">본부2 <b>(1)</b></button></li>
                                                                     </ul>
 
                                                                 </li>
-                                                            </ul>
-                                                        </li>
-
-                                                        <li class="apprItem">
-                                                            <ul class="approvalGroup">
                                                                 <li class="apprItem">
-                                                                    <button class="nameTeam plus">전략사업본부(8)</button>
+                                                                    <button class="nameTeam plus">전략사업본부 <b>(8)</b></button>
 
                                                                     <ul class="approvalGroup">
-                                                                        <li class="apprItem"><button class="nameTeam">본부1(2)</button></li>
-                                                                        <li class="apprItem"><button class="nameTeam">본부2(3)</button></li>
-                                                                        <li class="apprItem"><button class="nameTeam">본부3(3)</button></li>
+                                                                        <li class="apprItem"><button class="nameTeam">본부1 <b>(2)</b></button></li>
+                                                                        <li class="apprItem"><button class="nameTeam">본부2 <b>(3)</b></button></li>
+                                                                        <li class="apprItem"><button class="nameTeam">본부3 <b>(3)</b></button></li>
                                                                     </ul>
 
                                                                 </li>
-                                                            </ul>
-                                                        </li>
-                                                        
-                                                        <li class="apprItem">
-                                                            <ul class="approvalGroup">
                                                                 <li class="apprItem">
-                                                                    <button class="nameTeam minus">전보사업본부(26)</button>
+                                                                    <button class="nameTeam minus">전보사업본부 <b>(26)</b></button>
 
                                                                     <ul class="approvalGroup">
-                                                                        <li class="apprItem"><button class="nameTeam">전략기획팀(3)</button></li>
-                                                                        <li class="apprItem"><button class="nameTeam on">디자인팀(3)</button></li>
-                                                                        <li class="apprItem"><button class="nameTeam">UI개발팀(3)</button></li>
-                                                                        <li class="apprItem"><button class="nameTeam">개발팀(16)</button></li>
+                                                                        <li class="apprItem"><button class="nameTeam">전략기획팀 <b>(3)</b></button></li>
+                                                                        <li class="apprItem"><button class="nameTeam on">디자인팀 <b>(3)</b></button></li>
+                                                                        <li class="apprItem"><button class="nameTeam">UI개발팀 <b>(3)</b></button></li>
+                                                                        <li class="apprItem"><button class="nameTeam">개발팀 <b>(16)</b></button></li>
                                                                     </ul>
 
                                                                 </li>
@@ -303,103 +293,107 @@
                                                         </li>
                                                     </ul>
                                                 </div>
+                                                <script>
+                                                    function approvalToggle(){
+                                                        document.querySelectorAll('.approvalTeamList .nameTeam').forEach(function (button) {
+                                                            button.addEventListener('click', function () {
+                                                                // .on 클래스가 있는 다른 버튼에서 제거
+                                                                document.querySelectorAll('.approvalTeamList .nameTeam.on').forEach(function (btn) {
+                                                                    btn.classList.remove('on');
+                                                                });
+                                                    
+                                                                // 현재 버튼에 .plus 또는 .minus가 있는지 확인
+                                                                if (this.classList.contains('plus')) {
+                                                                    this.classList.remove('plus');
+                                                                    this.classList.add('minus');
+                                                                } else if (this.classList.contains('minus')) {
+                                                                    this.classList.remove('minus');
+                                                                    this.classList.add('plus');
+                                                                } else {
+                                                                    // .plus 또는 .minus가 없으면 .on 클래스 추가
+                                                                    this.classList.add('on');
+                                                                }
+                                                            });
+                                                        });
+                                                    }
+                                                    approvalToggle();
+                                                </script>
                                                 <div class="approvalNameList">
-                                                    <ul class="frmChoList">
-                                                        <li class="frmChoBox"><input id="chk201" type="checkbox" class="iptChk"><label for="chk201" class="iptLbl">체크박스의</label></li>
-                                                        <li class="frmChoBox"><input id="chk202" type="checkbox" class="iptChk"><label for="chk202" class="iptLbl">너비가 글자수랑 상관없이</label></li>
-                                                        <li class="frmChoBox"><input id="chk203" type="checkbox" class="iptChk"><label for="chk203" class="iptLbl">모두 같아요</label></li>
+                                                    <ul class="frmChoList vertical">
+                                                        <li class="frmChoBox"><input id="chk101" type="checkbox" class="iptChk"><label for="chk101" class="iptLbl">송민아 과장 <span class="team">(디자인팀)</span></label></li>
+                                                        <li class="frmChoBox"><input id="chk102" type="checkbox" class="iptChk"><label for="chk102" class="iptLbl">권진주 대리 <span class="team">(디자인팀)</span></label></li>
+                                                        <li class="frmChoBox"><input id="chk103" type="checkbox" class="iptChk"><label for="chk103" class="iptLbl">고윤영 과장 <span class="team">(디자인팀)</span></label></li>
+                                                        <li class="frmChoBox"><input id="chk104" type="checkbox" class="iptChk"><label for="chk104" class="iptLbl">홍길동 주임 <span class="team">(디자인팀)</span></label></li>
                                                     </ul>
                                                 </div>
                                                 <div class="approvalChoiceList">
-
+                                                    <div class="choiceGroup">
+                                                        <div class="inOutBox">
+                                                            <button type="button" class="btnIn">포함</button>
+                                                            <button type="button" class="btnOut">미포함</button>
+                                                        </div>
+                                                        <div class="listGroup">
+                                                            <div class="listTitle">
+                                                                <b>합의</b>
+                                                                <div class="upDownBox">
+                                                                    <button type="button" class="btnUp">위로 이동</button>
+                                                                    <button type="button" class="btnDown">아래로 이동</button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="listBox">
+                                                                <ul class="frmChoList vertical">
+                                                                    <li class="frmChoBox"><input id="chk201" type="checkbox" class="iptChk"><label for="chk201" class="iptLbl">정형호 차장 <span class="team">(개발팀)</span></label></li>
+                                                                    <li class="frmChoBox"><input id="chk202" type="checkbox" class="iptChk"><label for="chk202" class="iptLbl">김형주 이사 <span class="team">(대회사업팀)</span></label></li>
+                                                                    <li class="frmChoBox"><input id="chk203" type="checkbox" class="iptChk"><label for="chk203" class="iptLbl">이창수 대표 <span class="team">(경영지원팀)</span></label></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="choiceGroup">
+                                                        <div class="inOutBox">
+                                                            <button type="button" class="btnIn">포함</button>
+                                                            <button type="button" class="btnOut">미포함</button>
+                                                        </div>
+                                                        <div class="listGroup">
+                                                            <div class="listTitle">
+                                                                <b>합의</b>
+                                                                <div class="upDownBox">
+                                                                    <button type="button" class="btnUp">위로 이동</button>
+                                                                    <button type="button" class="btnDown">아래로 이동</button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="listBox">
+                                                                <ul class="frmChoList vertical">
+                                                                    <li class="frmChoBox"><input id="chk301" type="checkbox" class="iptChk"><label for="chk301" class="iptLbl">김형주 이사 <span class="team">(대회사업팀)</span></label></li>
+                                                                    <li class="frmChoBox"><input id="chk302" type="checkbox" class="iptChk"><label for="chk302" class="iptLbl">이창수 대표 <span class="team">(경영지원팀)</span></label></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="choiceGroup">
+                                                        <div class="inOutBox">
+                                                            <button type="button" class="btnIn">포함</button>
+                                                            <button type="button" class="btnOut">미포함</button>
+                                                        </div>
+                                                        <div class="listGroup">
+                                                            <div class="listTitle">
+                                                                <b>참조</b>
+                                                                <div class="upDownBox">
+                                                                    <button type="button" class="btnUp">위로 이동</button>
+                                                                    <button type="button" class="btnDown">아래로 이동</button>
+                                                                </div>
+                                                            </div>
+                                                            <div class="listBox">
+                                                                <ul class="frmChoList vertical">
+                                                                    <li class="frmChoBox"><input id="chk401" type="checkbox" class="iptChk"><label for="chk401" class="iptLbl">이도경 차장 <span class="team">(경영지원팀)</span></label></li>
+                                                                    <li class="frmChoBox"><input id="chk402" type="checkbox" class="iptChk"><label for="chk402" class="iptLbl">김재인 이사 <span class="team">(경영지원팀)</span></label></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
 
-
-                                             <!-- 테이블 -->
-                                            <div class="cptTable">
-                                                <table class="tbView">
-                                                    <colgroup>
-                                                        <col style="width:110px;">
-                                                        <col style="width:auto;">
-                                                        <col style="width:110px;">
-                                                        <col style="width:auto;">
-                                                    </colgroup>
-                                                    <caption></caption>
-                                                    <tbody>
-                                                        <tr>
-                                                            <th class="left">요청자</th>
-                                                            <td class="left">안경애</td>
-                                                            <th class="left">작성일자</th>
-                                                            <td class="left">2025-04-07</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="left">프로젝트<span class="required">*</span></th>
-                                                            <td colspan="3" class="left">
-                                                                <div class="frmGroup">
-                                                                    <select name="" id="" class="iptSlt">
-                                                                        <option value="">프로젝트 선택</option>
-                                                                    </select>
-                                                                    <button type="button" class="gridBtn minus">프로젝트 삭제</button>
-                                                                    <button type="button" class="gridBtn plus">프로젝트 추가</button>
-                                                                </div>
-                                                                <i class="pointText">동일업무를 여러 프로젝트에 적용할 경우 프로젝트 선택을 증가하여 작성해주세요.</i>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="left">처리 희망일자<span class="required">*</span></th>
-                                                            <td colspan="3" class="left">
-                                                                <div class="frmGroup">
-                                                                    <div class="frmChoBox"><input id="rdo001" type="radio" class="iptRdo" name="rdo001"><label for="rdo001" class="iptLbl">긴급</label></div>
-                                                                    <div class="frmChoBox"><input id="rdo002" type="radio" class="iptRdo" name="rdo001"><label for="rdo002" class="iptLbl">직접입력</label></div>
-                                                                    <div class="tui-datepicker-input tui-datetime-input tui-has-focus frmLg">
-                                                                        <input type="text" id="datepicker-input" aria-label="Date-Time" disabled>
-                                                                        <div id="datepicker-container" style="margin-top: -1px;"></div>
-                                                                    </div>
-                                                                    <script>
-                                                                        datePicker("datepicker-input","datepicker-container");
-                                                                    </script>
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="left">첨부파일</th>
-                                                            <td colspan="3" class="left">
-                                                                <div class="frmGroup">
-                                                                    <div class="fileBox">
-                                                                        <div class="fileBefore">
-                                                                            <label for="uploadBtn1" class="gridBtn dkbLine">파일선택</label>
-                                                                            <input type="file" id="uploadBtn1" class="uploadBtn">
-                                                                        </div>
-                                                                        <div class="fileAfter">
-                                                                            <div class="textBox"></div>
-                                                                            <button type="button" class="fileDel">삭제</button>
-                                                                        </div>
-                                                                    </div>
-                                                                    <button type="button" class="gridBtn minus">파일삭제</button>
-                                                                    <button type="button" class="gridBtn plus">파일추가</button>
-                                                                </div>
-                                                                <i class="pointText">파일형식(jpg,gif,jpeg,doc,docx,xls,pdf,hwp,xlst,txt)만 첨부 가능하며, 최대 1MB까지 첨부가능</i>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="left">제목<span class="required">*</span></th>
-                                                            <td colspan="3" class="left">
-                                                                <div class="frmGroup"><input type="text" class="iptText"></div>
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th class="left">내용</th>
-                                                            <td colspan="3" class="left">
-                                                                <!-- 에디터영역 -->
-                                                                <textarea class="textArea areaMd">에디터영역</textarea>
-                                                                <!-- //에디터영역 -->
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </div>
-                    
                                             <!-- //팝업 컨텐츠 영역 -->
                     
                                         </div>
@@ -407,7 +401,7 @@
                                         <div class="popBtm">
                                             <div class="alignR">
                                                 <button type="button" class="btn gLine">취소</button>
-                                                <button type="button" class="btn dkBlue">등록</button>
+                                                <button type="button" class="btn dkBlue">확인</button>
                                             </div>
                                         </div>
                                     </div>

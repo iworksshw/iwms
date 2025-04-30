@@ -1,3 +1,12 @@
 @import 'maxin';        //mixin
 @import 'common';       //수정된 com.
 @import 'component';    //수정된 cpt.
+
+/* layout 기존 수정 */
+.cptSnav .snavMenu .menuItem.dropDown.on {
+    background: url(../../common/images/iwms/ic_10_menu_up.svg) calc(100% - 25px) 20px no-repeat;
+}
+
+.cptSnav .snavMenu .menuItem.dropDown {
+    background: url(../../common/images/iwms/ic_10_menu_down.svg) calc(100% - 25px) 20px no-repeat;
+}

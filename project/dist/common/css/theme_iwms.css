@@ -13,6 +13,9 @@
 	/* ------------------------ 추후 원본 css 수정 필요부분 ------------------------ */
 	/* --------------------------------------------------------------------------- */
 }
+.iwms .comPaging {
+	margin-top: 60px;
+}
 .iwms .comPaging .start, .iwms .comPaging .prev, .iwms .comPaging .next, .iwms .comPaging .end {
 	height: 34px;
 }
@@ -235,11 +238,48 @@ html, body, .wrap, .lytLayout, .layoutArea {
 .iwms.lytLayout .layoutContainer .layoutCont .layoutContArea {
 	background: #FFF;
 }
+.iwms .cptGroupTop .unit {
+	margin-left: 26px;
+	position: relative;
+}
+.iwms .cptGroupTop .unit::after {
+	content: "";
+	width: 2px;
+	height: 14px;
+	background: #ddd;
+	position: absolute;
+	left: -14px;
+	top: 2px;
+}
+.iwms .cptGroupTop .unit:first-child {
+	margin-left: 0;
+}
+.iwms .cptGroupTop .unit:first-child::after {
+	display: none;
+}
 .iwms .cptGroupTop .total.bold {
 	margin-right: 2px;
 	font-weight: 500;
 	color: #000;
 	font-size: 18px;
+}
+.iwms .cptGroupTop .total.bold.txtBlue {
+	font-weight: 600;
+}
+.iwms .cptGroupTop .draft {
+	width: max-content;
+	height: 23px;
+	padding: 0 10px;
+	margin-bottom: -2px;
+	margin-right: 3px;
+	border-radius: 12px;
+	background: #3569E7;
+	color: #FFF;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 23px;
+	display: inline-block;
 }
 .iwms .cptGroupTop .comSideOpt .srhBtn {
 	height: 35px;
@@ -340,6 +380,67 @@ html, body, .wrap, .lytLayout, .layoutArea {
 	border: 1px solid #E1E5EF;
 	background: #EFF5FF;
 }
+.iwms .cptGrid .gridTb .title {
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+.iwms .cptGrid .gridTb .title .link {
+	width: max-content;
+	font-weight: 400;
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: block;
+}
+.iwms .cptGrid .gridTb .title .icons {
+	padding: 0 2px;
+	display: flex;
+}
+.iwms .cptGrid .gridTb .title .icons .read {
+	color: #3569E7;
+	line-height: 1.6;
+	white-space: nowrap;
+}
+.iwms .cptGrid .gridTb .title .icons .read:last-child {
+	margin-right: 0;
+}
+.iwms .cptGrid .gridTb .title .icons .icon {
+	width: 18px;
+	margin-right: 5px;
+	font-size: 0;
+	border-radius: 8px;
+	display: flex;
+	position: relative;
+}
+.iwms .cptGrid .gridTb .title .icons .icon:last-child {
+	margin-right: 0;
+}
+.iwms .cptGrid .gridTb .title .icons .icon.new {
+	min-width: 14px;
+	width: 14px;
+	background: url(../../images/common/ic_20_new.svg) center no-repeat;
+}
+.iwms .cptGrid .gridTb .title .icons .icon.file {
+	background: url(../../common/images/iwms/ic_16_list_file.svg) center no-repeat;
+}
+.iwms .cptGrid .gridTb .text.blue {
+	color: #3569E7;
+	font-weight: 500;
+}
+.iwms .cptGrid .gridTb .text.gray {
+	color: #96A0B5;
+	font-weight: 500;
+}
+.iwms .cptGrid .gridTb .text.black {
+	color: #000000;
+	font-weight: 500;
+}
+.iwms .cptGrid .gridTb .text.orange {
+	color: #FF5C4A;
+	font-weight: 500;
+}
 .iwms .cptGrid .gridTb tr th.line {
 	border-left: 1px solid #666;
 }
@@ -352,8 +453,22 @@ html, body, .wrap, .lytLayout, .layoutArea {
 .iwms .cptGroupBtm:first-child {
 	margin-top: 0;
 }
-.iwms .cptGroupBtm.alignC .comSideOpt button {
+.iwms .cptGroupBtm.alignC .comSideOpt .crudBtn {
 	width: auto;
+	height: 48px;
+	min-width: auto;
+	padding: 0 30px;
+	font-size: 20px;
+	line-height: 1;
+	display: inline-flex;
+	align-items: center;
+}
+.iwms .cptGroupBtm .comSideOpt .srhBtn {
+	height: 34px;
+	padding: 0 30px;
+}
+.iwms .comH2Group + .cptGroupBtm {
+	margin: 20px 0 12px;
 }
 
 /* ------------------------ Tab + 상세검색 ----------------------- */
@@ -982,7 +1097,6 @@ html, body, .wrap, .lytLayout, .layoutArea {
 }
 .cptRequestView .commentsGroup .commentBox .cmtItem .cmtTop {
 	width: 100%;
-	max-width: 464px;
 	display: flex;
 	gap: 8px;
 }
@@ -1770,5 +1884,401 @@ html, body, .wrap, .lytLayout, .layoutArea {
 .cptDashboard .workTime .timeItem .time b {
 	color: #000;
 	font-weight: 600;
+}
+
+/* ---------------------------- 결재선 변경 ---------------------------- */
+.cptApprovalSetting {
+	width: 100%;
+	display: flex;
+}
+.cptApprovalSetting .approvalTeamList {
+	width: 240px;
+	height: 520px;
+	padding: 0 10px;
+	border-radius: 4px;
+	border: 1px solid #BBB;
+	background: #FFF;
+	display: flex;
+	flex-shrink: 0;
+	overflow: auto;
+}
+.cptApprovalSetting .approvalNameList {
+	width: 240px;
+	height: 520px;
+	margin-left: 8px;
+	border-radius: 4px;
+	border: 1px solid #BBB;
+	background: #FFF;
+	display: flex;
+	flex-shrink: 0;
+	align-items: start;
+	overflow: auto;
+}
+.cptApprovalSetting .approvalNameList .frmChoBox .iptLbl {
+	width: 100%;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.cptApprovalSetting .approvalNameList .frmChoBox .iptLbl .team {
+	color: #757575;
+	font-weight: 400;
+}
+.cptApprovalSetting .approvalNameList .frmChoBox .iptChk + .iptLbl {
+	padding-left: 34px;
+	color: #000;
+	background: url(../images/icon/ic_chk_off.svg) left 10px center no-repeat;
+}
+.cptApprovalSetting .approvalNameList .frmChoBox .iptChk:checked + .iptLbl {
+	padding-left: 34px;
+	color: #3569E7;
+	background: #F7F9FF url(../images/icon/ic_chk_on.svg) left 10px center no-repeat;
+}
+.cptApprovalSetting .approvalNameList .frmChoBox .iptChk:checked + .iptLbl .team {
+	color: #3569E7;
+	font-weight: 400;
+}
+.cptApprovalSetting .approvalChoiceList {
+	width: calc(100% - 508px);
+	margin-left: 20px;
+	position: relative;
+}
+.cptApprovalSetting .approvalGroup {
+	width: 100%;
+}
+.cptApprovalSetting .approvalGroup .apprItem {
+	width: 100%;
+	padding-left: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	position: relative;
+}
+.cptApprovalSetting .approvalGroup .apprItem .nameTeam {
+	width: 100%;
+	height: 40px;
+	padding-left: 4px;
+	color: #333;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	text-align: left;
+	border: 0;
+	background: none;
+	position: relative;
+}
+.cptApprovalSetting .approvalGroup .apprItem .nameTeam.on, .cptApprovalSetting .approvalGroup .apprItem .nameTeam:hover {
+	color: #3569E7;
+}
+.cptApprovalSetting .approvalGroup .apprItem .nameTeam.plus::before {
+	content: "";
+	width: 16px;
+	height: 16px;
+	display: block;
+	position: absolute;
+	left: -17px;
+	top: 12px;
+	background: url(../../../common/images/iwms/ic_16_plus_circle.svg) center no-repeat;
+}
+.cptApprovalSetting .approvalGroup .apprItem .nameTeam.plus + .approvalGroup {
+	display: none;
+}
+.cptApprovalSetting .approvalGroup .apprItem .nameTeam.minus::before {
+	content: "";
+	width: 16px;
+	height: 16px;
+	display: block;
+	position: absolute;
+	left: -17px;
+	top: 12px;
+	background: url(../../../common/images/iwms/ic_16_minus_circle.svg) center no-repeat;
+}
+.cptApprovalSetting .approvalGroup .apprItem .nameTeam.minus + .approvalGroup {
+	display: block;
+}
+.cptApprovalSetting .approvalGroup .apprItem .nameTeam b {
+	font-weight: 500;
+}
+.cptApprovalSetting .choiceGroup {
+	width: 100%;
+	margin-top: 30px;
+	display: flex;
+}
+.cptApprovalSetting .choiceGroup:first-child {
+	margin-top: 0;
+}
+.cptApprovalSetting .choiceGroup .inOutBox {
+	width: 50px;
+	min-width: 50px;
+	padding-top: 33px;
+}
+.cptApprovalSetting .choiceGroup .inOutBox button {
+	width: 30px;
+	height: 30px;
+	margin-top: 4px;
+	font-size: 0;
+	border-radius: 6px;
+	border: 0;
+}
+.cptApprovalSetting .choiceGroup .inOutBox button:first-child {
+	margin-top: 0;
+}
+.cptApprovalSetting .choiceGroup .inOutBox button.btnIn {
+	background: #EFF1F7 url(../../common/images/iwms/ic_20_arr_right.svg) center no-repeat;
+}
+.cptApprovalSetting .choiceGroup .inOutBox button.btnOut {
+	background: #EFF1F7 url(../../common/images/iwms/ic_20_arr_left.svg) center no-repeat;
+}
+.cptApprovalSetting .choiceGroup .listGroup {
+	width: 100%;
+}
+.cptApprovalSetting .choiceGroup .listGroup .listTitle {
+	width: 100%;
+	height: 29px;
+	display: flex;
+	justify-content: space-between;
+}
+.cptApprovalSetting .choiceGroup .listGroup .listTitle b {
+	width: max-content;
+	height: 100%;
+	color: #000;
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 1.6;
+	display: block;
+}
+.cptApprovalSetting .choiceGroup .listGroup .listTitle .upDownBox {
+	width: max-content;
+	display: flex;
+}
+.cptApprovalSetting .choiceGroup .listGroup .listTitle .upDownBox button {
+	width: 19px;
+	height: 19px;
+	margin-left: 4px;
+	font-size: 0;
+	border: 0;
+	display: block;
+}
+.cptApprovalSetting .choiceGroup .listGroup .listTitle .upDownBox button:first-child {
+	margin-top: 0;
+}
+.cptApprovalSetting .choiceGroup .listGroup .listTitle .upDownBox button.btnUp {
+	background: url(../../common/images/iwms/ic_19_arr_up.svg) center no-repeat;
+}
+.cptApprovalSetting .choiceGroup .listGroup .listTitle .upDownBox button.btnDown {
+	background: url(../../common/images/iwms/ic_19_arr_down.svg) center no-repeat;
+}
+.cptApprovalSetting .choiceGroup .listGroup .listBox {
+	width: 100%;
+	height: 120px;
+	margin-top: 4px;
+	border-radius: 4px;
+	border: 1px solid #BBB;
+	overflow: auto;
+}
+.cptApprovalSetting .choiceGroup .listGroup .listBox .frmChoBox .iptLbl {
+	width: 100%;
+	padding: 10px;
+}
+.cptApprovalSetting .choiceGroup .listGroup .listBox .frmChoBox .iptLbl .team {
+	color: #757575;
+	font-weight: 400;
+}
+.cptApprovalSetting .choiceGroup .listGroup .listBox .frmChoBox .iptChk + .iptLbl {
+	padding-left: 10px;
+	color: #000;
+	background: none;
+}
+.cptApprovalSetting .choiceGroup .listGroup .listBox .frmChoBox .iptChk:checked + .iptLbl {
+	padding-left: 10px;
+	color: #3569E7;
+	background: #F7F9FF;
+}
+.cptApprovalSetting .choiceGroup .listGroup .listBox .frmChoBox .iptChk:checked + .iptLbl .team {
+	color: #3569E7;
+	font-weight: 400;
+}
+
+/* ------------------------ 결재 상세 내용 ------------------------ */
+.cptApprovalView {
+	width: 100%;
+	margin-top: 80px;
+}
+.cptApprovalView .apprTitle {
+	width: 100%;
+}
+.cptApprovalView .apprTitle h3 {
+	color: #000;
+	font-size: 30px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: 1.5;
+}
+.cptApprovalView .apprCont {
+	width: 100%;
+	margin-top: 12px;
+	padding: 30px 0 60px;
+	border-top: 1px solid #333;
+	border-bottom: 1px solid #E1E5EF;
+}
+.cptApprovalView .fileGroup {
+	width: 100%;
+	margin-top: 30px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+}
+.cptApprovalView .fileGroup:first-child {
+	margin-top: 0;
+}
+.cptApprovalView .fileDown {
+	width: calc(50% - 4px);
+	min-height: 50px;
+	padding-left: 36px;
+	border-radius: 6px;
+	border: 1px solid #BBB;
+	display: flex;
+	flex-shrink: 0;
+	flex-grow: 0;
+	background: #FFF url(../../common/images/iwms/ic_16_attach.svg) left 15px center no-repeat;
+}
+.cptApprovalView .fileDown .download {
+	width: 100%;
+	min-height: 48px;
+	padding: 10px 37px 10px 0;
+	color: #000;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 1;
+	display: block;
+	background: url(../../common/images/iwms/ic_24_download.svg) right 13px center no-repeat;
+	align-content: center;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: block;
+}
+
+/* ------------------------ 댓글 ------------------------ */
+.cptComment {
+	width: 100%;
+	margin-top: 80px;
+}
+.cptComment .commentTitle {
+	width: 100%;
+}
+.cptComment .commentTitle h3 {
+	color: #000;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 700;
+	line-height: 1.5;
+}
+.cptComment .commentsGroup {
+	width: 100%;
+	margin-top: 4px;
+}
+.cptComment .commentsGroup .registBox {
+	width: 100%;
+	padding: 16px;
+	border-radius: 4px;
+	border: 1px solid #A1A9BA;
+	display: flex;
+	gap: 8px;
+}
+.cptComment .commentsGroup .registBox .text {
+	width: 100%;
+	height: 35px;
+	padding: 7px 10px;
+	flex-grow: 1;
+	flex-shrink: 1;
+	border: 0;
+	overflow: hidden;
+}
+.cptComment .commentsGroup .registBox .btnRegist {
+	width: max-content;
+	height: 35px;
+	padding: 0 30px;
+	border: 0;
+	border-radius: 6px;
+	line-height: 1;
+	background: #0C1F2B;
+	color: #FFF;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 500;
+	white-space: nowrap;
+}
+.cptComment .commentsGroup .commentBox {
+	width: 100%;
+	margin-top: 20px;
+}
+.cptComment .commentsGroup .commentBox .cmtItem {
+	width: 100%;
+	margin-top: 20px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.cptComment .commentsGroup .commentBox .cmtItem:first-child {
+	margin-top: 0;
+}
+.cptComment .commentsGroup .commentBox .cmtItem.me {
+	justify-content: flex-end;
+}
+.cptComment .commentsGroup .commentBox .cmtItem.me .cmtTop {
+	justify-content: flex-end;
+}
+.cptComment .commentsGroup .commentBox .cmtItem .cmtTop {
+	width: 100%;
+	display: flex;
+	gap: 8px;
+}
+.cptComment .commentsGroup .commentBox .cmtItem .cmtTop .profile {
+	width: 26px;
+	height: 26px;
+	border-radius: 50%;
+	background: #EFF1F7;
+}
+.cptComment .commentsGroup .commentBox .cmtItem .cmtTop .name {
+	color: #000;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 26px;
+}
+.cptComment .commentsGroup .commentBox .cmtItem .cmtTop .date {
+	color: #999;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 26px;
+}
+.cptComment .commentsGroup .commentBox .cmtItem .cmtCont {
+	width: max-content;
+	margin-left: 34px;
+	margin-top: 4px;
+}
+.cptComment .commentsGroup .commentBox .cmtItem .cmtCont .msg {
+	color: #333;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.6;
+}
+.cptComment .commentsGroup .commentBox .cmtItem .cmtCont .fileDown {
+	min-height: 40px;
+}
+.cptComment .commentsGroup .commentBox .cmtItem .cmtCont .fileDown .download {
+	min-height: 38px;
+	padding: 4px 37px 4px 0;
+}
+
+/* layout 기존 수정 */
+.cptSnav .snavMenu .menuItem.dropDown.on {
+	background: url(../../common/images/iwms/ic_10_menu_up.svg) calc(100% - 25px) 20px no-repeat;
+}
+
+.cptSnav .snavMenu .menuItem.dropDown {
+	background: url(../../common/images/iwms/ic_10_menu_down.svg) calc(100% - 25px) 20px no-repeat;
 }
 /*# sourceMappingURL=../maps/theme_iwms.css.map */
