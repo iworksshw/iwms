@@ -22,20 +22,19 @@
         .commentBox {
             width: 100%; margin-top: 20px;
             .cmtItem {
-                width: 100%; margin-top: 20px; display: flex; flex-wrap: wrap;
+                width: 100%; margin-top: 20px; padding-bottom: 20px; border-bottom: 1px solid #E1E5EF; display: flex; flex-wrap: wrap;
                 &:first-child {margin-top: 0;}
-                &.me {
-                    justify-content: flex-end;
-                    .cmtTop {justify-content: flex-end;}
-                    .cmtCont {}
-                }
                 .cmtTop {
-                    width: 100%; display: flex; gap: 8px; //max-width: 464px; 
+                    width: 100%; display: flex; gap: 8px; align-items: center; //max-width: 464px; 
                     .profile {
                         width: 26px; height: 26px; border-radius: 50%; background: #EFF1F7;
                     }
                     .name {color: #000; font-size: 16px; font-style: normal; font-weight: 400; line-height: 26px;}
                     .date { color: #999; font-size: 12px; font-style: normal; font-weight: 400; line-height: 26px;}
+                    .btnDel {
+                        width: 19px; height: 19px; margin-left: 5px; font-size: 0; border: 0; 
+                        background: url(../../common/images/iwms/ic_16_name_del.svg) center no-repeat; display: inline-block;
+                    }
                 }
                 .cmtCont {
                     width: max-content; margin-left: 34px; margin-top: 4px;
